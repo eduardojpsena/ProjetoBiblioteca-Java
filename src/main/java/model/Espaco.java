@@ -1,45 +1,44 @@
 package model;
 
 public class Espaco {
-    //Atributos
-    private int id;
-    private String nome;
-    private Double capacidade;
+	private long id;
+	private String nomeLocal;
+	private int capacidade;
+	
+	public Espaco() {
+	}
 
-    //Constutores
-    public Espaco() {
-    }
+	public Espaco(long id, String nomeLocal, int capacidade) {
+		this.id = id;
+		this.nomeLocal = nomeLocal;
+		this.capacidade = capacidade;
+	}
 
-    public Espaco(int id, String nome, Double capacidade) {
-            this.id = id;
-            this.nome = nome;
-            this.capacidade = capacidade;
-    }
+	public long getId() {
+		return id;
+	}
 
-    //Get e Set
-    public int getId() {
-            return id;
-    }
-    public void setId(int id) {
-            this.id = id;
-    }
+	public void setId(long id) {
+		this.id = id;
+	}
 
-    public String getNome() {
-            return nome;
-    }
-    public void setNome(String nome) {
-            this.nome = nome;
-    }
-    
-    public Double getCapacidade() {
-            return capacidade;
-    }
-    public void setNome(Double capacidade) {
-            this.capacidade = capacidade;
-    }
+	public String getNomeLocal() {
+		return nomeLocal;
+	}
 
-    //toString
-    public String toString() {
-            return "Espaco [id=" + id + ", nome=" + nome + ", capacidade=" + capacidade + "]";
-    }
+	public void setNomeLocal(String nomeLocal) {
+		this.nomeLocal = nomeLocal;
+	}
+
+	public int getCapacidade() {
+		return capacidade;
+	}
+
+	public void setCapacidade(int capacidade) {
+		this.capacidade = capacidade;
+	}
+
+	public String toString() {
+		return "Espaco [id=" + id + ", nomeLocal=" + nomeLocal + ", capacidade=" + capacidade + "]";
+	}
 }

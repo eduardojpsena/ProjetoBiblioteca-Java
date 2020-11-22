@@ -1,54 +1,67 @@
 package model;
 
 public class Evento {
-    //Atributos
-    private int id;
-    private String nome;
-    private Espaco espaco;
-    private String data;
+	private long id;
+	private String nomeEvento;
+	private Espaco espaco;
+	private String data;
+	private String hora;
+	
+	public Evento() {
+	}
 
-    //Construtores
-    public Evento() {
-    }
+	public Evento(long id, String nomeEvento, Espaco espaco, String data, String hora) {
+		super();
+		this.id = id;
+		this.nomeEvento = nomeEvento;
+		this.espaco = espaco;
+		this.data = data;
+		this.hora = hora;
+	}
 
-    public Evento(int id, String nome, Espaco espaco, String data) {
-            this.id = id;
-            this.nome = nome;
-            this.espaco = espaco;
-            this.data = data;
-    }
+	public long getId() {
+		return id;
+	}
 
-    //Get e Set
-    public int getId() {
-            return id;
-    }
-    public void setId(int id) {
-            this.id = id;
-    }
+	public void setId(long id) {
+		this.id = id;
+	}
+	
+	
+	public String getNomeEvento() {
+		return nomeEvento;
+	}
 
-    public String getNome() {
-            return nome;
-    }
-    public void setNome(String nome) {
-            this.nome = nome;
-    }
+	public void setNomeEvento(String nomeEvento) {
+		this.nomeEvento = nomeEvento;
+	}
 
-    public Espaco getEspaco() {
-            return espaco;
-    }
-    public void setEspaco(Espaco espaco) {
-            this.espaco = espaco;
-    }
+	public Espaco getEspaco() {
+		return espaco;
+	}
 
-    public String getData() {
-            return data;
-    }
-    public void setData(String data) {
-            this.data = data;
-    }
+	public void setEspaco(Espaco espaco) {
+		this.espaco = espaco;
+	}
 
-    //toString
-    public String toString() {
-            return "Evento [id=" + id + ", nome=" + nome + ", espaco=" + espaco + ", data=" + data + "]";
-    }
+	public String getData() {
+		return data;
+	}
+
+	public void setData(String data) {
+		this.data = data;
+	}
+
+	public String getHora() {
+		return hora;
+	}
+
+	public void setHora(String hora) {
+		this.hora = hora;
+	}
+
+	public String toString() {
+		return "Evento [id=" + id + ", nomeEvento=" + nomeEvento + ", espaco=" + espaco + ", data=" + data + ", hora="
+				+ hora + "]";
+	}
 }

@@ -1,37 +1,76 @@
 package model;
 
 public class Livro {
-    //Atributos
-    private int id;
-    private FichaCatalografica fichaCat;
-
-    //Construtores
-    public Livro() {
-    }
-
-    public Livro(int id, FichaCatalografica fichaCat) {
-            this.id = id;
-            this.fichaCat = fichaCat;
-    }
-
-    //Get e Set
-    public int getId() {
-            return id;
-    }
-    public void setId(int id) {
-            this.id = id;
-    }
-
-    public FichaCatalografica getFichaCat() {
-            return fichaCat;
-    }
-    public void setFichaCat(FichaCatalografica fichaCat) {
-            this.fichaCat = fichaCat;
-    }
-
-    //toString
-    public String toString() {
-            return "Livro [id=" + id + ", fichaCat=" + fichaCat + "]";
-    }
+	private long id;
+	private String titulo;
+	private String autor;
+	private String ano;
+	private int quantidade;
+	private String tema;
 	
+	public Livro() {};
+	
+	public Livro(long id, String titulo, String autor, String ano, int quantidade, String tema) {
+		this.id = id;
+		this.titulo = titulo;
+		this.autor = autor;
+		this.ano = ano;
+		this.quantidade = quantidade;
+		this.tema = tema;
+	}
+	
+	
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public String getAutor() {
+		return autor;
+	}
+
+	public void setAutor(String autor) {
+		this.autor = autor;
+	}
+
+	public String getAno() {
+		return ano;
+	}
+
+	public void setAno(String ano) {
+		this.ano = ano;
+	}
+
+	public int getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(int quantidade) {
+		this.quantidade = quantidade;
+	}
+
+	public String getTema() {
+		return tema;
+	}
+
+	public void setTema(String tema) {
+		this.tema = tema;
+	}
+
+	public String toString() {
+		return "Livro [titulo=" + titulo + ", autor=" + autor + ", ano=" + ano + ", quantidade=" + quantidade
+				+ ", tema=" + tema + "]";
+	}
+
 }

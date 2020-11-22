@@ -1,65 +1,121 @@
 package view;
 
-import java.util.Scanner;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import model.Aluguel;
+import model.Espaco;
+import model.Evento;
+import model.Livro;
+import model.Usuario;
+import service.EventoService;
+import service.LivroService;
+import service.UsuarioService;
 
 public class Main {
-    
-    public static String menuInicial() {
-        Scanner entrada1 = new Scanner(System.in);
 
-        System.out.println("• LOGIN •");
-        System.out.print("[1] Usuário"
-                        + "\n[2] Funcionário"
-                        + "\nDigite a opção desejada: ");
-        String menu = entrada1.nextLine();
-        if (menu.equals("1")) {
-                return menuUsuario();
-        } else {
-                return menuFuncionario();
-        }	
+    public static void main(String[] args) throws IOException {
+
+
+        /*Usuario user = new Usuario("Andre", "123", "101010", "Externo");
+        Usuario user2 = new Usuario("Erick", "456", "202020", "Interno");
+
+        listaUsuario.add(user);
+        listaUsuario.add(user2);
+
+
+        for (Usuario usuario : listaUsuario) {
+                System.out.println(usuario.toString());
+        }*/
+
+        //System.out.println(aluguel1.toString());
+
+        //Cadastrar eventos
+        EventoService eventoService = new EventoService();
+        Espaco espaco1 = new Espaco(1, "Patio Externo", 2000);
+        eventoService.cadastrarEvento(1, "Outubro Rosa", espaco1, "22/11/2020", "18:00");
+        Espaco espaco2 = new Espaco(1, "Audotorio", 2000);
+        eventoService.cadastrarEvento(2, "Novembro Azul", espaco2, "22/11/2020", "18:00");
+
+        List<Evento> eventos = eventoService.listarEvento();
+        for (Evento evento : eventos) {
+                System.out.println(evento);
+        }
+
+        eventoService.exportarEvento(eventos);
+
+        /*//Cadastrar usuario
+        UsuarioService usuarioService = new UsuarioService(); 
+        usuarioService.cadastrarUsuario(1,"AndreGao", "arrombado", "123", "Interno"); 
+
+        usuarioService.cadastrarUsuario(2, "PiuPiu", "arrombado2", "123", "Externo"); 
+
+        List<Usuario> usuarios = usuarioService.listarUsuario();
+        for (Usuario usuario : usuarios) { 
+                System.out.println(usuario); 
+        }
+
+        usuarioService.exportarUsuario(usuarios);*/
+
+        /*//Importar dados usuarios
+        UsuarioService userService = new UsuarioService();
+        try {
+                List<Usuario> usuarios = userService.importarArquivo("C:/Users/eduar/OneDrive/�rea de Trabalho/usuarios.txt");
+                for (Usuario usuario : usuarios) {
+                        System.out.println("Eventos importados do txt: " + usuario);
+                }
+        } catch (Exception e) {
+                e.printStackTrace();
+        }*/
+
+        //Remover usuario
+        //userService.removerUsuario("Piu");
+        //Listar usuario
+        //System.out.println(userService.listarUsuario());
+
+
+        /*//Cadastrar livros
+        LivroService livroService = new LivroService();
+        livroService.cadastrarLivro(1, "Do mil ao milh�o", "Thiago Nigro", "2018", 5, "Finan�as"); 
+        livroService.cadastrarLivro(1, "Do mil ao bilh�o", "Thiago Iork", "2020", 5, "Finan�as"); 
+        List<Livro> licros = livroService.listarLivro(); 
+        for (Livro livro : licros) {
+                System.out.println(livro); 
+        }*/
+
+
+
+        /*//Importar dados eventos
+        EventoService eventoService = new EventoService();
+        try {
+                List<Evento> eventos = eventoService.importarArquivo("C:/Users/eduar/OneDrive/�rea de Trabalho/eventos.txt");
+                for (Evento evento : eventos) {
+                        System.out.println("Eventos importados do txt: " + evento);
+                }
+        } catch (IOException e) {
+                e.printStackTrace();
+        }*/
+
+
+        /*//Importar dados livros
+        LivroService livroService = new LivroService();
+        try {
+                List<Livro> livros = livroService.importarArquivo("C:/Users/eduar/OneDrive/�rea de Trabalho/livros.txt");
+                for (Livro livro : livros) {
+                        System.out.println("Livros importados do txt: " + livro);
+                }
+
+        } catch (Exception e) {
+                e.printStackTrace();
+        }*/
+
+        //Aluguel de livros
+        //livroService.alugarLivro("Mulheres que correm com os lobos");
+
+
+
     }
-    public static String menuUsuario() {
-        Scanner entrada = new Scanner(System.in);
-
-        StringBuilder sb = new StringBuilder ();
-        sb.append("####################### Menu Usuário ######################## \n");
-        sb.append("1- Buscar por livro \n");
-        sb.append("2- Reservar livro \n");
-        sb.append("3- Alugar livro \n");
-        sb.append("4- Solicitar ficha catalografica \n");
-        sb.append("5- Reservar sala de estudo \n");
-        sb.append("6- Visualizar ficha catalografica \n");
-        sb.append("7- Sair \n");
-        sb.append("################################################################ \n");
-
-        System.out.print(sb.toString());
-        System.out.print("Digite a opção desejada: ");
-        return entrada.nextLine();
-    }
-    
-    public static String menuFuncionario() {
-        Scanner entrada = new Scanner(System.in);
-
-        StringBuilder sb = new StringBuilder ();
-        sb.append("####################### Menu Funcionário ######################## \n");
-        sb.append("1- Cadastrar novo usuario \n");
-        sb.append("2- Remover usuario \n");
-        sb.append("3- Realizar aluguel de livro \n");
-        sb.append("4- Cadastrar eventos \n");
-        sb.append("5- Adicionar novos espaços \n");
-        sb.append("6- Gerar ficha catalografica \n");
-        sb.append("7- Importar dados de um arquivo sobre eventos ou funcionarios \n");
-        sb.append("8- Gerar relatorio  \n");
-        sb.append("9-Sair \n");
-        sb.append("################################################################ \n");
-
-        System.out.print(sb.toString());
-        return entrada.nextLine();
-    }
-      
-    public static void main(String[] args) {
-        
-        menuInicial();
-        
-    } 
 }

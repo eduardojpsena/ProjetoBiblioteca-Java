@@ -1,46 +1,70 @@
 package model;
 
+import java.util.ArrayList;
+
 public class Usuario {
-    //Atributos
-    private Aluno alunoExterno;
-    private Professor professor;
-    private MembroExterno membroExterno;
+	private long id;
+	private String nome;
+	private String login;
+    private String senha;
+    private String tipo;
+     
+	 //Construtores
+	 public Usuario() {
+	 }
+	
+	 public Usuario(long id, String nome, String login, String senha, String tipo) {
+	     this.id = id;
+		 this.nome = nome;
+	     this.login = login;
+	     this.senha = senha;
+	     this.tipo = tipo;
+	 }
+	 
+	 //Get e Set
+	 
+	 public long getId() {
+		return id;
+	}
 
-    //Construtores
-    public Usuario() {
-    }
+	public void setId(long id) {
+		this.id = id;
+	}
 
-    public Usuario(Aluno alunoExterno, Professor professor, MembroExterno membroExterno) {
-            this.alunoExterno = alunoExterno;
-            this.professor = professor;
-            this.membroExterno = membroExterno;
-    }
+	public String getLogin() {
+		return login;
+	}
 
-    //Get e Set
-    public Aluno getAlunoExterno() {
-            return alunoExterno;
-    }
-    public void setAlunoExterno(Aluno alunoExterno) {
-            this.alunoExterno = alunoExterno;
-    }
+	public void setLogin(String login) {
+		this.login = login;
+	}
+	
+	public String getNome() {
+	     return nome;
+	 }
+	public void setNome(String nome) {
+	     this.nome = nome;
+	 }
+		
+	 public String getSenha() {
+	     return senha;
+	 }
+	 public void setSenha(String senha) {
+	     this.senha = senha;
+	 }
+	
+	 public String getTipo() {
+	     return tipo;
+	 }
+	 public void setTipo(String tipo) {
+	     this.tipo = tipo;
+	 }
 
-    public Professor getProfessor() {
-            return professor;
-    }
-    public void setProfessor(Professor professor) {
-            this.professor = professor;
-    }
-
-    public MembroExterno getMembroExterno() {
-            return membroExterno;
-    }
-    public void setMembroExterno(MembroExterno membroExterno) {
-            this.membroExterno = membroExterno;
-    }
-
-    //toString
-    public String toString() {
-            return "Usuario [alunoExterno=" + alunoExterno + ", professor=" + professor + ", membroExterno=" + membroExterno
-                            + "]";
-    }	
+	//toString
+	public String toString() {
+		return "Usuario [id=" + id + ", nome=" + nome + ", login=" + login + ", senha=" + senha + ", tipo=" + tipo
+				+ "]";
+	}
 }
+	
+	 
