@@ -6,47 +6,62 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Aluguel;
-import model.Espaco;
-import model.Evento;
-import model.Livro;
-import model.Usuario;
-import service.EventoService;
-import service.LivroService;
-import service.UsuarioService;
+import model.entity.Aluguel;
+import model.entity.Espaco;
+import model.entity.Evento;
+import model.entity.Livro;
+import model.entity.SalaEstudo;
+import model.entity.Usuario;
+import model.service.EventoService;
+import model.service.LivroService;
+import model.service.SalaEstudoService;
+import model.service.UsuarioService;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
-
-
-        /*Usuario user = new Usuario("Andre", "123", "101010", "Externo");
-        Usuario user2 = new Usuario("Erick", "456", "202020", "Interno");
-
-        listaUsuario.add(user);
-        listaUsuario.add(user2);
-
-
-        for (Usuario usuario : listaUsuario) {
-                System.out.println(usuario.toString());
-        }*/
-
-        //System.out.println(aluguel1.toString());
-
-        //Cadastrar eventos
+        
+        /*//Cadastrar eventos
         EventoService eventoService = new EventoService();
-        Espaco espaco1 = new Espaco(1, "Patio Externo", 2000);
-        eventoService.cadastrarEvento(1, "Outubro Rosa", espaco1, "22/11/2020", "18:00");
-        Espaco espaco2 = new Espaco(1, "Audotorio", 2000);
-        eventoService.cadastrarEvento(2, "Novembro Azul", espaco2, "22/11/2020", "18:00");
-
+        Espaco espaco1 = new Espaco(1, "Piso Superior", 55);
+        eventoService.cadastrarEvento(1, "Outubro Rosa", espaco1, "20/12/2020","18:00");
+        Espaco espaco2 = new Espaco(2, "Entrada", 150);
+        eventoService.cadastrarEvento(2, "Novembro Azul", espaco2, "09/12/2020","15:00");
+        Espaco espaco3 = new Espaco(3, "Hall", 40);
+        eventoService.cadastrarEvento(3, "Novembro Azul", espaco3, "09/12/2020","18:00");
+        
         List<Evento> eventos = eventoService.listarEvento();
         for (Evento evento : eventos) {
                 System.out.println(evento);
         }
 
-        eventoService.exportarEvento(eventos);
-
+        eventoService.exportarEvento(eventos);*/
+        
+        /*//Cadastrar salasEstudo
+        SalaEstudoService salaService = new SalaEstudoService();
+        salaService.cadastrarSalasEstudo(1, "Sala 1", false);
+        salaService.cadastrarSalasEstudo(2, "Sala 2", false);
+        salaService.cadastrarSalasEstudo(3, "Sala 3", false);
+        salaService.cadastrarSalasEstudo(4, "Sala 4", false);
+        
+        List<SalaEstudo> salas = salaService.listarSalas();
+        for (SalaEstudo sala : salas) {
+            System.out.println(sala);
+        }
+        
+        salaService.exportarSala(salas);*/
+        
+        /*//Importar dados de salas de estudo
+        SalaEstudoService salaService = new SalaEstudoService();
+        try {
+            List<SalaEstudo> salasEstudo = salaService.importarArquivo("src/main/java/files/salasEstudo.txt");
+            for (SalaEstudo salaEstudo : salasEstudo) {
+                System.out.println("Salas importadas do txt com sucesso");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }*/
+        
         /*//Cadastrar usuario
         UsuarioService usuarioService = new UsuarioService(); 
         usuarioService.cadastrarUsuario(1,"AndreGao", "arrombado", "123", "Interno"); 
@@ -63,12 +78,12 @@ public class Main {
         /*//Importar dados usuarios
         UsuarioService userService = new UsuarioService();
         try {
-                List<Usuario> usuarios = userService.importarArquivo("C:/Users/eduar/OneDrive/�rea de Trabalho/usuarios.txt");
-                for (Usuario usuario : usuarios) {
-                        System.out.println("Eventos importados do txt: " + usuario);
-                }
+            List<Usuario> usuarios = userService.importarArquivo("C:/Users/eduar/OneDrive/�rea de Trabalho/usuarios.txt");
+            for (Usuario usuario : usuarios) {
+                    System.out.println("Eventos importados do txt: " + usuario);
+            }
         } catch (Exception e) {
-                e.printStackTrace();
+            e.printStackTrace();
         }*/
 
         //Remover usuario
@@ -114,8 +129,5 @@ public class Main {
 
         //Aluguel de livros
         //livroService.alugarLivro("Mulheres que correm com os lobos");
-
-
-
     }
 }

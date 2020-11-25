@@ -1,0 +1,5 @@
+ID,NOME,STATUS
+1,Sala 1,false
+2,Sala 2,false
+3,Sala 3,false
+4,Sala 4,false
