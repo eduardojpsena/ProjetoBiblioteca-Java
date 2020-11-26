@@ -79,7 +79,7 @@ public class Main {
         /*//Importar dados usuarios
         UsuarioService userService = new UsuarioService();
         try {
-            List<Usuario> usuarios = userService.importarArquivo("C:/Users/eduar/OneDrive/�rea de Trabalho/usuarios.txt");
+            List<Usuario> usuarios = userService.importarArquivo("src/main/java/files/usuarios.txt");
             for (Usuario usuario : usuarios) {
                     System.out.println("Eventos importados do txt: " + usuario);
             }
@@ -99,7 +99,7 @@ public class Main {
         livroService.cadastrarLivro(1, "Do mil ao bilh�o", "Thiago Iork", "2020", 5, "Finan�as"); 
         List<Livro> livros = livroService.listarLivro(); 
         for (Livro livro : livros) {
-                System.out.println(livro); 
+            System.out.println(livro); 
         }*/
 
 
@@ -125,11 +125,22 @@ public class Main {
 
         } catch (Exception e) {
                 e.printStackTrace();
+        }*/
+        
+        //System.out.println(livroService.fichaCatalografica("Mulheres que correm com os lobos"));
+        
+        /*List<Livro> livros = livroService.listarLivro();
+        List<Livro> livrosEnc = new ArrayList<>();
+        for (Livro livro : livros) {
+            if (livro.getTema().equals("Psicologia2")){
+                
+                livrosEnc.add(livro);
+            } 
         }
+        System.out.println(livrosEnc.size());
         
-        System.out.println(livroService.fichaCatalografica("Mulheres que correm com os lobos"));*/
+        System.out.println(livrosEnc);*/
         
-              
         //Aluguel de livros
         //livroService.alugarLivro("Mulheres que correm com os lobos");
     }

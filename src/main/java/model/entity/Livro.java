@@ -1,76 +1,74 @@
 package model.entity;
-
+/**
+ *
+ * @author andreLuis
+ */
 public class Livro {
-	private long id;
-	private String titulo;
-	private String autor;
-	private String ano;
-	private int quantidade;
-	private String tema;
-	
-	public Livro() {};
-	
-	public Livro(long id, String titulo, String autor, String ano, int quantidade, String tema) {
-		this.id = id;
-		this.titulo = titulo;
-		this.autor = autor;
-		this.ano = ano;
-		this.quantidade = quantidade;
-		this.tema = tema;
-	}
-	
-	
-	public long getId() {
-		return id;
-	}
+    //Atributos
+    private long id;
+    private String titulo;
+    private String autor;
+    private String ano;
+    private int quantidade;
+    private String tema;
 
-	public void setId(long id) {
-		this.id = id;
-	}
+    //Construtores
+    public Livro() {};
 
-	public String getTitulo() {
-		return titulo;
-	}
+    public Livro(long id, String titulo, String autor, String ano, int quantidade, String tema) {
+        this.id = id;
+        this.titulo = titulo;
+        this.autor = autor;
+        this.ano = ano;
+        this.quantidade = quantidade;
+        this.tema = tema;
+    }
 
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
-	}
+    //Get e Set
+    public long getId() {
+        return id;
+    }
+    public void setId(long id) {
+        this.id = id;
+    }
 
-	public String getAutor() {
-		return autor;
-	}
+    public String getTitulo() {
+        return titulo;
+    }
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
 
-	public void setAutor(String autor) {
-		this.autor = autor;
-	}
+    public String getAutor() {
+        return autor;
+    }
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
 
-	public String getAno() {
-		return ano;
-	}
+    public String getAno() {
+        return ano;
+    }
+    public void setAno(String ano) {
+        this.ano = ano;
+    }
 
-	public void setAno(String ano) {
-		this.ano = ano;
-	}
+    public int getQuantidade() {
+        return quantidade;
+    }
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
 
-	public int getQuantidade() {
-		return quantidade;
-	}
+    public String getTema() {
+        return tema;
+    }
+    public void setTema(String tema) {
+        this.tema = tema;
+    }
 
-	public void setQuantidade(int quantidade) {
-		this.quantidade = quantidade;
-	}
-
-	public String getTema() {
-		return tema;
-	}
-
-	public void setTema(String tema) {
-		this.tema = tema;
-	}
-
-	public String toString() {
-		return "Livro [titulo=" + titulo + ", autor=" + autor + ", ano=" + ano + ", quantidade=" + quantidade
-				+ ", tema=" + tema + "]";
-	}
-
+    public String toString() {
+        return "\nLivro ID: " + id + "\nTITULO: " + titulo +"\nAUTOR: "+ autor
+                + "\nANO: " + ano + "\nTEMA: " + tema + "\nQUANTIDADE: " + quantidade;
+    }
 }

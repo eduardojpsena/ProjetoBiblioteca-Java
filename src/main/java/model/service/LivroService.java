@@ -1,4 +1,8 @@
 package model.service;
+/**
+ *
+ * @author andreLuis
+ */
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -41,11 +45,11 @@ public class LivroService {
                 if (livros.get(i).getQuantidade() > 1) {
                     livros.get(i).setQuantidade(livros.get(i).getQuantidade()-1);
                     JOptionPane.showConfirmDialog(null, "Livro " + livros.get(i).getTitulo() 
-                    + " alugado com sucesso. \nQuantidade restante: " + livros.get(i).getQuantidade());
+                    + " alugado com sucesso.");
 
                 } else if (livros.get(i).getQuantidade() <= 1) {
                     JOptionPane.showConfirmDialog(null, "Livro " + livros.get(i).getTitulo() 
-                    + " não pode ser alugado. \nQuantidade restante: " + livros.get(i).getQuantidade());
+                    + " não pode ser alugado.");
                 }
             } 
         }
@@ -60,10 +64,12 @@ public class LivroService {
     public String fichaCatalografica(String titulo) {
         for (Livro livro : livros) {
             if (livro.getTitulo().equals(titulo)) {
-                return "••••• FICHA CATALOGRÁFICA •••••\n    LIVRO ID: " + livro.getId() 
-                + "\n    TITULO: " + livro.getTitulo() + "\n    AUTOR: " + livro.getAutor() 
-                + "\n    ANO: " + livro.getAno() + "\n    TEMA: " + livro.getTema();
-            }
+                String [] autor = livro.getAutor().split(" ");
+                return "••••••••••• FICHA CATALOGRÁFICA •••••••••••\n\n"
+                + autor[1] + ", " + autor[0] + "\n\n    " + livro.getTitulo() 
+                + "/" + livro.getAutor() + "-" + livro.getAno() + ".\n\n    1." 
+                + livro.getTema();
+            } 
         }
         return null;
     }

@@ -1,67 +1,66 @@
 package model.entity;
-
+/**
+ *
+ * @author eduardoSena
+ */
 public class Evento {
+    //Atributos
     private long id;
     private String nomeEvento;
     private Espaco espaco;
     private String data;
     private String hora;
 
-    public Evento() {
-    }
+    //Construtores
+    public Evento() {}
 
     public Evento(long id, String nomeEvento, Espaco espaco, String data, String hora) {
-            super();
-            this.id = id;
-            this.nomeEvento = nomeEvento;
-            this.espaco = espaco;
-            this.data = data;
-            this.hora = hora;
+        this.id = id;
+        this.nomeEvento = nomeEvento;
+        this.espaco = espaco;
+        this.data = data;
+        this.hora = hora;
     }
-
+    
+    //Get e Set
     public long getId() {
-            return id;
+        return id;
     }
-
     public void setId(long id) {
-            this.id = id;
+        this.id = id;
     }
-
 
     public String getNomeEvento() {
-            return nomeEvento;
+        return nomeEvento;
     }
-
     public void setNomeEvento(String nomeEvento) {
-            this.nomeEvento = nomeEvento;
+        this.nomeEvento = nomeEvento;
     }
 
     public Espaco getEspaco() {
-            return espaco;
+        return espaco;
     }
-
     public void setEspaco(Espaco espaco) {
-            this.espaco = espaco;
+        this.espaco = espaco;
     }
 
     public String getData() {
-            return data;
+        return data;
     }
-
     public void setData(String data) {
-            this.data = data;
+        this.data = data;
     }
 
     public String getHora() {
-            return hora;
+        return hora;
     }
-
     public void setHora(String hora) {
-            this.hora = hora;
+        this.hora = hora;
     }
 
+    //toString
     public String toString() {
-            return "Evento [id=" + id + ", nomeEvento=" + nomeEvento + ", espaco=" + espaco + ", data=" + data + ", hora="
-                            + hora + "]";
+        return "Evento [id=" + id + ", nomeEvento=" + nomeEvento + ", espaco=" + espaco 
+                + ", data=" + data + ", hora=" + hora + "]";
     }
 }

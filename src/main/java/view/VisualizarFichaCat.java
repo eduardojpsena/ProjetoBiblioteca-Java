@@ -18,15 +18,15 @@ public class VisualizarFichaCat extends javax.swing.JInternalFrame {
         
     public VisualizarFichaCat() {
         initComponents();
+        
         try { //Importando dados do arquivo contendo os livros cadastradas
             List<Livro> livros = livroService.importarArquivo("src/main/java/files/livros.txt");
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
-        
+          
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -65,6 +65,12 @@ public class VisualizarFichaCat extends javax.swing.JInternalFrame {
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Titulo");
 
+        txtTitulo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTituloActionPerformed(evt);
+            }
+        });
+
         btnVoltar.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         btnVoltar.setText("Voltar");
 
@@ -77,7 +83,7 @@ public class VisualizarFichaCat extends javax.swing.JInternalFrame {
         });
 
         txtFicha.setColumns(20);
-        txtFicha.setFont(new java.awt.Font("Comic Sans MS", 3, 14)); // NOI18N
+        txtFicha.setFont(new java.awt.Font("Comic Sans MS", 3, 12)); // NOI18N
         txtFicha.setRows(5);
         jScrollPane1.setViewportView(txtFicha);
 
@@ -105,17 +111,17 @@ public class VisualizarFichaCat extends javax.swing.JInternalFrame {
             .addGroup(jpVisualizarFichaCatLayout.createSequentialGroup()
                 .addContainerGap(27, Short.MAX_VALUE)
                 .addComponent(jLabel2)
-                .addGap(28, 28, 28)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, Short.MAX_VALUE)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(jpVisualizarFichaCatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnVoltar)
                     .addComponent(btnVisualizar))
-                .addGap(32, 32, 32))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -139,12 +145,18 @@ public class VisualizarFichaCat extends javax.swing.JInternalFrame {
                 
         for (Livro livro : livros) {
             if (nomeFicha.equals(livro.getTitulo())){
-                txtFicha.setText(livroService.fichaCatalografica(livro.getTitulo()));
-            } else {
-                txtFicha.setText("Livro Não Encontrado!!");
+                txtFicha.setText(livroService.fichaCatalografica(livro.getTitulo()));                
+                break;
+            } else if (nomeFicha.equals(livro.getTitulo()) == false){
+                txtFicha.setText("Livro Não Encontrado!!");           
             }
         }
+        txtTitulo.setText("");
     }//GEN-LAST:event_btnVisualizarActionPerformed
+
+    private void txtTituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTituloActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTituloActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

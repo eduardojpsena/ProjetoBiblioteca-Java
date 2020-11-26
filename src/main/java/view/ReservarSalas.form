@@ -106,20 +106,20 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="btnSala1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="btnSala3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="btnSala4" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="btnSala5" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btnSala1R" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btnSala3R" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btnSala4R" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btnSala2R" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="btnSala2" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnSala1L" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnSala6" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnSala7" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnSala9" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnSala2L" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnSala3L" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnSala4L" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -157,31 +157,31 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="btnSala1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnSala1R" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtSala1" alignment="3" max="32767" attributes="0"/>
                       <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btnSala2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnSala1L" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="txtSala2" alignment="3" max="32767" attributes="0"/>
                       <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btnSala5" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btnSala6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnSala2R" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnSala2L" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="btnSala3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnSala3R" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtSala3" alignment="3" max="32767" attributes="0"/>
                       <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btnSala7" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnSala3L" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="btnSala4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnSala4R" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtSala4" alignment="3" max="32767" attributes="0"/>
                       <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btnSala9" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnSala4L" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
                   <Component id="btnVoltar" min="-2" max="-2" attributes="0"/>
@@ -205,36 +205,36 @@
             <Property name="text" type="java.lang.String" value="Reservar"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btnSala1">
+        <Component class="javax.swing.JButton" name="btnSala1R">
           <Properties>
             <Property name="text" type="java.lang.String" value="&#x2022;"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSala1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSala1RActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btnSala2">
+        <Component class="javax.swing.JButton" name="btnSala1L">
           <Properties>
             <Property name="text" type="java.lang.String" value="&#x2022;"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSala2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSala1LActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btnSala3">
+        <Component class="javax.swing.JButton" name="btnSala3R">
           <Properties>
             <Property name="text" type="java.lang.String" value="&#x2022;"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSala3ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSala3RActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btnSala4">
+        <Component class="javax.swing.JButton" name="btnSala4R">
           <Properties>
             <Property name="text" type="java.lang.String" value="&#x2022;"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSala4ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSala4RActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="txtSala2">
@@ -372,36 +372,36 @@
             <Property name="text" type="java.lang.String" value="SALA 4"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btnSala5">
+        <Component class="javax.swing.JButton" name="btnSala2R">
           <Properties>
             <Property name="text" type="java.lang.String" value="&#x2022;"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSala5ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSala2RActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btnSala6">
+        <Component class="javax.swing.JButton" name="btnSala2L">
           <Properties>
             <Property name="text" type="java.lang.String" value="&#x2022;"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSala6ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSala2LActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btnSala7">
+        <Component class="javax.swing.JButton" name="btnSala3L">
           <Properties>
             <Property name="text" type="java.lang.String" value="&#x2022;"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSala7ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSala3LActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btnSala9">
+        <Component class="javax.swing.JButton" name="btnSala4L">
           <Properties>
             <Property name="text" type="java.lang.String" value="&#x2022;"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSala9ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSala4LActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
