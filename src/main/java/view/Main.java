@@ -5,6 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import model.entity.Aluguel;
 import model.entity.Espaco;
@@ -96,11 +97,10 @@ public class Main {
         LivroService livroService = new LivroService();
         livroService.cadastrarLivro(1, "Do mil ao milh�o", "Thiago Nigro", "2018", 5, "Finan�as"); 
         livroService.cadastrarLivro(1, "Do mil ao bilh�o", "Thiago Iork", "2020", 5, "Finan�as"); 
-        List<Livro> licros = livroService.listarLivro(); 
-        for (Livro livro : licros) {
+        List<Livro> livros = livroService.listarLivro(); 
+        for (Livro livro : livros) {
                 System.out.println(livro); 
         }*/
-
 
 
         /*//Importar dados eventos
@@ -118,15 +118,18 @@ public class Main {
         /*//Importar dados livros
         LivroService livroService = new LivroService();
         try {
-                List<Livro> livros = livroService.importarArquivo("C:/Users/eduar/OneDrive/�rea de Trabalho/livros.txt");
-                for (Livro livro : livros) {
-                        System.out.println("Livros importados do txt: " + livro);
-                }
+            List<Livro> livros = livroService.importarArquivo("src/main/java/files/livros.txt");
+            for (Livro livro : livros) {
+                System.out.println("Livros importados do txt: " + livro);
+            }
 
         } catch (Exception e) {
                 e.printStackTrace();
-        }*/
-
+        }
+        
+        System.out.println(livroService.fichaCatalografica("Mulheres que correm com os lobos"));*/
+        
+              
         //Aluguel de livros
         //livroService.alugarLivro("Mulheres que correm com os lobos");
     }

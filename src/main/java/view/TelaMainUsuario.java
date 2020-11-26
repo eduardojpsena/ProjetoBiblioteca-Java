@@ -6,7 +6,9 @@
 package view;
 
 import java.util.List;
+import model.entity.Livro;
 import model.entity.SalaEstudo;
+import model.service.LivroService;
 import model.service.SalaEstudoService;
 
 import view.BuscaLivro;
@@ -17,15 +19,24 @@ import view.BuscaLivro;
  */
 public class TelaMainUsuario extends javax.swing.JFrame {
     SalaEstudoService salaService = new SalaEstudoService();
+    LivroService livroService = new LivroService();
     
     public TelaMainUsuario() {
         initComponents();
-        try {
+        jbVisualizarFicha.setText("<html>Visualizar Ficha<br>  Catalografica</html>");
+        
+        try { //Importando dados do arquivo contendo as salas de estudos cadastradas
             List<SalaEstudo> salasEstudo = salaService.importarArquivo("src/main/java/files/salasEstudo.txt");
         } catch (Exception e) {
             e.printStackTrace();
         }
-        jbVisualizarFicha.setText("<html>Visualizar Ficha<br>  Catalografica</html>");
+                
+        try { //Importando dados do arquivo contendo os livros cadastradas
+            List<Livro> livros = livroService.importarArquivo("src/main/java/files/livros.txt");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
         
     }
 
@@ -55,7 +66,7 @@ public class TelaMainUsuario extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel2.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel2.setBackground(new java.awt.Color(51, 153, 255));
         jPanel2.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 jPanel2AncestorAdded(evt);
@@ -193,7 +204,7 @@ public class TelaMainUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jbBuscarLivroActionPerformed
 
     private void jbVisualizarFichaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbVisualizarFichaActionPerformed
-
+        
         VisualizarFichaCat telaVisualizarFicha = new VisualizarFichaCat();
         jDesktopPane1.add(telaVisualizarFicha);
         telaVisualizarFicha.setVisible(true);
