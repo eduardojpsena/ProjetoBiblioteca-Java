@@ -1,48 +1,51 @@
 package model.entity;
-
+/**
+ *
+ * @author andreLuis
+ */
 import java.util.List;
 
 public class Aluguel {
-	private long id;
-	private List<Livro> livros;
-	private Usuario usuario;
-	private String dataAluguel;
-	
-	public Aluguel() {};
-	
-	public Aluguel(List<Livro> livros, Usuario usuario, String dataAluguel) {
-		super();
-		this.livros = livros;
-		this.usuario = usuario;
-		this.dataAluguel = dataAluguel;
-	}
+    //Atributos
+    private long id;
+    private List<Livro> livros;
+    private Usuario usuario;
+    private String dataAluguel;
+    
+    //Construtores
+    public Aluguel() {};
 
-	public List<Livro> getLivros() {
-		return livros;
-	}
+    public Aluguel(List<Livro> livros, Usuario usuario, String dataAluguel) {
+        this.livros = livros;
+        this.usuario = usuario;
+        this.dataAluguel = dataAluguel;
+    }
 
-	public void setLivros(List<Livro> livros) {
-		this.livros = livros;
-	}
+    //Get e Set
+    public List<Livro> getLivros() {
+        return livros;
+    }
+    public void setLivros(List<Livro> livros) {
+        this.livros = livros;
+    }
 
-	public Usuario getUsuario() {
-		return usuario;
-	}
+    public Usuario getUsuario() {
+        return usuario;
+    }
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
 
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
-	}
+    public String getDataAluguel() {
+        return dataAluguel;
+    }
+    public void setDataAluguel(String dataAluguel) {
+        this.dataAluguel = dataAluguel;
+    }
 
-	public String getDataAluguel() {
-		return dataAluguel;
-	}
-
-	public void setDataAluguel(String dataAluguel) {
-		this.dataAluguel = dataAluguel;
-	}
-
-	
-	public String toString() {
-		return "Aluguel [livros=" + livros + ", usuario=" + usuario + ", dataAluguel=" + dataAluguel + "]";
-	}
+    //toString
+    public String toString() {
+        return "Aluguel [livros=" + livros + ", usuario=" + usuario 
+                + ", dataAluguel=" + dataAluguel + "]";
+    }
 }

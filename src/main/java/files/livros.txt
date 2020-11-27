@@ -1,21 +1,21 @@
 id,titulo,autor,ano,quantidade,tema
-1,Do mil ao milhao,Thiago Nigro,2018,5,Financas
-2,A nova psicologia do sucesso,Carol Dweck,2017,2,Psicologia
-3,O poder do habito,Charles Duhigg,2012,3,Psicologia
-4,Mulheres que correm com os lobos,Clarissa Pinkola2018,1,Psicologia
-5,O homem mais rico da Babilonia,George Samuel,2017,5,Auto Ajuda
-6,O milagre da manha,Hal Elrod,2016,3,Auto Ajuda
-7,As aventuras da programacao,Andre luis e Eduardo jose,2020,100,Tecnologia
-8,A arte da guerra,Sun Tzu,500 a.C,50,Desenvolvimento Pessoal
-9,Cloud computing - computacao em nuvem,CEZAR TAURION,2006,70,Tecnologia
-10,Estruturas de dados e algoritmos em java,Michael T. Goodrich e Roberto Tamassia,1997,150,Tecnologia
-11,Dragon ball z,Akira Toriyama,1984,500,Quadrinhos
-12,Cavaleiros do zodiaco,Masami Kurumada,1985,100,Quadrinhos
-13,Java guia do programador,PETER JANDL JUNIOR,2015,30,Tecnologia
-14,Python fluente: Programacao Clara, Concisa e Eficaz,Luciano Ramalho,2015,30,Tecnologia
-15,Querido john,Nicholas Sparks,2010,5,Romance
-16,The chronicles of narnia,C. S. Lewis,1956,7,Ficcao
-17,O senhor dos aneis,J. R. R. Tolkien,1937,10,Ficcao
-18,Game of Thrones,George R. R. Martin,2012,5,Ficcao
-19,Os segredos da mente milionaria,T. Harv Eker,2020,4,Desenvolvimento Pessoal
-20,Percy jackson e os olimpianos,Rick Riordan,2015,10,Ficcao
+1,Do Mil Ao Milhao,Thiago Nigro,2018,5,Financas
+2,A Nova Psicologia Do Sucesso,Carol Dweck,2017,2,Psicologia
+3,O Poder Do Habito,Charles Duhigg,2012,3,Psicologia
+4,Mulheres Que Correm Com Os Lobos,Clarissa Pinkola,2018,1,Psicologia
+5,O Homem Mais Rico da Babilonia,George Samuel,2017,5,Auto Ajuda
+6,O Milagre Da Manha,Hal Elrod,2016,3,Auto Ajuda
+7,As Aventuras Da Programacao,Andre Luis,2020,100,Tecnologia
+8,A Arte Da Guerra,Sun Tzu,500 a.C,50,Desenvolvimento Pessoal
+9,Cloud Computing - Computacao Em Nuvem,Cesar Taurion,2006,70,Tecnologia
+10,Estruturas De Dados e algoritmos em java,Michael Goodrich,1997,150,Tecnologia
+11,Dragon Ball Z,Akira Toriyama,1984,500,Quadrinhos
+12,Cavaleiros Do Zodiaco,Masami Kurumada,1985,100,Quadrinhos
+13,Java Guia Do Programador,Peter Jandl,2015,30,Tecnologia
+14,Python Fluente: Programacao Clara,Luciano Ramalho,2015,30,Tecnologia
+15,Querido John,Nicholas Sparks,2010,5,Romance
+16,The Chronicles Of Narnia,Clive Lewis,1956,7,Ficcao
+17,O Senhor Dos Aneis,John Tolkien,1937,10,Ficcao
+18,Game Of Thrones,George Martin,2012,5,Ficcao
+19,Os Segredos Da Mente Milionaria,Harv Eker,2020,4,Desenvolvimento Pessoal
+20,Percy Jackson E Os Olimpianos,Rick Riordan,2015,10,Ficcao

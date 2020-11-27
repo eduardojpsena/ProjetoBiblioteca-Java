@@ -1,4 +1,8 @@
 package model.service;
+/**
+ *
+ * @author eduardoSena
+ */
 
 import java.io.BufferedReader;
 import java.io.File;

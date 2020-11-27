@@ -1,9 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package view;
+/**
+ *
+ * @author eduardoSena
+ */
 
 import java.io.IOException;
 import java.util.List;
@@ -12,18 +11,13 @@ import java.util.logging.Logger;
 import model.entity.SalaEstudo;
 import model.service.SalaEstudoService;
 
-
-
-/**
- *
- * @author eduardoSena
- */
 public class ReservarSalas extends javax.swing.JInternalFrame {
     SalaEstudoService salaService = new SalaEstudoService();
         
     public ReservarSalas() {
         initComponents();
-        try {
+        
+        try { //Importando dados das salas de estudo
             List<SalaEstudo> salasEstudo = salaService.importarArquivo("src/main/java/files/salasEstudo.txt");
         } catch (Exception e) {
             e.printStackTrace();
@@ -61,10 +55,10 @@ public class ReservarSalas extends javax.swing.JInternalFrame {
         btnSala8 = new javax.swing.JButton();
         jpReservarSala = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        btnSala1 = new javax.swing.JButton();
-        btnSala2 = new javax.swing.JButton();
-        btnSala3 = new javax.swing.JButton();
-        btnSala4 = new javax.swing.JButton();
+        btnSala1R = new javax.swing.JButton();
+        btnSala1L = new javax.swing.JButton();
+        btnSala3R = new javax.swing.JButton();
+        btnSala4R = new javax.swing.JButton();
         txtSala2 = new javax.swing.JLabel();
         txtSala1 = new javax.swing.JLabel();
         txtSala3 = new javax.swing.JLabel();
@@ -77,10 +71,10 @@ public class ReservarSalas extends javax.swing.JInternalFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        btnSala5 = new javax.swing.JButton();
-        btnSala6 = new javax.swing.JButton();
-        btnSala7 = new javax.swing.JButton();
-        btnSala9 = new javax.swing.JButton();
+        btnSala2R = new javax.swing.JButton();
+        btnSala2L = new javax.swing.JButton();
+        btnSala3L = new javax.swing.JButton();
+        btnSala4L = new javax.swing.JButton();
 
         jButton4.setText("jButton4");
 
@@ -107,31 +101,43 @@ public class ReservarSalas extends javax.swing.JInternalFrame {
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Reservar");
 
-        btnSala1.setText("•");
-        btnSala1.addActionListener(new java.awt.event.ActionListener() {
+        btnSala1R.setBackground(new java.awt.Color(0, 0, 0));
+        btnSala1R.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        btnSala1R.setForeground(new java.awt.Color(255, 255, 255));
+        btnSala1R.setText("•");
+        btnSala1R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSala1ActionPerformed(evt);
+                btnSala1RActionPerformed(evt);
             }
         });
 
-        btnSala2.setText("•");
-        btnSala2.addActionListener(new java.awt.event.ActionListener() {
+        btnSala1L.setBackground(new java.awt.Color(0, 0, 0));
+        btnSala1L.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        btnSala1L.setForeground(new java.awt.Color(255, 255, 255));
+        btnSala1L.setText("•");
+        btnSala1L.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSala2ActionPerformed(evt);
+                btnSala1LActionPerformed(evt);
             }
         });
 
-        btnSala3.setText("•");
-        btnSala3.addActionListener(new java.awt.event.ActionListener() {
+        btnSala3R.setBackground(new java.awt.Color(0, 0, 0));
+        btnSala3R.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        btnSala3R.setForeground(new java.awt.Color(255, 255, 255));
+        btnSala3R.setText("•");
+        btnSala3R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSala3ActionPerformed(evt);
+                btnSala3RActionPerformed(evt);
             }
         });
 
-        btnSala4.setText("•");
-        btnSala4.addActionListener(new java.awt.event.ActionListener() {
+        btnSala4R.setBackground(new java.awt.Color(0, 0, 0));
+        btnSala4R.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        btnSala4R.setForeground(new java.awt.Color(255, 255, 255));
+        btnSala4R.setText("•");
+        btnSala4R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSala4ActionPerformed(evt);
+                btnSala4RActionPerformed(evt);
             }
         });
 
@@ -184,31 +190,43 @@ public class ReservarSalas extends javax.swing.JInternalFrame {
         jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("SALA 4");
 
-        btnSala5.setText("•");
-        btnSala5.addActionListener(new java.awt.event.ActionListener() {
+        btnSala2R.setBackground(new java.awt.Color(0, 0, 0));
+        btnSala2R.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        btnSala2R.setForeground(new java.awt.Color(255, 255, 255));
+        btnSala2R.setText("•");
+        btnSala2R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSala5ActionPerformed(evt);
+                btnSala2RActionPerformed(evt);
             }
         });
 
-        btnSala6.setText("•");
-        btnSala6.addActionListener(new java.awt.event.ActionListener() {
+        btnSala2L.setBackground(new java.awt.Color(0, 0, 0));
+        btnSala2L.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        btnSala2L.setForeground(new java.awt.Color(255, 255, 255));
+        btnSala2L.setText("•");
+        btnSala2L.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSala6ActionPerformed(evt);
+                btnSala2LActionPerformed(evt);
             }
         });
 
-        btnSala7.setText("•");
-        btnSala7.addActionListener(new java.awt.event.ActionListener() {
+        btnSala3L.setBackground(new java.awt.Color(0, 0, 0));
+        btnSala3L.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        btnSala3L.setForeground(new java.awt.Color(255, 255, 255));
+        btnSala3L.setText("•");
+        btnSala3L.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSala7ActionPerformed(evt);
+                btnSala3LActionPerformed(evt);
             }
         });
 
-        btnSala9.setText("•");
-        btnSala9.addActionListener(new java.awt.event.ActionListener() {
+        btnSala4L.setBackground(new java.awt.Color(0, 0, 0));
+        btnSala4L.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        btnSala4L.setForeground(new java.awt.Color(255, 255, 255));
+        btnSala4L.setText("•");
+        btnSala4L.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSala9ActionPerformed(evt);
+                btnSala4LActionPerformed(evt);
             }
         });
 
@@ -217,85 +235,91 @@ public class ReservarSalas extends javax.swing.JInternalFrame {
         jpReservarSalaLayout.setHorizontalGroup(
             jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpReservarSalaLayout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel10))
+                .addGap(130, 130, 130)
+                .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
                     .addGroup(jpReservarSalaLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel6)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jpReservarSalaLayout.createSequentialGroup()
+                        .addGap(12, 12, 12)
                         .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel9)
-                            .addComponent(jLabel10))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                        .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addGroup(jpReservarSalaLayout.createSequentialGroup()
-                                .addGap(12, 12, 12)
-                                .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btnSala1)
-                                    .addComponent(btnSala3)
-                                    .addComponent(btnSala4)
-                                    .addComponent(btnSala5))))
-                        .addGap(39, 39, 39)
-                        .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnSala2)
-                            .addComponent(jLabel4)
-                            .addComponent(btnSala6)
-                            .addComponent(btnSala7)
-                            .addComponent(btnSala9))
-                        .addGap(29, 29, 29)
-                        .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(btnVoltar)
-                                .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtSala4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtSala3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtSala2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jpReservarSalaLayout.createSequentialGroup()
-                                        .addGap(21, 21, 21)
-                                        .addComponent(jLabel7))))
-                            .addComponent(txtSala1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addComponent(btnSala1R)
+                            .addComponent(btnSala3R)
+                            .addComponent(btnSala4R)
+                            .addComponent(btnSala2R))))
+                .addGap(188, 188, 188)
+                .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
+                    .addComponent(btnSala2L)
+                    .addComponent(btnSala3L)
+                    .addComponent(btnSala4L)
+                    .addComponent(btnSala1L))
+                .addGap(101, 101, 101)
+                .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(txtSala4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtSala3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtSala2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jpReservarSalaLayout.createSequentialGroup()
+                            .addGap(21, 21, 21)
+                            .addComponent(jLabel7)))
+                    .addComponent(txtSala1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnVoltar, javax.swing.GroupLayout.Alignment.LEADING))
+                .addGap(0, 17, Short.MAX_VALUE))
+            .addGroup(jpReservarSalaLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel6)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jpReservarSalaLayout.setVerticalGroup(
             jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpReservarSalaLayout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
-                .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSala1)
-                    .addComponent(txtSala1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel1)
-                    .addComponent(btnSala2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtSala2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel8)
-                    .addComponent(btnSala5)
-                    .addComponent(btnSala6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSala3)
-                    .addComponent(txtSala3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel9)
-                    .addComponent(btnSala7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSala4)
-                    .addComponent(txtSala4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel10)
-                    .addComponent(btnSala9))
-                .addGap(64, 64, 64)
+                .addGap(121, 121, 121)
+                .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpReservarSalaLayout.createSequentialGroup()
+                        .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel7))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnSala1R)
+                            .addComponent(txtSala1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtSala2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel8)
+                            .addComponent(btnSala2R))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnSala3R)
+                            .addComponent(txtSala3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel9))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnSala4R)
+                            .addComponent(txtSala4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel10)))
+                    .addGroup(jpReservarSalaLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnSala1L)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnSala2L)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnSala3L)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnSala4L)))
+                .addGap(68, 68, 68)
                 .addComponent(btnVoltar)
-                .addGap(59, 59, 59))
+                .addGap(56, 56, 56))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -312,7 +336,7 @@ public class ReservarSalas extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnSala1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSala1ActionPerformed
+    private void btnSala1RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSala1RActionPerformed
         // TODO add your handling code here:
         txtSala1.setText("Sala Reservada");
         salaService.salasEstudo.get(0).setStatus(true);
@@ -323,9 +347,9 @@ public class ReservarSalas extends javax.swing.JInternalFrame {
         }
         System.out.println(salaService.listarSalas());
         
-    }//GEN-LAST:event_btnSala1ActionPerformed
+    }//GEN-LAST:event_btnSala1RActionPerformed
 
-    private void btnSala2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSala2ActionPerformed
+    private void btnSala1LActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSala1LActionPerformed
         // TODO add your handling code here:
         txtSala1.setText("Sala Livre");
         salaService.salasEstudo.get(0).setStatus(false);
@@ -336,9 +360,9 @@ public class ReservarSalas extends javax.swing.JInternalFrame {
         }
         System.out.println(salaService.listarSalas());
         
-    }//GEN-LAST:event_btnSala2ActionPerformed
+    }//GEN-LAST:event_btnSala1LActionPerformed
 
-    private void btnSala5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSala5ActionPerformed
+    private void btnSala2RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSala2RActionPerformed
         // TODO add your handling code here:
         txtSala2.setText("Sala Reservada");
         salaService.salasEstudo.get(1).setStatus(true);
@@ -348,9 +372,9 @@ public class ReservarSalas extends javax.swing.JInternalFrame {
             Logger.getLogger(ReservarSalas.class.getName()).log(Level.SEVERE, null, ex);
         }
         System.out.println(salaService.listarSalas());
-    }//GEN-LAST:event_btnSala5ActionPerformed
+    }//GEN-LAST:event_btnSala2RActionPerformed
 
-    private void btnSala6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSala6ActionPerformed
+    private void btnSala2LActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSala2LActionPerformed
         // TODO add your handling code here:
         txtSala2.setText("Sala Livre");
         salaService.salasEstudo.get(1).setStatus(false);
@@ -360,9 +384,9 @@ public class ReservarSalas extends javax.swing.JInternalFrame {
             Logger.getLogger(ReservarSalas.class.getName()).log(Level.SEVERE, null, ex);
         }
         System.out.println(salaService.listarSalas());
-    }//GEN-LAST:event_btnSala6ActionPerformed
+    }//GEN-LAST:event_btnSala2LActionPerformed
 
-    private void btnSala3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSala3ActionPerformed
+    private void btnSala3RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSala3RActionPerformed
         // TODO add your handling code here:
         txtSala3.setText("Sala Reservada");
         salaService.salasEstudo.get(2).setStatus(true);
@@ -372,9 +396,9 @@ public class ReservarSalas extends javax.swing.JInternalFrame {
             Logger.getLogger(ReservarSalas.class.getName()).log(Level.SEVERE, null, ex);
         }
         System.out.println(salaService.listarSalas());
-    }//GEN-LAST:event_btnSala3ActionPerformed
+    }//GEN-LAST:event_btnSala3RActionPerformed
 
-    private void btnSala7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSala7ActionPerformed
+    private void btnSala3LActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSala3LActionPerformed
         // TODO add your handling code here:
         txtSala3.setText("Sala Livre");
         salaService.salasEstudo.get(2).setStatus(false);
@@ -384,9 +408,9 @@ public class ReservarSalas extends javax.swing.JInternalFrame {
             Logger.getLogger(ReservarSalas.class.getName()).log(Level.SEVERE, null, ex);
         }
         System.out.println(salaService.listarSalas());
-    }//GEN-LAST:event_btnSala7ActionPerformed
+    }//GEN-LAST:event_btnSala3LActionPerformed
 
-    private void btnSala4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSala4ActionPerformed
+    private void btnSala4RActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSala4RActionPerformed
         // TODO add your handling code here:
         txtSala4.setText("Sala Reservada");
         salaService.salasEstudo.get(3).setStatus(true);
@@ -396,9 +420,9 @@ public class ReservarSalas extends javax.swing.JInternalFrame {
             Logger.getLogger(ReservarSalas.class.getName()).log(Level.SEVERE, null, ex);
         }
         System.out.println(salaService.listarSalas());
-    }//GEN-LAST:event_btnSala4ActionPerformed
+    }//GEN-LAST:event_btnSala4RActionPerformed
 
-    private void btnSala9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSala9ActionPerformed
+    private void btnSala4LActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSala4LActionPerformed
         // TODO add your handling code here:
         txtSala4.setText("Sala Livre");
         salaService.salasEstudo.get(3).setStatus(false);
@@ -408,19 +432,19 @@ public class ReservarSalas extends javax.swing.JInternalFrame {
             Logger.getLogger(ReservarSalas.class.getName()).log(Level.SEVERE, null, ex);
         }
         System.out.println(salaService.listarSalas());
-    }//GEN-LAST:event_btnSala9ActionPerformed
+    }//GEN-LAST:event_btnSala4LActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnSala1;
-    private javax.swing.JButton btnSala2;
-    private javax.swing.JButton btnSala3;
-    private javax.swing.JButton btnSala4;
-    private javax.swing.JButton btnSala5;
-    private javax.swing.JButton btnSala6;
-    private javax.swing.JButton btnSala7;
+    private javax.swing.JButton btnSala1L;
+    private javax.swing.JButton btnSala1R;
+    private javax.swing.JButton btnSala2L;
+    private javax.swing.JButton btnSala2R;
+    private javax.swing.JButton btnSala3L;
+    private javax.swing.JButton btnSala3R;
+    private javax.swing.JButton btnSala4L;
+    private javax.swing.JButton btnSala4R;
     private javax.swing.JButton btnSala8;
-    private javax.swing.JButton btnSala9;
     private javax.swing.JButton btnVoltar;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton4;

@@ -7,7 +7,7 @@ package view;
 
 /**
  *
- * @author eduar
+ * @author andreLuis
  */
 public class TelaMainFuncionario extends javax.swing.JFrame {
 
