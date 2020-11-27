@@ -65,6 +65,9 @@ public class VisualizarFichaCat extends javax.swing.JInternalFrame {
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Titulo");
 
+        txtTitulo.setBackground(new java.awt.Color(0, 0, 0));
+        txtTitulo.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        txtTitulo.setForeground(new java.awt.Color(255, 255, 255));
         txtTitulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTituloActionPerformed(evt);
@@ -82,8 +85,10 @@ public class VisualizarFichaCat extends javax.swing.JInternalFrame {
             }
         });
 
+        txtFicha.setBackground(new java.awt.Color(0, 0, 0));
         txtFicha.setColumns(20);
         txtFicha.setFont(new java.awt.Font("Comic Sans MS", 3, 12)); // NOI18N
+        txtFicha.setForeground(new java.awt.Color(255, 255, 255));
         txtFicha.setRows(5);
         jScrollPane1.setViewportView(txtFicha);
 
@@ -92,26 +97,27 @@ public class VisualizarFichaCat extends javax.swing.JInternalFrame {
         jpVisualizarFichaCatLayout.setHorizontalGroup(
             jpVisualizarFichaCatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpVisualizarFichaCatLayout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
+                .addContainerGap(194, Short.MAX_VALUE)
                 .addGroup(jpVisualizarFichaCatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jScrollPane1)
-                    .addGroup(jpVisualizarFichaCatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jpVisualizarFichaCatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpVisualizarFichaCatLayout.createSequentialGroup()
-                                .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 168, Short.MAX_VALUE)
-                                .addComponent(btnVisualizar))
-                            .addComponent(jLabel3)
-                            .addComponent(txtTitulo))
-                        .addComponent(jLabel2)))
-                .addContainerGap(24, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 342, Short.MAX_VALUE)
+                    .addGroup(jpVisualizarFichaCatLayout.createSequentialGroup()
+                        .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 168, Short.MAX_VALUE)
+                        .addComponent(btnVisualizar))
+                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtTitulo, javax.swing.GroupLayout.Alignment.LEADING))
+                .addContainerGap(194, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpVisualizarFichaCatLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jpVisualizarFichaCatLayout.setVerticalGroup(
             jpVisualizarFichaCatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpVisualizarFichaCatLayout.createSequentialGroup()
-                .addContainerGap(27, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel2)
-                .addGap(18, 18, 18)
+                .addGap(58, 58, 58)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -121,7 +127,7 @@ public class VisualizarFichaCat extends javax.swing.JInternalFrame {
                 .addGroup(jpVisualizarFichaCatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnVoltar)
                     .addComponent(btnVisualizar))
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

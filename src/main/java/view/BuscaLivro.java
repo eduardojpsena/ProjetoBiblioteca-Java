@@ -66,6 +66,8 @@ public class BuscaLivro extends javax.swing.JInternalFrame {
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Titulo");
 
+        txtTitulo.setBackground(new java.awt.Color(0, 0, 0));
+        txtTitulo.setForeground(new java.awt.Color(255, 255, 255));
         txtTitulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTituloActionPerformed(evt);
@@ -76,6 +78,9 @@ public class BuscaLivro extends javax.swing.JInternalFrame {
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Autor");
 
+        txtAutor.setBackground(new java.awt.Color(0, 0, 0));
+        txtAutor.setForeground(new java.awt.Color(255, 255, 255));
+
         btnVoltar.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         btnVoltar.setText("Voltar");
 
@@ -83,8 +88,13 @@ public class BuscaLivro extends javax.swing.JInternalFrame {
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Categoria");
 
+        txtCategoria.setBackground(new java.awt.Color(0, 0, 0));
+        txtCategoria.setForeground(new java.awt.Color(255, 255, 255));
+
+        txtArea.setBackground(new java.awt.Color(0, 0, 0));
         txtArea.setColumns(20);
         txtArea.setFont(new java.awt.Font("Comic Sans MS", 3, 12)); // NOI18N
+        txtArea.setForeground(new java.awt.Color(255, 255, 255));
         txtArea.setRows(5);
         jScrollPane1.setViewportView(txtArea);
 
@@ -117,10 +127,9 @@ public class BuscaLivro extends javax.swing.JInternalFrame {
         jpBuscarLivroLayout.setHorizontalGroup(
             jpBuscarLivroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpBuscarLivroLayout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
+                .addContainerGap(194, Short.MAX_VALUE)
                 .addGroup(jpBuscarLivroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1)
                     .addGroup(jpBuscarLivroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(jpBuscarLivroLayout.createSequentialGroup()
                             .addComponent(jLabel3)
@@ -139,14 +148,18 @@ public class BuscaLivro extends javax.swing.JInternalFrame {
                             .addGroup(jpBuscarLivroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(txtCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jButton3)))))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(194, Short.MAX_VALUE))
+            .addGroup(jpBuscarLivroLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jpBuscarLivroLayout.setVerticalGroup(
             jpBuscarLivroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpBuscarLivroLayout.createSequentialGroup()
-                .addContainerGap(28, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(55, 55, 55)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -171,7 +184,7 @@ public class BuscaLivro extends javax.swing.JInternalFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnVoltar)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -227,19 +240,19 @@ public class BuscaLivro extends javax.swing.JInternalFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         List<Livro> livros = livroService.listarLivro();
+        String txtLiv = "";
         //Primeira letra de cada palavra maiuscula
         String nomeCategoria = livroService.nomeTitle(txtCategoria.getText());
-        List<Livro> livrosEnc = new ArrayList<>();
-              
+                      
         for (Livro livro : livros) {
             if (nomeCategoria.equals(livro.getTema())){
-                livrosEnc.add(livro); 
+                txtLiv += livro + "\n••••••••••••••••••••••••••••••••\n";
+                
+            } else if (nomeCategoria.equals(livro.getTema()) == false){
+                txtArea.setText("Livro não encontrado");
             }
-            if (livrosEnc.size() > 0) {
-                txtArea.setText(livrosEnc.toString());
-            } else if (livrosEnc.size() == 0) {
-                txtArea.setText("Livro não encontrado!");
-            }
+            txtArea.setText(txtLiv);
+            
         }
         txtCategoria.setText("");        
     }//GEN-LAST:event_jButton3ActionPerformed

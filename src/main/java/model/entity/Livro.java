@@ -68,7 +68,7 @@ public class Livro {
     }
 
     public String toString() {
-        return "\nLivro ID: " + id + "\nTITULO: " + titulo +"\nAUTOR: "+ autor
+        return "Livro ID: " + id + "\nTITULO: " + titulo +"\nAUTOR: "+ autor
                 + "\nANO: " + ano + "\nTEMA: " + tema + "\nQUANTIDADE: " + quantidade;
     }
 }

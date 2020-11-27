@@ -44,9 +44,7 @@ public class LivroService {
             if (livros.get(i).getTitulo().equals(titulo)) {
                 if (livros.get(i).getQuantidade() > 1) {
                     livros.get(i).setQuantidade(livros.get(i).getQuantidade()-1);
-                    JOptionPane.showConfirmDialog(null, "Livro " + livros.get(i).getTitulo() 
-                    + " alugado com sucesso.");
-
+                    
                 } else if (livros.get(i).getQuantidade() <= 1) {
                     JOptionPane.showConfirmDialog(null, "Livro " + livros.get(i).getTitulo() 
                     + " não pode ser alugado.");

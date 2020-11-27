@@ -101,6 +101,9 @@ public class ReservarSalas extends javax.swing.JInternalFrame {
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Reservar");
 
+        btnSala1R.setBackground(new java.awt.Color(0, 0, 0));
+        btnSala1R.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        btnSala1R.setForeground(new java.awt.Color(255, 255, 255));
         btnSala1R.setText("•");
         btnSala1R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,6 +111,9 @@ public class ReservarSalas extends javax.swing.JInternalFrame {
             }
         });
 
+        btnSala1L.setBackground(new java.awt.Color(0, 0, 0));
+        btnSala1L.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        btnSala1L.setForeground(new java.awt.Color(255, 255, 255));
         btnSala1L.setText("•");
         btnSala1L.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,6 +121,9 @@ public class ReservarSalas extends javax.swing.JInternalFrame {
             }
         });
 
+        btnSala3R.setBackground(new java.awt.Color(0, 0, 0));
+        btnSala3R.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        btnSala3R.setForeground(new java.awt.Color(255, 255, 255));
         btnSala3R.setText("•");
         btnSala3R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,6 +131,9 @@ public class ReservarSalas extends javax.swing.JInternalFrame {
             }
         });
 
+        btnSala4R.setBackground(new java.awt.Color(0, 0, 0));
+        btnSala4R.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        btnSala4R.setForeground(new java.awt.Color(255, 255, 255));
         btnSala4R.setText("•");
         btnSala4R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -178,6 +190,9 @@ public class ReservarSalas extends javax.swing.JInternalFrame {
         jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("SALA 4");
 
+        btnSala2R.setBackground(new java.awt.Color(0, 0, 0));
+        btnSala2R.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        btnSala2R.setForeground(new java.awt.Color(255, 255, 255));
         btnSala2R.setText("•");
         btnSala2R.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -185,6 +200,9 @@ public class ReservarSalas extends javax.swing.JInternalFrame {
             }
         });
 
+        btnSala2L.setBackground(new java.awt.Color(0, 0, 0));
+        btnSala2L.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        btnSala2L.setForeground(new java.awt.Color(255, 255, 255));
         btnSala2L.setText("•");
         btnSala2L.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -192,6 +210,9 @@ public class ReservarSalas extends javax.swing.JInternalFrame {
             }
         });
 
+        btnSala3L.setBackground(new java.awt.Color(0, 0, 0));
+        btnSala3L.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        btnSala3L.setForeground(new java.awt.Color(255, 255, 255));
         btnSala3L.setText("•");
         btnSala3L.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -199,6 +220,9 @@ public class ReservarSalas extends javax.swing.JInternalFrame {
             }
         });
 
+        btnSala4L.setBackground(new java.awt.Color(0, 0, 0));
+        btnSala4L.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        btnSala4L.setForeground(new java.awt.Color(255, 255, 255));
         btnSala4L.setText("•");
         btnSala4L.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -211,86 +235,91 @@ public class ReservarSalas extends javax.swing.JInternalFrame {
         jpReservarSalaLayout.setHorizontalGroup(
             jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpReservarSalaLayout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel10))
+                .addGap(130, 130, 130)
+                .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
                     .addGroup(jpReservarSalaLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel6)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jpReservarSalaLayout.createSequentialGroup()
+                        .addGap(12, 12, 12)
                         .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel9)
-                            .addComponent(jLabel10))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                        .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addGroup(jpReservarSalaLayout.createSequentialGroup()
-                                .addGap(12, 12, 12)
-                                .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btnSala1R)
-                                    .addComponent(btnSala3R)
-                                    .addComponent(btnSala4R)
-                                    .addComponent(btnSala2R))))
-                        .addGap(39, 39, 39)
-                        .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnSala1L)
-                            .addComponent(jLabel4)
-                            .addComponent(btnSala2L)
-                            .addComponent(btnSala3L)
-                            .addComponent(btnSala4L))
-                        .addGap(29, 29, 29)
-                        .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(btnVoltar)
-                                .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtSala4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtSala3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtSala2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jpReservarSalaLayout.createSequentialGroup()
-                                        .addGap(21, 21, 21)
-                                        .addComponent(jLabel7))))
-                            .addComponent(txtSala1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addComponent(btnSala1R)
+                            .addComponent(btnSala3R)
+                            .addComponent(btnSala4R)
+                            .addComponent(btnSala2R))))
+                .addGap(188, 188, 188)
+                .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
+                    .addComponent(btnSala2L)
+                    .addComponent(btnSala3L)
+                    .addComponent(btnSala4L)
+                    .addComponent(btnSala1L))
+                .addGap(101, 101, 101)
+                .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(txtSala4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtSala3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtSala2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jpReservarSalaLayout.createSequentialGroup()
+                            .addGap(21, 21, 21)
+                            .addComponent(jLabel7)))
+                    .addComponent(txtSala1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnVoltar, javax.swing.GroupLayout.Alignment.LEADING))
+                .addGap(0, 17, Short.MAX_VALUE))
+            .addGroup(jpReservarSalaLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel6)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jpReservarSalaLayout.setVerticalGroup(
             jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpReservarSalaLayout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
+                .addGap(121, 121, 121)
                 .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel7)
-                        .addComponent(jLabel4)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSala1R)
-                    .addComponent(txtSala1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel1)
-                    .addComponent(btnSala1L))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtSala2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel8)
-                    .addComponent(btnSala2R)
-                    .addComponent(btnSala2L))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSala3R)
-                    .addComponent(txtSala3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel9)
-                    .addComponent(btnSala3L))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSala4R)
-                    .addComponent(txtSala4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel10)
-                    .addComponent(btnSala4L))
-                .addGap(64, 64, 64)
+                    .addGroup(jpReservarSalaLayout.createSequentialGroup()
+                        .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel7))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnSala1R)
+                            .addComponent(txtSala1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtSala2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel8)
+                            .addComponent(btnSala2R))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnSala3R)
+                            .addComponent(txtSala3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel9))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnSala4R)
+                            .addComponent(txtSala4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel10)))
+                    .addGroup(jpReservarSalaLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnSala1L)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnSala2L)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnSala3L)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnSala4L)))
+                .addGap(68, 68, 68)
                 .addComponent(btnVoltar)
-                .addGap(59, 59, 59))
+                .addGap(56, 56, 56))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

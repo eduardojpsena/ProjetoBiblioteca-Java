@@ -77,6 +77,9 @@ public class ReservarLivro extends javax.swing.JInternalFrame {
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Titulo");
 
+        txtTitulo.setBackground(new java.awt.Color(0, 0, 0));
+        txtTitulo.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        txtTitulo.setForeground(new java.awt.Color(255, 255, 255));
         txtTitulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTituloActionPerformed(evt);
@@ -86,6 +89,10 @@ public class ReservarLivro extends javax.swing.JInternalFrame {
         jLabel5.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Usuario");
+
+        txtUsuario.setBackground(new java.awt.Color(0, 0, 0));
+        txtUsuario.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        txtUsuario.setForeground(new java.awt.Color(255, 255, 255));
 
         btnVoltar.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         btnVoltar.setText("Voltar");
@@ -98,7 +105,10 @@ public class ReservarLivro extends javax.swing.JInternalFrame {
             }
         });
 
+        txtArea.setBackground(new java.awt.Color(0, 0, 0));
         txtArea.setColumns(20);
+        txtArea.setFont(new java.awt.Font("Comic Sans MS", 3, 12)); // NOI18N
+        txtArea.setForeground(new java.awt.Color(255, 255, 255));
         txtArea.setRows(5);
         jScrollPane1.setViewportView(txtArea);
 
@@ -107,9 +117,8 @@ public class ReservarLivro extends javax.swing.JInternalFrame {
         jpReservarLivroLayout.setHorizontalGroup(
             jpReservarLivroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpReservarLivroLayout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
+                .addContainerGap(194, Short.MAX_VALUE)
                 .addGroup(jpReservarLivroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel2)
                     .addComponent(jLabel5)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpReservarLivroLayout.createSequentialGroup()
                         .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -119,14 +128,18 @@ public class ReservarLivro extends javax.swing.JInternalFrame {
                     .addComponent(txtTitulo)
                     .addComponent(txtUsuario)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(194, Short.MAX_VALUE))
+            .addGroup(jpReservarLivroLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jpReservarLivroLayout.setVerticalGroup(
             jpReservarLivroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpReservarLivroLayout.createSequentialGroup()
-                .addContainerGap(30, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(56, 56, 56)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -140,7 +153,7 @@ public class ReservarLivro extends javax.swing.JInternalFrame {
                 .addGroup(jpReservarLivroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnReservar)
                     .addComponent(btnVoltar))
-                .addContainerGap(78, Short.MAX_VALUE))
+                .addContainerGap(101, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -176,9 +189,6 @@ public class ReservarLivro extends javax.swing.JInternalFrame {
                                 + " reservado com sucesso \nDias reservado: 3 dias \n"
                                         + "Multa por atraso: R$ 2,00 por dia" );
                         break;
-                    } else if (usuario.getLogin().equals(txtUsuario.getText()) == false){
-                        txtArea.setText("Usuario inválido");
-                        
                     }
                     if (usuario.getLogin().equals(txtUsuario.getText()) && usuario.getTipo().equals("Professor")){
                         livroService.alugarLivro(livro.getTitulo());
@@ -186,16 +196,14 @@ public class ReservarLivro extends javax.swing.JInternalFrame {
                                 + " reservado com sucesso \nDias reservado: 10 dias \n"
                                         + "Multa por atraso: R$ 1,00 por dia" );
                         break;
-                    } else if (usuario.getLogin().equals(txtUsuario.getText()) == false){
-                        txtArea.setText("Usuario inválido");
-                        
-                    }
+                    } 
                     if (usuario.getLogin().equals(txtUsuario.getText()) && usuario.getTipo().equals("Externo")){
                         livroService.alugarLivro(livro.getTitulo());
                         txtArea.setText("Livro " + livro.getTitulo()
                                 + " reservado com sucesso");
                         break;
-                    } else if (usuario.getLogin().equals(txtUsuario.getText()) == false){
+                    } 
+                    if (usuario.getLogin().equals(txtUsuario.getText()) == false){
                         txtArea.setText("Usuario inválido");
                         
                     }
@@ -206,9 +214,9 @@ public class ReservarLivro extends javax.swing.JInternalFrame {
  
             }
         }
-        
-        
-        
+        txtUsuario.setText("");
+        txtTitulo.setText("");
+       
     }//GEN-LAST:event_btnReservarActionPerformed
 
     private void txtTituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTituloActionPerformed
