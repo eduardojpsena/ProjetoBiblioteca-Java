@@ -7,6 +7,7 @@ package model.service;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -71,7 +72,22 @@ public class LivroService {
         }
         return null;
     }
+    //Exportar dados da lista de livros para um arquivo externo .txt
+    public void exportarLivro(List<Livro> livros) throws IOException {
+        File diretorio = new File("src/main/java/files");
+        diretorio.mkdir();
 
+        if (diretorio.isDirectory()) {
+                FileWriter arquivo = new FileWriter("src/main/java/files/livros.txt", false);
+                arquivo.write("ID,"+"TITULO,"+"AUTOR,"+"ANO,"+"QUANTIDADE,"+"TEMA\n");
+                for (Livro livro : livros) {
+                        arquivo.write(livro.getId() + "," + livro.getTitulo() + "," 
+                                + livro.getAutor() + "," + livro.getAno() + "," 
+                                + livro.getQuantidade() + "," + livro.getTema() + "\n");
+                }
+                arquivo.close();
+        }
+    }
     //Importar livros de um arquivo externo para a lista de livros
     public List<Livro> importarArquivo(String nomeArquivo) throws IOException {
         File arquivo = new File(nomeArquivo);

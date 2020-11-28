@@ -1,4 +1,4 @@
-id,titulo,autor,ano,quantidade,tema
+ID,TITULO,AUTOR,ANO,QUANTIDADE,TEMA
 1,Do Mil Ao Milhao,Thiago Nigro,2018,5,Financas
 2,A Nova Psicologia Do Sucesso,Carol Dweck,2017,2,Psicologia
 3,O Poder Do Habito,Charles Duhigg,2012,3,Psicologia
@@ -19,3 +19,6 @@ id,titulo,autor,ano,quantidade,tema
 18,Game Of Thrones,George Martin,2012,5,Ficcao
 19,Os Segredos Da Mente Milionaria,Harv Eker,2020,4,Desenvolvimento Pessoal
 20,Percy Jackson E Os Olimpianos,Rick Riordan,2015,10,Ficcao
+21,A Lista De Chindler,Hitler,1996,10,Terror
+22,A Bola Que Nao Rolava,Eduardo Jose,2020,1,Ficcao
+23,A Historia Da Historia,Jaoa,2020,20,Historia
