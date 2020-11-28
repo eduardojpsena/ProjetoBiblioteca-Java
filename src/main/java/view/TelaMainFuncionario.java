@@ -95,6 +95,11 @@ public class TelaMainFuncionario extends javax.swing.JFrame {
         });
 
         btnCadastrarUsuario.setText("Cadastrar Usuário");
+        btnCadastrarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadastrarUsuarioActionPerformed(evt);
+            }
+        });
 
         btnRemoverUsuario.setText("Remover Usuário");
 
@@ -221,7 +226,10 @@ public class TelaMainFuncionario extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCadastrarLivroActionPerformed
 
     private void btnGerarFichaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerarFichaActionPerformed
-        // TODO add your handling code here:
+        
+        GerarFichaCat telaGerarFicha = new GerarFichaCat();
+        jDesktopPane1.add(telaGerarFicha);
+        telaGerarFicha.setVisible(true);
     }//GEN-LAST:event_btnGerarFichaActionPerformed
 
     private void btnBuscarLivroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarLivroActionPerformed
@@ -239,11 +247,18 @@ public class TelaMainFuncionario extends javax.swing.JFrame {
     }//GEN-LAST:event_btnVisualizarFichaActionPerformed
 
     private void btnAlugarLivroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlugarLivroActionPerformed
-
-        ReservarLivro telaReservarLivro = new ReservarLivro();
-        jDesktopPane1.add(telaReservarLivro);
-        telaReservarLivro.setVisible(true);
+        
+        AlugarLivro telaAlugarLivro = new AlugarLivro();
+        jDesktopPane1.add(telaAlugarLivro);
+        telaAlugarLivro.setVisible(true);
     }//GEN-LAST:event_btnAlugarLivroActionPerformed
+
+    private void btnCadastrarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarUsuarioActionPerformed
+        
+        CadastrarUsuario telaCadastroUsuario = new CadastrarUsuario();
+        jDesktopPane1.add(telaCadastroUsuario);
+        telaCadastroUsuario.setVisible(true);
+    }//GEN-LAST:event_btnCadastrarUsuarioActionPerformed
 
     /**
      * @param args the command line arguments

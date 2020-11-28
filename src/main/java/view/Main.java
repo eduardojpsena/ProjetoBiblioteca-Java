@@ -104,7 +104,6 @@ public class Main {
             System.out.println(livro); 
         }*/
 
-
         /*//Importar dados eventos
         EventoService eventoService = new EventoService();
         try {
@@ -117,17 +116,17 @@ public class Main {
         }*/
 
 
-        //Importar dados livros
+        /*//Importar dados livros
         LivroService livroService = new LivroService();
         try {
             List<Livro> livros = livroService.importarArquivo("src/main/java/files/livros.txt");
             for (Livro livro : livros) {
-                System.out.println("Livros importados do txt: " + livro);
+                //System.out.println("Livros importados do txt: " + livro);
             }
 
         } catch (Exception e) {
                 e.printStackTrace();
-        }
+        }*/
         
         //System.out.println(livroService.fichaCatalografica("Mulheres que correm com os lobos"));
         
@@ -143,12 +142,15 @@ public class Main {
         
         System.out.println(livrosEnc);*/
         
-        //Aluguel de livros
-        livroService.alugarLivro("Mulheres que correm com os lobos");
+        /*//Aluguel de livros
+        livroService.alugarLivro("Do Mil Ao Milhao");
+        System.out.println("Livro alugado");
+        List<Livro> livros = livroService.listarLivro();
         
-        System.out.println(livroService.listarLivro());
+        livroService.exportarLivro(livros);*/
         
-        /*//Cadastrar ficha catalografica e exportar dados para arquivo txt
+        
+        //Cadastrar ficha catalografica e exportar dados para arquivo txt
         FichaCatalograficaService fichasService = new FichaCatalograficaService();
         fichasService.cadastrarFicha(1, "Producao Artesanal De Cerveja Pilsen", "Eduardo Sena"
                 , "2018", 50, "12-34567-89-0", "Cerveja, Quimica, Producao Artesanal");
@@ -159,8 +161,10 @@ public class Main {
             System.out.println(fichaCatalografica);
         }
         
-        fichasService.exportarUsuario(fichasCat);
+        System.out.println(fichasCat.get(fichasCat.size()-1).getId() + 1);
         
-        System.out.println(fichasService.VisualizarFichaCatalografica("Producao Artesanal De Cerveja Pilsen"));*/
+        //fichasService.exportarFichas(fichasCat);
+        
+        System.out.println(fichasService.VisualizarFichaCatalografica("Producao Artesanal De Cerveja Pilsen"));
     }
 }

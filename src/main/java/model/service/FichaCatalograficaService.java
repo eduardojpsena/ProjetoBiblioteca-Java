@@ -32,7 +32,7 @@ public class FichaCatalograficaService {
     }
     
     //Exportar dados da lista de fichas catalograficas para um arquivo externo .txt
-    public void exportarUsuario(List<FichaCatalografica> fichas) throws IOException {
+    public void exportarFichas(List<FichaCatalografica> fichas) throws IOException {
         File diretorio = new File("src/main/java/files");
         diretorio.mkdir();
 

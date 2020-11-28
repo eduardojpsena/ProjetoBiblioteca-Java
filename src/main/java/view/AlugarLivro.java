@@ -9,7 +9,10 @@ package view;
  * @author eduardoSena
  */
 
+import java.io.IOException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import model.entity.Livro;
 import model.entity.Usuario;
 import model.service.LivroService;
@@ -173,27 +176,43 @@ public class AlugarLivro extends javax.swing.JInternalFrame {
         for (Livro livro : livros) {
             if (nomeLivro.equals(livro.getTitulo())){
                 if (livro.getQuantidade() <= 1){
-                    txtArea.setText("Livro " + livro.getTitulo() + " não pode ser reservado");
+                    txtArea.setText("Livro " + livro.getTitulo() + " não pode ser alugado");
                     break;
                 }
                 for (Usuario usuario : usuarios) {
                     if (usuario.getLogin().equals(txtUsuario.getText()) && usuario.getTipo().equals("Interno")){
                         livroService.alugarLivro(livro.getTitulo());
-                        txtArea.setText("•      Reservado com sucesso      •"
+                        try {
+                            livroService.exportarLivro(livros);
+                        } catch (IOException ex) {
+                            Logger.getLogger(AlugarLivro.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                        txtArea.setText("•      Alugado com sucesso      •"
                                 + "\n- Livro: " + livro.getTitulo()
-                                + "\n- Aluno: " + usuario.getNome());
+                                + "\n- Aluno: " + usuario.getNome() 
+                                + "\n- ");
                         break;
                     }
                     if (usuario.getLogin().equals(txtUsuario.getText()) && usuario.getTipo().equals("Professor")){
                         livroService.alugarLivro(livro.getTitulo());
-                        txtArea.setText("•      Reservado com sucesso      •"
+                        try {
+                            livroService.exportarLivro(livros);
+                        } catch (IOException ex) {
+                            Logger.getLogger(AlugarLivro.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                        txtArea.setText("•      Alugado com sucesso      •"
                                 + "\n- Livro: " + livro.getTitulo()
                                 + "\n- Professor: " + usuario.getNome());
                         break;
                     } 
                     if (usuario.getLogin().equals(txtUsuario.getText()) && usuario.getTipo().equals("Externo")){
                         livroService.alugarLivro(livro.getTitulo());
-                        txtArea.setText("•      Reservado com sucesso      •"
+                        try {
+                            livroService.exportarLivro(livros);
+                        } catch (IOException ex) {
+                            Logger.getLogger(AlugarLivro.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                        txtArea.setText("•      Alugado com sucesso      •"
                                 + "\n- Livro: " + livro.getTitulo()
                                 + "\n- Usuário externo: " + usuario.getNome());
                         break;
