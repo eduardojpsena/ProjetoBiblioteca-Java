@@ -158,7 +158,7 @@ public class VisualizarFichaCat extends javax.swing.JInternalFrame {
                 txtFicha.setText("Livro Não Encontrado!!");
             }
         }
-        
+        System.out.println(fichas);
         txtTitulo.setText("");
     }//GEN-LAST:event_btnVisualizarActionPerformed
 

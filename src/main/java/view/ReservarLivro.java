@@ -171,7 +171,7 @@ public class ReservarLivro extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnReservarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReservarActionPerformed
-        // TODO add your handling code here:
+
         List<Livro> livros = livroService.listarLivro();
         List<Usuario> usuarios = usuarioService.listarUsuario();
         String nomeLivro = livroService.nomeTitle(txtTitulo.getText());
