@@ -23,7 +23,7 @@ public class TelaMainUsuario extends javax.swing.JFrame {
     
     public TelaMainUsuario() {
         initComponents();
-        jbVisualizarFicha.setText("<html>Visualizar Ficha<br>  Catalografica</html>");
+        btnVisualizarFicha.setText("<html>Visualizar Ficha<br>  Catalografica</html>");
         
         try { //Importando dados do arquivo contendo as salas de estudos cadastradas
             List<SalaEstudo> salasEstudo = salaService.importarArquivo("src/main/java/files/salasEstudo.txt");
@@ -52,21 +52,23 @@ public class TelaMainUsuario extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jbBuscarLivro = new javax.swing.JButton();
-        jbReservarLivro = new javax.swing.JButton();
-        jbVisualizarFicha = new javax.swing.JButton();
-        jbReservarSala = new javax.swing.JButton();
-        jbSair = new javax.swing.JButton();
+        btnBuscarLivro = new javax.swing.JButton();
+        btnReservarLivro = new javax.swing.JButton();
+        btnVisualizarFicha = new javax.swing.JButton();
+        btnReservarSala = new javax.swing.JButton();
+        btnSair = new javax.swing.JButton();
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jLabel1 = new javax.swing.JLabel();
 
         jButton3.setText("jButton3");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel2.setBackground(new java.awt.Color(51, 153, 255));
+        jPanel2.setBackground(new java.awt.Color(44, 44, 85));
+        jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel2.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 jPanel2AncestorAdded(evt);
@@ -77,40 +79,40 @@ public class TelaMainUsuario extends javax.swing.JFrame {
             }
         });
 
-        jbBuscarLivro.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
-        jbBuscarLivro.setText("Buscar  Livro");
-        jbBuscarLivro.addActionListener(new java.awt.event.ActionListener() {
+        btnBuscarLivro.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        btnBuscarLivro.setText("Buscar  Livro");
+        btnBuscarLivro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbBuscarLivroActionPerformed(evt);
+                btnBuscarLivroActionPerformed(evt);
             }
         });
 
-        jbReservarLivro.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
-        jbReservarLivro.setText("Reservar Livro");
-        jbReservarLivro.addActionListener(new java.awt.event.ActionListener() {
+        btnReservarLivro.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        btnReservarLivro.setText("Reservar Livro");
+        btnReservarLivro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbReservarLivroActionPerformed(evt);
+                btnReservarLivroActionPerformed(evt);
             }
         });
 
-        jbVisualizarFicha.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
-        jbVisualizarFicha.setText("Visualizar Ficha Catalografica");
-        jbVisualizarFicha.addActionListener(new java.awt.event.ActionListener() {
+        btnVisualizarFicha.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        btnVisualizarFicha.setText("Visualizar Ficha");
+        btnVisualizarFicha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbVisualizarFichaActionPerformed(evt);
+                btnVisualizarFichaActionPerformed(evt);
             }
         });
 
-        jbReservarSala.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
-        jbReservarSala.setText("Reservar Sala");
-        jbReservarSala.addActionListener(new java.awt.event.ActionListener() {
+        btnReservarSala.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        btnReservarSala.setText("Reservar Sala");
+        btnReservarSala.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbReservarSalaActionPerformed(evt);
+                btnReservarSalaActionPerformed(evt);
             }
         });
 
-        jbSair.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
-        jbSair.setText("Sair");
+        btnSair.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        btnSair.setText("Sair");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -118,28 +120,28 @@ public class TelaMainUsuario extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jbBuscarLivro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jbReservarLivro, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
-                    .addComponent(jbVisualizarFicha, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jbReservarSala, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jbSair, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnBuscarLivro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnReservarLivro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnVisualizarFicha, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
+                    .addComponent(btnReservarSala, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnSair, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(89, Short.MAX_VALUE)
-                .addComponent(jbBuscarLivro, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnBuscarLivro, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jbReservarLivro, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnReservarLivro, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jbVisualizarFicha, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnVisualizarFicha, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jbReservarSala, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnReservarSala, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jbSair, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addComponent(btnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jDesktopPane1.setBackground(new java.awt.Color(255, 255, 255));
@@ -155,16 +157,16 @@ public class TelaMainUsuario extends javax.swing.JFrame {
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addContainerGap(235, Short.MAX_VALUE)
+                .addContainerGap(233, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(230, Short.MAX_VALUE))
+                .addContainerGap(228, Short.MAX_VALUE))
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(153, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(154, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -178,8 +180,8 @@ public class TelaMainUsuario extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jDesktopPane1)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -196,38 +198,38 @@ public class TelaMainUsuario extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jbBuscarLivroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarLivroActionPerformed
+    private void btnBuscarLivroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarLivroActionPerformed
         
         BuscaLivro telaBuscaLivro = new BuscaLivro();
         jDesktopPane1.add(telaBuscaLivro);
         telaBuscaLivro.setVisible(true);
-    }//GEN-LAST:event_jbBuscarLivroActionPerformed
+    }//GEN-LAST:event_btnBuscarLivroActionPerformed
 
-    private void jbVisualizarFichaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbVisualizarFichaActionPerformed
+    private void btnVisualizarFichaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVisualizarFichaActionPerformed
         
         VisualizarFichaCat telaVisualizarFicha = new VisualizarFichaCat();
         jDesktopPane1.add(telaVisualizarFicha);
         telaVisualizarFicha.setVisible(true);
-    }//GEN-LAST:event_jbVisualizarFichaActionPerformed
+    }//GEN-LAST:event_btnVisualizarFichaActionPerformed
 
     private void jPanel2AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jPanel2AncestorAdded
         // TODO add your handling code here:
     }//GEN-LAST:event_jPanel2AncestorAdded
 
-    private void jbReservarLivroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbReservarLivroActionPerformed
+    private void btnReservarLivroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReservarLivroActionPerformed
         
         ReservarLivro telaReservarLivro = new ReservarLivro();
         jDesktopPane1.add(telaReservarLivro);
         telaReservarLivro.setVisible(true);
-    }//GEN-LAST:event_jbReservarLivroActionPerformed
+    }//GEN-LAST:event_btnReservarLivroActionPerformed
 
-    private void jbReservarSalaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbReservarSalaActionPerformed
+    private void btnReservarSalaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReservarSalaActionPerformed
         
         ReservarSalas telaReservarSala = new ReservarSalas();
         jDesktopPane1.add(telaReservarSala);
         telaReservarSala.setVisible(true);
         
-    }//GEN-LAST:event_jbReservarSalaActionPerformed
+    }//GEN-LAST:event_btnReservarSalaActionPerformed
     
     /**
      * @param args the command line arguments
@@ -265,15 +267,15 @@ public class TelaMainUsuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBuscarLivro;
+    private javax.swing.JButton btnReservarLivro;
+    private javax.swing.JButton btnReservarSala;
+    private javax.swing.JButton btnSair;
+    private javax.swing.JButton btnVisualizarFicha;
     private javax.swing.JButton jButton3;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JButton jbBuscarLivro;
-    private javax.swing.JButton jbReservarLivro;
-    private javax.swing.JButton jbReservarSala;
-    private javax.swing.JButton jbSair;
-    private javax.swing.JButton jbVisualizarFicha;
     // End of variables declaration//GEN-END:variables
 }
