@@ -10,10 +10,12 @@ import java.util.Scanner;
 import model.entity.Aluguel;
 import model.entity.Espaco;
 import model.entity.Evento;
+import model.entity.FichaCatalografica;
 import model.entity.Livro;
 import model.entity.SalaEstudo;
 import model.entity.Usuario;
 import model.service.EventoService;
+import model.service.FichaCatalograficaService;
 import model.service.LivroService;
 import model.service.SalaEstudoService;
 import model.service.UsuarioService;
@@ -115,7 +117,7 @@ public class Main {
         }*/
 
 
-        /*//Importar dados livros
+        //Importar dados livros
         LivroService livroService = new LivroService();
         try {
             List<Livro> livros = livroService.importarArquivo("src/main/java/files/livros.txt");
@@ -125,7 +127,7 @@ public class Main {
 
         } catch (Exception e) {
                 e.printStackTrace();
-        }*/
+        }
         
         //System.out.println(livroService.fichaCatalografica("Mulheres que correm com os lobos"));
         
@@ -142,6 +144,23 @@ public class Main {
         System.out.println(livrosEnc);*/
         
         //Aluguel de livros
-        //livroService.alugarLivro("Mulheres que correm com os lobos");
+        livroService.alugarLivro("Mulheres que correm com os lobos");
+        
+        System.out.println(livroService.listarLivro());
+        
+        /*//Cadastrar ficha catalografica e exportar dados para arquivo txt
+        FichaCatalograficaService fichasService = new FichaCatalograficaService();
+        fichasService.cadastrarFicha(1, "Producao Artesanal De Cerveja Pilsen", "Eduardo Sena"
+                , "2018", 50, "12-34567-89-0", "Cerveja, Quimica, Producao Artesanal");
+        fichasService.cadastrarFicha(2, "Analise Ambiental De Terreno Industrial", "Andre Luis"
+                , "2017", 65, "98-78563-21-0", "Meio Ambiente, Industria, Ecossistema");
+        List<FichaCatalografica> fichasCat = fichasService.listarFichas();
+        for (FichaCatalografica fichaCatalografica : fichasCat) {
+            System.out.println(fichaCatalografica);
+        }
+        
+        fichasService.exportarUsuario(fichasCat);
+        
+        System.out.println(fichasService.VisualizarFichaCatalografica("Producao Artesanal De Cerveja Pilsen"));*/
     }
 }

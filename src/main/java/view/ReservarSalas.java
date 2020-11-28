@@ -93,6 +93,7 @@ public class ReservarSalas extends javax.swing.JInternalFrame {
         btnSala8.setText("•");
 
         setClosable(true);
+        setPreferredSize(new java.awt.Dimension(736, 515));
 
         jpReservarSala.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -235,7 +236,7 @@ public class ReservarSalas extends javax.swing.JInternalFrame {
         jpReservarSalaLayout.setHorizontalGroup(
             jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpReservarSalaLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(20, Short.MAX_VALUE)
                 .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addComponent(jLabel8)
@@ -269,18 +270,18 @@ public class ReservarSalas extends javax.swing.JInternalFrame {
                             .addComponent(jLabel7)))
                     .addComponent(txtSala1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnVoltar, javax.swing.GroupLayout.Alignment.LEADING))
-                .addGap(0, 17, Short.MAX_VALUE))
+                .addGap(0, 9, Short.MAX_VALUE))
             .addGroup(jpReservarSalaLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(284, 284, 284)
                 .addComponent(jLabel6)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jpReservarSalaLayout.setVerticalGroup(
             jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpReservarSalaLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(23, 23, 23)
                 .addComponent(jLabel6)
-                .addGap(121, 121, 121)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
                 .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jpReservarSalaLayout.createSequentialGroup()
                         .addGroup(jpReservarSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -307,7 +308,7 @@ public class ReservarSalas extends javax.swing.JInternalFrame {
                             .addComponent(txtSala4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel10)))
                     .addGroup(jpReservarSalaLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGap(0, 8, Short.MAX_VALUE)
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnSala1L)

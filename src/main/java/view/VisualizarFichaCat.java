@@ -6,21 +6,21 @@
 package view;
 
 import java.util.List;
-import model.entity.Livro;
-import model.service.LivroService;
+import model.entity.FichaCatalografica;
+import model.service.FichaCatalograficaService;
 
 /**
  *
  * @author andreLuis
  */
 public class VisualizarFichaCat extends javax.swing.JInternalFrame {
-    LivroService livroService = new LivroService();
+    FichaCatalograficaService fichasService = new FichaCatalograficaService();
         
     public VisualizarFichaCat() {
         initComponents();
         
-        try { //Importando dados do arquivo contendo os livros cadastradas
-            List<Livro> livros = livroService.importarArquivo("src/main/java/files/livros.txt");
+        try { //Importando dados do arquivo contendo as fichas cadastradas
+            List<FichaCatalografica> fichas = fichasService.importarArquivo("src/main/java/files/fichasCat.txt");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -53,6 +53,7 @@ public class VisualizarFichaCat extends javax.swing.JInternalFrame {
 
         setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         setClosable(true);
+        setPreferredSize(new java.awt.Dimension(736, 515));
 
         jpVisualizarFichaCat.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -97,20 +98,21 @@ public class VisualizarFichaCat extends javax.swing.JInternalFrame {
         jpVisualizarFichaCatLayout.setHorizontalGroup(
             jpVisualizarFichaCatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpVisualizarFichaCatLayout.createSequentialGroup()
-                .addContainerGap(194, Short.MAX_VALUE)
-                .addGroup(jpVisualizarFichaCatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 342, Short.MAX_VALUE)
-                    .addGroup(jpVisualizarFichaCatLayout.createSequentialGroup()
-                        .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 168, Short.MAX_VALUE)
-                        .addComponent(btnVisualizar))
-                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtTitulo, javax.swing.GroupLayout.Alignment.LEADING))
-                .addContainerGap(194, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpVisualizarFichaCatLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2)
+                .addGroup(jpVisualizarFichaCatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpVisualizarFichaCatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(jpVisualizarFichaCatLayout.createSequentialGroup()
+                            .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 168, Short.MAX_VALUE)
+                            .addComponent(btnVisualizar))
+                        .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(txtTitulo, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addComponent(jLabel2))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jpVisualizarFichaCatLayout.createSequentialGroup()
+                .addGap(122, 122, 122)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 497, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(111, Short.MAX_VALUE))
         );
         jpVisualizarFichaCatLayout.setVerticalGroup(
             jpVisualizarFichaCatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -127,7 +129,7 @@ public class VisualizarFichaCat extends javax.swing.JInternalFrame {
                 .addGroup(jpVisualizarFichaCatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnVoltar)
                     .addComponent(btnVisualizar))
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addContainerGap(68, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -146,17 +148,17 @@ public class VisualizarFichaCat extends javax.swing.JInternalFrame {
 
     private void btnVisualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVisualizarActionPerformed
         // TODO add your handling code here:
-        List<Livro> livros = livroService.listarLivro(); 
-        String nomeFicha = livroService.nomeTitle(txtTitulo.getText()); //Primeira letra de cada palavra maiuscula
-                
-        for (Livro livro : livros) {
-            if (nomeFicha.equals(livro.getTitulo())){
-                txtFicha.setText(livroService.fichaCatalografica(livro.getTitulo()));                
+        List<FichaCatalografica> fichas = fichasService.listarFichas(); 
+        String nomeFicha = fichasService.fichaTitle(txtTitulo.getText()); //Primeira letra de cada palavra maiuscula
+        for (FichaCatalografica ficha : fichas) {
+            if (nomeFicha.equals(ficha.getTitulo())){
+                txtFicha.setText(fichasService.VisualizarFichaCatalografica(ficha.getTitulo()));
                 break;
-            } else if (nomeFicha.equals(livro.getTitulo()) == false){
-                txtFicha.setText("Livro Não Encontrado!!");           
+            } else if(nomeFicha.equals(ficha.getTitulo()) == false){
+                txtFicha.setText("Livro Não Encontrado!!");
             }
         }
+        
         txtTitulo.setText("");
     }//GEN-LAST:event_btnVisualizarActionPerformed
 
