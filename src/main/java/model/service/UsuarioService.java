@@ -33,7 +33,7 @@ public class UsuarioService {
     //Remover usuario da lista de usu�rios
     public void removerUsuario(String user) {
         for (int i = 0; i < usuarios.size(); i++) {
-                if (usuarios.get(i).getNome().equals(user)) {
+                if (usuarios.get(i).getLogin().equals(user)) {
                         usuarios.remove(i);
                 }
         }
