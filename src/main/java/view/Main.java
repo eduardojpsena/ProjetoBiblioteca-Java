@@ -87,10 +87,16 @@ public class Main {
             }
         } catch (Exception e) {
             e.printStackTrace();
-        }*/
+        }
 
         //Remover usuario
-        //userService.removerUsuario("Piu");
+        userService.removerUsuario("dudusn");
+        List<Usuario> usuarios = userService.listarUsuario();
+        for (Usuario usuario : usuarios) {
+            System.out.println(usuario);
+        }*/
+        
+        
         //Listar usuario
         //System.out.println(userService.listarUsuario());
 
@@ -150,7 +156,7 @@ public class Main {
         livroService.exportarLivro(livros);*/
         
         
-        //Cadastrar ficha catalografica e exportar dados para arquivo txt
+        /*//Cadastrar ficha catalografica e exportar dados para arquivo txt
         FichaCatalograficaService fichasService = new FichaCatalograficaService();
         fichasService.cadastrarFicha(1, "Producao Artesanal De Cerveja Pilsen", "Eduardo Sena"
                 , "2018", 50, "12-34567-89-0", "Cerveja, Quimica, Producao Artesanal");
@@ -165,6 +171,6 @@ public class Main {
         
         //fichasService.exportarFichas(fichasCat);
         
-        System.out.println(fichasService.VisualizarFichaCatalografica("Producao Artesanal De Cerveja Pilsen"));
+        System.out.println(fichasService.VisualizarFichaCatalografica("Producao Artesanal De Cerveja Pilsen"));*/
     }
 }

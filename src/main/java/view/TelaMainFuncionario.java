@@ -16,6 +16,7 @@ public class TelaMainFuncionario extends javax.swing.JFrame {
      */
     public TelaMainFuncionario() {
         initComponents();
+        lbIcon.setIcon(new javax.swing.ImageIcon("src/main/java/images/ImageBack.jpg"));
         btnGerarFicha.setText("<html> Gerar Ficha<br>Catalografica</html>");
         btnVisualizarFicha.setText("<html>Visualizar Ficha<br>  Catalografica</html>");
         btnRelatorioUsuario.setText("<html>Gerar Relatório<br>      Usuário</html>");
@@ -47,15 +48,16 @@ public class TelaMainFuncionario extends javax.swing.JFrame {
         btnRelatorioEvento = new javax.swing.JButton();
         btnSair = new javax.swing.JButton();
         jDesktopPane1 = new javax.swing.JDesktopPane();
-        jLabel1 = new javax.swing.JLabel();
+        lbIcon = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Morais Library");
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
 
-        jPanel2.setBackground(new java.awt.Color(44, 44, 85));
-        jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel2.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel2.setBorder(new javax.swing.border.MatteBorder(null));
 
         btnBuscarLivro.setText("Buscar Livro");
         btnBuscarLivro.addActionListener(new java.awt.event.ActionListener() {
@@ -72,6 +74,11 @@ public class TelaMainFuncionario extends javax.swing.JFrame {
         });
 
         btnRemoverLivro.setText("Remover Livro");
+        btnRemoverLivro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRemoverLivroActionPerformed(evt);
+            }
+        });
 
         btnAlugarLivro.setText("Realizar Aluguel");
         btnAlugarLivro.addActionListener(new java.awt.event.ActionListener() {
@@ -102,6 +109,11 @@ public class TelaMainFuncionario extends javax.swing.JFrame {
         });
 
         btnRemoverUsuario.setText("Remover Usuário");
+        btnRemoverUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRemoverUsuarioActionPerformed(evt);
+            }
+        });
 
         btnRelatorioUsuario.setText("Relatório Usuário");
 
@@ -170,26 +182,17 @@ public class TelaMainFuncionario extends javax.swing.JFrame {
         jDesktopPane1.setBackground(new java.awt.Color(255, 255, 255));
         jDesktopPane1.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\DEV\\java-projects\\netbeans-projects\\ProjetoBiblioteca-Java\\src\\main\\java\\images\\logoMoraisLibraryBlk.png")); // NOI18N
-        jLabel1.setText("jLabel1");
-
-        jDesktopPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(lbIcon, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addContainerGap(232, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(228, Short.MAX_VALUE))
+            .addComponent(lbIcon, javax.swing.GroupLayout.DEFAULT_SIZE, 731, Short.MAX_VALUE)
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(lbIcon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -219,10 +222,14 @@ public class TelaMainFuncionario extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCadastrarLivroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarLivroActionPerformed
-        // TODO add your handling code here:
+        
+        CadastrarLivro telaCadastroLivro = new CadastrarLivro();
+        jDesktopPane1.add(telaCadastroLivro);
+        telaCadastroLivro.setVisible(true);
     }//GEN-LAST:event_btnCadastrarLivroActionPerformed
 
     private void btnGerarFichaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerarFichaActionPerformed
@@ -259,6 +266,20 @@ public class TelaMainFuncionario extends javax.swing.JFrame {
         jDesktopPane1.add(telaCadastroUsuario);
         telaCadastroUsuario.setVisible(true);
     }//GEN-LAST:event_btnCadastrarUsuarioActionPerformed
+
+    private void btnRemoverUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoverUsuarioActionPerformed
+        
+        RemoverUsuario telaRemoverUsuario = new RemoverUsuario();
+        jDesktopPane1.add(telaRemoverUsuario);
+        telaRemoverUsuario.setVisible(true);
+    }//GEN-LAST:event_btnRemoverUsuarioActionPerformed
+
+    private void btnRemoverLivroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoverLivroActionPerformed
+        
+        RemoverLivro telaRemoverLivro = new RemoverLivro();
+        jDesktopPane1.add(telaRemoverLivro);
+        telaRemoverLivro.setVisible(true);
+    }//GEN-LAST:event_btnRemoverLivroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -310,8 +331,8 @@ public class TelaMainFuncionario extends javax.swing.JFrame {
     private javax.swing.JButton btnSair;
     private javax.swing.JButton btnVisualizarFicha;
     private javax.swing.JDesktopPane jDesktopPane1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel lbIcon;
     // End of variables declaration//GEN-END:variables
 }
