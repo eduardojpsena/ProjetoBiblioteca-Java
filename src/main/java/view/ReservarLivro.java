@@ -79,7 +79,9 @@ public class ReservarLivro extends javax.swing.JInternalFrame {
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Reservar Livro");
 
-        btnReservar.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        btnReservar.setBackground(new java.awt.Color(0, 0, 0));
+        btnReservar.setFont(new java.awt.Font("Comic Sans MS", 1, 11)); // NOI18N
+        btnReservar.setForeground(new java.awt.Color(255, 255, 255));
         btnReservar.setText("Reservar");
         btnReservar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,7 +98,7 @@ public class ReservarLivro extends javax.swing.JInternalFrame {
         txtTitulo.setForeground(new java.awt.Color(255, 255, 255));
 
         btnPesquisar.setBackground(new java.awt.Color(0, 0, 0));
-        btnPesquisar.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        btnPesquisar.setFont(new java.awt.Font("Comic Sans MS", 1, 11)); // NOI18N
         btnPesquisar.setForeground(new java.awt.Color(255, 255, 255));
         btnPesquisar.setText("Pesquisar");
         btnPesquisar.addActionListener(new java.awt.event.ActionListener() {
@@ -123,7 +125,7 @@ public class ReservarLivro extends javax.swing.JInternalFrame {
         jpReservarLivroLayout.setHorizontalGroup(
             jpReservarLivroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpReservarLivroLayout.createSequentialGroup()
-                .addContainerGap(454, Short.MAX_VALUE)
+                .addContainerGap(453, Short.MAX_VALUE)
                 .addComponent(btnReservar)
                 .addContainerGap(194, Short.MAX_VALUE))
             .addGroup(jpReservarLivroLayout.createSequentialGroup()

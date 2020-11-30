@@ -22,7 +22,7 @@ import model.entity.Usuario;
 public class UsuarioService {
     public List<Usuario> usuarios= new ArrayList<Usuario>();
 
-    //Cadastrar usuarios e adicionar a lista de usu�rios
+    //Cadastrar usuarios e adicionar a lista de usuarios
     public Usuario cadastrarUsuario(long id, String nome, String login, String senha, String tipo) throws IOException {
         Usuario usuario = new Usuario(id, nome, login, senha, tipo);
         usuarios.add(usuario);
@@ -30,7 +30,7 @@ public class UsuarioService {
         return usuario;
     }
 
-    //Remover usuario da lista de usu�rios
+    //Remover usuario da lista de usuarios
     public void removerUsuario(String user) {
         for (int i = 0; i < usuarios.size(); i++) {
                 if (usuarios.get(i).getLogin().equals(user)) {
@@ -63,11 +63,11 @@ public class UsuarioService {
     public List<Usuario> importarArquivo(String nomeArquivo) throws IOException {
         File arquivo = new File(nomeArquivo);
         BufferedReader br = new BufferedReader(new FileReader(arquivo));
-        // Pualando a primeira linha do arquivo(Colunas)
+        // Pulando a primeira linha do arquivo(Colunas)
         br.readLine();
         while (br.ready()) {
                 String linha = br.readLine();
-                System.out.println(linha);
+                //System.out.println(linha);
                 String[] colunas = linha.split(",");
                 cadastrarUsuario(Long.parseLong(colunas[0]), colunas[1], colunas[2], colunas[3], colunas[4]);
         }
