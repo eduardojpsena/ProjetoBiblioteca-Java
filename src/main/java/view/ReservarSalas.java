@@ -63,7 +63,6 @@ public class ReservarSalas extends javax.swing.JInternalFrame {
         txtSala1 = new javax.swing.JLabel();
         txtSala3 = new javax.swing.JLabel();
         txtSala4 = new javax.swing.JLabel();
-        btnVoltar = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -157,8 +156,6 @@ public class ReservarSalas extends javax.swing.JInternalFrame {
         txtSala4.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         txtSala4.setForeground(new java.awt.Color(0, 0, 0));
         txtSala4.setText("Sala Livre");
-
-        btnVoltar.setText("Voltar");
 
         jLabel4.setBackground(new java.awt.Color(0, 0, 0));
         jLabel4.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
@@ -268,8 +265,7 @@ public class ReservarSalas extends javax.swing.JInternalFrame {
                         .addGroup(jpReservarSalaLayout.createSequentialGroup()
                             .addGap(21, 21, 21)
                             .addComponent(jLabel7)))
-                    .addComponent(txtSala1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnVoltar, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addComponent(txtSala1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 9, Short.MAX_VALUE))
             .addGroup(jpReservarSalaLayout.createSequentialGroup()
                 .addGap(284, 284, 284)
@@ -318,9 +314,7 @@ public class ReservarSalas extends javax.swing.JInternalFrame {
                         .addComponent(btnSala3L)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnSala4L)))
-                .addGap(68, 68, 68)
-                .addComponent(btnVoltar)
-                .addGap(56, 56, 56))
+                .addGap(149, 149, 149))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -446,7 +440,6 @@ public class ReservarSalas extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnSala4L;
     private javax.swing.JButton btnSala4R;
     private javax.swing.JButton btnSala8;
-    private javax.swing.JButton btnVoltar;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton6;

@@ -76,5 +76,36 @@ public class UsuarioService {
         return usuarios;
     }
 	
-	
+    //Gerar relatório
+    public void gerarRelatorio(List<Usuario> usuarios, String caminho, String nomeArquivo) throws IOException{
+        int userInt = 0, userExt = 0, userProf = 0, userFunc = 0;
+        File diretorio = new File(caminho);
+        diretorio.mkdir();
+        
+        if (diretorio.isDirectory()) {
+            FileWriter arquivo = new FileWriter(caminho +"\\"+ nomeArquivo+".txt", false);
+            arquivo.write("         MORAIS LIBRARY         \n");
+            arquivo.write("--------------------------------\n");
+            arquivo.write("••    RELATORIO DE USUARIOS    ••\n");
+            arquivo.write("--------------------------------\n");
+            arquivo.write("Usuarios cadastrados: " + usuarios.size() + "\n");
+            for (Usuario usuario : usuarios) {
+                if (usuario.getTipo().equals("Interno")){
+                    userInt++;
+                } else if(usuario.getTipo().equals("Externo")){
+                    userExt++;
+                } else if(usuario.getTipo().equals("Professor")){
+                    userProf++;
+                } else if(usuario.getTipo().equals("Funcionario")){
+                    userFunc++;
+                }
+            }
+            arquivo.write("Usuarios internos cadastrados: " + userInt + "\n");
+            arquivo.write("Usuarios externos cadastrados: " + userExt + "\n");
+            arquivo.write("Professores cadastrados: " + userProf + "\n");
+            arquivo.write("Funcionarios cadastrados: " + userFunc + "\n");
+            arquivo.write("---------------------------------\n");
+            arquivo.close();
+        }
+    }
 }

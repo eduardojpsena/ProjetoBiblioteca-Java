@@ -86,11 +86,9 @@
                           <Component id="btnVisualizarFicha" alignment="0" max="32767" attributes="0"/>
                           <Component id="btnCadastrarUsuario" alignment="0" max="32767" attributes="0"/>
                           <Component id="btnRemoverUsuario" alignment="0" max="32767" attributes="0"/>
-                          <Component id="btnAdicionarEspaco" alignment="0" max="32767" attributes="0"/>
                           <Component id="btnCadastrarEvento" alignment="0" max="32767" attributes="0"/>
                           <Component id="btnRelatorioEvento" alignment="0" max="32767" attributes="0"/>
                           <Component id="btnSair" alignment="0" max="32767" attributes="0"/>
-                          <Component id="btnRelatorioUsuario" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -99,33 +97,29 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                       <Component id="btnBuscarLivro" min="-2" pref="33" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="btnCadastrarLivro" min="-2" pref="33" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="btnRemoverLivro" min="-2" pref="33" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="btnAlugarLivro" min="-2" pref="33" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="btnGerarFicha" min="-2" pref="33" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="btnVisualizarFicha" min="-2" pref="33" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="btnCadastrarUsuario" min="-2" pref="33" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="btnRemoverUsuario" min="-2" pref="33" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="btnRelatorioUsuario" min="-2" pref="33" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="btnAdicionarEspaco" min="-2" pref="33" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="btnCadastrarEvento" min="-2" pref="33" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="btnRelatorioEvento" min="-2" pref="33" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="btnSair" min="-2" pref="33" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="21" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -195,30 +189,29 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRemoverUsuarioActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="btnRelatorioUsuario">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Relat&#xf3;rio Usu&#xe1;rio"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="btnAdicionarEspaco">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Adicionar Espa&#xe7;o"/>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JButton" name="btnCadastrarEvento">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Cadastrar Evento"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCadastrarEventoActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnRelatorioEvento">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Relat&#xf3;rio Evento"/>
+                <Property name="text" type="java.lang.String" value="Gerar Relatorio"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRelatorioEventoActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnSair">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Sair"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSairActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

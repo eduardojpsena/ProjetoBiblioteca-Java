@@ -46,7 +46,6 @@ public class RemoverUsuario extends javax.swing.JInternalFrame {
         jLabel3 = new javax.swing.JLabel();
         txtUsuario = new javax.swing.JTextField();
         btnRemover = new javax.swing.JButton();
-        btnVoltar = new javax.swing.JButton();
         btnUsuario = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         txtList = new javax.swing.JList<>();
@@ -55,6 +54,7 @@ public class RemoverUsuario extends javax.swing.JInternalFrame {
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Remover Usúario");
 
+        setClosable(true);
         setPreferredSize(new java.awt.Dimension(736, 515));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -77,8 +77,6 @@ public class RemoverUsuario extends javax.swing.JInternalFrame {
                 btnRemoverActionPerformed(evt);
             }
         });
-
-        btnVoltar.setText("Voltar");
 
         btnUsuario.setText("Visualizar");
         btnUsuario.addActionListener(new java.awt.event.ActionListener() {
@@ -104,10 +102,7 @@ public class RemoverUsuario extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(btnUsuario)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnVoltar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnRemover))
+                    .addComponent(btnRemover)
                     .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtUsuario, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -127,10 +122,8 @@ public class RemoverUsuario extends javax.swing.JInternalFrame {
                 .addGap(9, 9, 9)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnVoltar)
-                    .addComponent(btnRemover))
-                .addContainerGap(159, Short.MAX_VALUE))
+                .addComponent(btnRemover)
+                .addContainerGap(108, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -195,7 +188,6 @@ public class RemoverUsuario extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnRemover;
     private javax.swing.JButton btnUsuario;
-    private javax.swing.JButton btnVoltar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

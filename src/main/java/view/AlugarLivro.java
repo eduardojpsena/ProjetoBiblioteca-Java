@@ -13,6 +13,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
 import model.entity.Livro;
 import model.entity.Usuario;
 import model.service.LivroService;
@@ -56,11 +58,12 @@ public class AlugarLivro extends javax.swing.JInternalFrame {
         txtTitulo = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         txtUsuario = new javax.swing.JTextField();
+        btnPesquisar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        txtArea = new javax.swing.JTextArea();
-        btnAlugar = new javax.swing.JButton();
-        btnVoltar = new javax.swing.JButton();
+        txtList = new javax.swing.JList<>();
+        jButton1 = new javax.swing.JButton();
 
+        setClosable(true);
         setPreferredSize(new java.awt.Dimension(736, 515));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -70,7 +73,7 @@ public class AlugarLivro extends javax.swing.JInternalFrame {
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Alugar Livro");
 
-        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Titulo");
 
@@ -78,7 +81,7 @@ public class AlugarLivro extends javax.swing.JInternalFrame {
         txtTitulo.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         txtTitulo.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Usuario");
 
@@ -86,32 +89,39 @@ public class AlugarLivro extends javax.swing.JInternalFrame {
         txtUsuario.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         txtUsuario.setForeground(new java.awt.Color(255, 255, 255));
 
-        txtArea.setBackground(new java.awt.Color(0, 0, 0));
-        txtArea.setColumns(20);
-        txtArea.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
-        txtArea.setForeground(new java.awt.Color(255, 255, 255));
-        txtArea.setRows(5);
-        jScrollPane1.setViewportView(txtArea);
-
-        btnAlugar.setBackground(new java.awt.Color(0, 0, 0));
-        btnAlugar.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
-        btnAlugar.setForeground(new java.awt.Color(255, 255, 255));
-        btnAlugar.setText("Alugar");
-        btnAlugar.addActionListener(new java.awt.event.ActionListener() {
+        btnPesquisar.setBackground(new java.awt.Color(0, 0, 0));
+        btnPesquisar.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        btnPesquisar.setForeground(new java.awt.Color(255, 255, 255));
+        btnPesquisar.setText("Pesquisar");
+        btnPesquisar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAlugarActionPerformed(evt);
+                btnPesquisarActionPerformed(evt);
             }
         });
 
-        btnVoltar.setBackground(new java.awt.Color(0, 0, 0));
-        btnVoltar.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
-        btnVoltar.setForeground(new java.awt.Color(255, 255, 255));
-        btnVoltar.setText("Voltar");
+        txtList.setBackground(new java.awt.Color(0, 0, 0));
+        txtList.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        txtList.setForeground(new java.awt.Color(255, 255, 255));
+        jScrollPane1.setViewportView(txtList);
+
+        jButton1.setBackground(new java.awt.Color(0, 0, 0));
+        jButton1.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Alugar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(162, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 421, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(143, 143, 143))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -119,38 +129,36 @@ public class AlugarLivro extends javax.swing.JInternalFrame {
                         .addComponent(jLabel6))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(192, 192, 192)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(btnVoltar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnAlugar))
-                            .addComponent(txtTitulo, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtUsuario, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 342, Short.MAX_VALUE))))
-                .addContainerGap(192, Short.MAX_VALUE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jButton1)
+                                .addComponent(txtTitulo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(btnPesquisar)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jLabel6)
-                .addGap(51, 51, 51)
+                .addGap(39, 39, 39)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnPesquisar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
-                .addGap(12, 12, 12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAlugar)
-                    .addComponent(btnVoltar))
-                .addContainerGap(97, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(105, 105, 105))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -167,16 +175,50 @@ public class AlugarLivro extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAlugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlugarActionPerformed
-        
+    private void btnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisarActionPerformed
+        boolean status = false; //verificação de não encontrar livro
+        boolean status2 = false; //verificação de encontrar livro
         List<Livro> livros = livroService.listarLivro();
         List<Usuario> usuarios = usuarioService.listarUsuario();
         String nomeLivro = livroService.nomeTitle(txtTitulo.getText());
+        DefaultListModel dlm = new DefaultListModel();
         
         for (Livro livro : livros) {
             if (nomeLivro.equals(livro.getTitulo())){
+                dlm.addElement(livro.getTitulo()+" / Autor: " + livro.getAutor() 
+                        + " / Ano: " + livro.getAno() + " / Quantidade: " + livro.getQuantidade());
+                
+                status2 = true;
+            } else if (nomeLivro.equals(livro.getTitulo())){
+                status = true;
+            }
+            txtList.setModel(dlm);
+        }
+        if (status == true && status2 == false) {
+            JOptionPane.showMessageDialog(null, "Livro não encontrado");
+        }
+        txtTitulo.setText(""); 
+                
+    }//GEN-LAST:event_btnPesquisarActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        boolean statusLiv = false; //verificação de não encontrar livro
+        boolean statusLiv2 = false; //verificação de encontrar livro
+        boolean statusUser = false; //verificação de não encontrar usuario
+        boolean statusUser2 = false; //verificação de encontrar usuario
+        List<Livro> livros = livroService.listarLivro();
+        List<Usuario> usuarios = usuarioService.listarUsuario();
+        DefaultListModel dlm = new DefaultListModel();
+        
+        //Nome do titulo selecionado separado para uso
+        String[] sepTitulo = txtList.getSelectedValue().split(" /");
+        String titulo = sepTitulo[0];
+        
+        for (Livro livro : livros) {
+            if(titulo.equals(livro.getTitulo())){
                 if (livro.getQuantidade() <= 1){
-                    txtArea.setText("Livro " + livro.getTitulo() + " não pode ser alugado");
+                    JOptionPane.showMessageDialog(null, "Livro " + livro.getTitulo() + " não pode ser alugado");
+                    statusLiv2 = true;
                     break;
                 }
                 for (Usuario usuario : usuarios) {
@@ -187,10 +229,12 @@ public class AlugarLivro extends javax.swing.JInternalFrame {
                         } catch (IOException ex) {
                             Logger.getLogger(AlugarLivro.class.getName()).log(Level.SEVERE, null, ex);
                         }
-                        txtArea.setText("•      Alugado com sucesso      •"
+                        JOptionPane.showMessageDialog(null, "•  Alugado com sucesso  •"
                                 + "\n- Livro: " + livro.getTitulo()
                                 + "\n- Aluno: " + usuario.getNome() 
-                                + "\n- ");
+                                + "\n- Dias Alugados: 3 dias.");
+                        statusUser2 = true;
+                        statusLiv2 = true;
                         break;
                     }
                     if (usuario.getLogin().equals(txtUsuario.getText()) && usuario.getTipo().equals("Professor")){
@@ -200,9 +244,12 @@ public class AlugarLivro extends javax.swing.JInternalFrame {
                         } catch (IOException ex) {
                             Logger.getLogger(AlugarLivro.class.getName()).log(Level.SEVERE, null, ex);
                         }
-                        txtArea.setText("•      Alugado com sucesso      •"
+                        JOptionPane.showMessageDialog(null, "•  Alugado com sucesso  •"
                                 + "\n- Livro: " + livro.getTitulo()
-                                + "\n- Professor: " + usuario.getNome());
+                                + "\n- Professor: " + usuario.getNome() 
+                                + "\n- Dias Alugados: 10 dias.");
+                        statusUser2 = true;
+                        statusLiv2 = true;
                         break;
                     } 
                     if (usuario.getLogin().equals(txtUsuario.getText()) && usuario.getTipo().equals("Externo")){
@@ -212,38 +259,45 @@ public class AlugarLivro extends javax.swing.JInternalFrame {
                         } catch (IOException ex) {
                             Logger.getLogger(AlugarLivro.class.getName()).log(Level.SEVERE, null, ex);
                         }
-                        txtArea.setText("•      Alugado com sucesso      •"
+                        JOptionPane.showMessageDialog(null, "•  Alugado com sucesso  •"
                                 + "\n- Livro: " + livro.getTitulo()
                                 + "\n- Usuário externo: " + usuario.getNome());
+                        statusUser2 = true;
+                        statusLiv2 = true;
                         break;
                     } 
                     if (usuario.getLogin().equals(txtUsuario.getText()) == false){
-                        txtArea.setText("Usuario inválido");
                         
+                        statusUser = true;
+                        statusLiv2 = true;
                     }
                 }
-                break;
-            } else if (nomeLivro.equals(livro.getTitulo()) == false){
-                txtArea.setText("Livro não encontrado");
- 
-            }
+            break;
+            } else if (titulo.equals(livro.getTitulo()) == false){
+                statusLiv = true;
+            }  
         }
-        
+        if (statusUser == true && statusUser2 == false) {
+            JOptionPane.showMessageDialog(null, "Usuario inválido!");
+        }
+        if (statusLiv == true && statusLiv2 == false) {
+            JOptionPane.showMessageDialog(null, "Livro não encontrado!");
+        }
+        dlm.clear();
+        txtList.setModel(dlm);
         txtUsuario.setText("");
-        txtTitulo.setText("");
-        
-    }//GEN-LAST:event_btnAlugarActionPerformed
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAlugar;
-    private javax.swing.JButton btnVoltar;
+    private javax.swing.JButton btnPesquisar;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea txtArea;
+    private javax.swing.JList<String> txtList;
     private javax.swing.JTextField txtTitulo;
     private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
