@@ -53,7 +53,6 @@ public class RemoverLivro extends javax.swing.JInternalFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         txtList = new javax.swing.JList<>();
         btnRemovelivro = new javax.swing.JButton();
-        btnVoltar = new javax.swing.JButton();
 
         jLabel1.setText("jLabel1");
 
@@ -68,6 +67,7 @@ public class RemoverLivro extends javax.swing.JInternalFrame {
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
+        setClosable(true);
         setPreferredSize(new java.awt.Dimension(736, 515));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -85,6 +85,9 @@ public class RemoverLivro extends javax.swing.JInternalFrame {
         txtTitulo.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         txtTitulo.setForeground(new java.awt.Color(255, 255, 255));
 
+        btnTitulo.setBackground(new java.awt.Color(0, 0, 0));
+        btnTitulo.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        btnTitulo.setForeground(new java.awt.Color(255, 255, 255));
         btnTitulo.setText("Pesquisar");
         btnTitulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,6 +111,9 @@ public class RemoverLivro extends javax.swing.JInternalFrame {
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Categoria");
 
+        btnCategoria.setBackground(new java.awt.Color(0, 0, 0));
+        btnCategoria.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        btnCategoria.setForeground(new java.awt.Color(255, 255, 255));
         btnCategoria.setText("Pesquisar");
         btnCategoria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,6 +121,9 @@ public class RemoverLivro extends javax.swing.JInternalFrame {
             }
         });
 
+        btnAutor.setBackground(new java.awt.Color(0, 0, 0));
+        btnAutor.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        btnAutor.setForeground(new java.awt.Color(255, 255, 255));
         btnAutor.setText("Pesquisar");
         btnAutor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,14 +136,15 @@ public class RemoverLivro extends javax.swing.JInternalFrame {
         txtList.setForeground(new java.awt.Color(255, 255, 255));
         jScrollPane1.setViewportView(txtList);
 
+        btnRemovelivro.setBackground(new java.awt.Color(0, 0, 0));
+        btnRemovelivro.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        btnRemovelivro.setForeground(new java.awt.Color(255, 255, 255));
         btnRemovelivro.setText("Remover");
         btnRemovelivro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRemovelivroActionPerformed(evt);
             }
         });
-
-        btnVoltar.setText("Voltar");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -144,7 +154,7 @@ public class RemoverLivro extends javax.swing.JInternalFrame {
                 .addContainerGap(145, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(btnTitulo)
                                 .addGroup(jPanel1Layout.createSequentialGroup()
@@ -164,10 +174,7 @@ public class RemoverLivro extends javax.swing.JInternalFrame {
                                                 .addComponent(btnCategoria, javax.swing.GroupLayout.Alignment.TRAILING))))
                                     .addGap(1, 1, 1))
                                 .addComponent(txtTitulo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(btnVoltar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnRemovelivro)))
+                            .addComponent(btnRemovelivro))
                         .addGap(142, 142, 142))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 471, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -203,10 +210,8 @@ public class RemoverLivro extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnRemovelivro)
-                    .addComponent(btnVoltar))
-                .addContainerGap(86, Short.MAX_VALUE))
+                .addComponent(btnRemovelivro)
+                .addContainerGap(80, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -329,10 +334,7 @@ public class RemoverLivro extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnAutor;
     private javax.swing.JButton btnCategoria;
     private javax.swing.JButton btnRemovelivro;
-    private javax.swing.JButton btnRemover;
-    private javax.swing.JButton btnRemover1;
     private javax.swing.JButton btnTitulo;
-    private javax.swing.JButton btnVoltar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

@@ -9,6 +9,7 @@ import java.awt.Image;
 import java.awt.Graphics;
 import javax.swing.ImageIcon;
 import java.util.List;
+import javax.swing.JOptionPane;
 import model.entity.Livro;
 import model.entity.SalaEstudo;
 import model.service.LivroService;
@@ -120,6 +121,11 @@ public class TelaMainUsuario extends javax.swing.JFrame {
 
         btnSair.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         btnSair.setText("Sair");
+        btnSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSairActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout imgMenuLayout = new javax.swing.GroupLayout(imgMenu);
         imgMenu.setLayout(imgMenuLayout);
@@ -229,6 +235,12 @@ public class TelaMainUsuario extends javax.swing.JFrame {
         telaReservarSala.setVisible(true);
         
     }//GEN-LAST:event_btnReservarSalaActionPerformed
+
+    private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Volte Sempre!");
+        System.exit(0);
+    }//GEN-LAST:event_btnSairActionPerformed
     
     /**
      * @param args the command line arguments

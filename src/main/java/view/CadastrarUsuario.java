@@ -55,13 +55,13 @@ public class CadastrarUsuario extends javax.swing.JInternalFrame {
         txtTipo = new javax.swing.JComboBox<>();
         txtID = new javax.swing.JLabel();
         btnSalvar = new javax.swing.JButton();
-        btnSair = new javax.swing.JButton();
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Buscar Livro");
 
+        setClosable(true);
         setPreferredSize(new java.awt.Dimension(736, 515));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -123,8 +123,6 @@ public class CadastrarUsuario extends javax.swing.JInternalFrame {
             }
         });
 
-        btnSair.setText("Sair");
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -160,8 +158,7 @@ public class CadastrarUsuario extends javax.swing.JInternalFrame {
                                             .addGap(47, 47, 47)))
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addComponent(btnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(152, 152, 152)
                         .addComponent(btnSalvar)))
@@ -187,17 +184,15 @@ public class CadastrarUsuario extends javax.swing.JInternalFrame {
                     .addComponent(jLabel5)
                     .addComponent(txtLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6)
-                    .addComponent(txtKeyWord, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtKeyWord, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel7)
                     .addComponent(txtTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSalvar)
-                    .addComponent(btnSair))
+                .addComponent(btnSalvar)
                 .addContainerGap(144, Short.MAX_VALUE))
         );
 
@@ -250,7 +245,6 @@ public class CadastrarUsuario extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnSair;
     private javax.swing.JButton btnSalvar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

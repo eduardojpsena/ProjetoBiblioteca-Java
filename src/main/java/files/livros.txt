@@ -1,21 +1,20 @@
 ID,TITULO,AUTOR,ANO,QUANTIDADE,TEMA
-1,Do Mil Ao Milhao,Thiago Nigro,2018,4,Financas
+1,Do Mil Ao Milhao,Thiago Nigro,2018,3,Financas
 2,A Nova Psicologia Do Sucesso,Carol Dweck,2017,2,Psicologia
 3,O Poder Do Habito,Charles Duhigg,2012,3,Psicologia
 4,Mulheres Que Correm Com Os Lobos,Clarissa Pinkola,2018,1,Psicologia
 5,O Homem Mais Rico da Babilonia,George Samuel,2017,5,Auto Ajuda
 6,O Milagre Da Manha,Hal Elrod,2016,3,Auto Ajuda
-7,As Aventuras Da Programacao,Andre Luis,2020,100,Tecnologia
-8,A Arte Da Guerra,Sun Tzu,500 a.C,50,Desenvolvimento Pessoal
-9,Cloud Computing - Computacao Em Nuvem,Cesar Taurion,2006,70,Tecnologia
-10,Estruturas De Dados e algoritmos em java,Michael Goodrich,1997,150,Tecnologia
-11,Dragon Ball Z,Akira Toriyama,1984,500,Quadrinhos
-12,Cavaleiros Do Zodiaco,Masami Kurumada,1985,100,Quadrinhos
+7,As Aventuras Da Programacao,Andre Luis,2020,20,Tecnologia
+8,A Arte Da Guerra,Sun Tzu,500 a.C,15,Desenvolvimento Pessoal
+9,Cloud Computing - Computacao Em Nuvem,Cesar Taurion,2006,9,Tecnologia
+10,Estruturas De Dados e algoritmos em java,Michael Goodrich,1997,2,Tecnologia
+11,Dragon Ball Z,Akira Toriyama,1984,33,Quadrinhos
+12,Cavaleiros Do Zodiaco,Masami Kurumada,1985,30,Quadrinhos
 13,Java Guia Do Programador,Peter Jandl,2015,30,Tecnologia
 14,Python Fluente: Programacao Clara,Luciano Ramalho,2015,30,Tecnologia
 15,Querido John,Nicholas Sparks,2010,5,Romance
 16,The Chronicles Of Narnia,Clive Lewis,1956,7,Ficcao
-17,O Senhor Dos Aneis,John Tolkien,1937,10,Ficcao
+17,O Senhor Dos Aneis,John Tolkien,1937,7,Ficcao
 18,Game Of Thrones,George Martin,2012,5,Ficcao
 19,Os Segredos Da Mente Milionaria,Harv Eker,2020,4,Desenvolvimento Pessoal
-20,Percy Jackson E Os Olimpianos,Rick Riordan,2015,10,Ficcao
