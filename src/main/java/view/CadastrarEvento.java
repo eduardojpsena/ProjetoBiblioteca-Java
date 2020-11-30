@@ -174,6 +174,9 @@ public class CadastrarEvento extends javax.swing.JInternalFrame {
         txtList.setForeground(new java.awt.Color(255, 255, 255));
         jScrollPane1.setViewportView(txtList);
 
+        btnGerarEspaço.setBackground(new java.awt.Color(0, 0, 0));
+        btnGerarEspaço.setFont(new java.awt.Font("Comic Sans MS", 1, 11)); // NOI18N
+        btnGerarEspaço.setForeground(new java.awt.Color(255, 255, 255));
         btnGerarEspaço.setText("Gerar Espaço");
         btnGerarEspaço.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -181,6 +184,9 @@ public class CadastrarEvento extends javax.swing.JInternalFrame {
             }
         });
 
+        btnGerarEvento.setBackground(new java.awt.Color(0, 0, 0));
+        btnGerarEvento.setFont(new java.awt.Font("Comic Sans MS", 1, 11)); // NOI18N
+        btnGerarEvento.setForeground(new java.awt.Color(255, 255, 255));
         btnGerarEvento.setText("Gerar Evento");
         btnGerarEvento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -284,7 +290,7 @@ public class CadastrarEvento extends javax.swing.JInternalFrame {
                         .addComponent(txtID2, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(33, 33, 33)
                 .addComponent(btnGerarEvento)
-                .addContainerGap(82, Short.MAX_VALUE))
+                .addContainerGap(78, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

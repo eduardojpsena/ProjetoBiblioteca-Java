@@ -3,6 +3,7 @@ package model.entity;
  *
  * @author andreLuis
  */
+
 import java.util.ArrayList;
 
 public class Usuario {

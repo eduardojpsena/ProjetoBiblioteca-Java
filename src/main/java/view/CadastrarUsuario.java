@@ -104,7 +104,7 @@ public class CadastrarUsuario extends javax.swing.JInternalFrame {
         jLabel7.setText("Tipo");
 
         txtTipo.setBackground(new java.awt.Color(0, 0, 0));
-        txtTipo.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        txtTipo.setFont(new java.awt.Font("Comic Sans MS", 1, 11)); // NOI18N
         txtTipo.setForeground(new java.awt.Color(255, 255, 255));
         txtTipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<Selecione uma das opções>", "Interno", "Externo", "Professor" }));
         txtTipo.addActionListener(new java.awt.event.ActionListener() {
@@ -116,6 +116,9 @@ public class CadastrarUsuario extends javax.swing.JInternalFrame {
         txtID.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         txtID.setForeground(new java.awt.Color(0, 0, 0));
 
+        btnSalvar.setBackground(new java.awt.Color(0, 0, 0));
+        btnSalvar.setFont(new java.awt.Font("Comic Sans MS", 1, 11)); // NOI18N
+        btnSalvar.setForeground(new java.awt.Color(255, 255, 255));
         btnSalvar.setText("Cadastrar");
         btnSalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -193,7 +196,7 @@ public class CadastrarUsuario extends javax.swing.JInternalFrame {
                     .addComponent(txtTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21)
                 .addComponent(btnSalvar)
-                .addContainerGap(144, Short.MAX_VALUE))
+                .addContainerGap(142, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

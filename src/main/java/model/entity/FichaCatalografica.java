@@ -1,9 +1,9 @@
 package model.entity;
-
 /**
  *
  * @author eduardoSena
  */
+
 public class FichaCatalografica {
     //Atributos
     private long id;

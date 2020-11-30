@@ -121,7 +121,7 @@ public class GerarRelatorio extends javax.swing.JInternalFrame {
         txtNameEvt.setForeground(new java.awt.Color(255, 255, 255));
 
         btnFIleUser.setBackground(new java.awt.Color(0, 0, 0));
-        btnFIleUser.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        btnFIleUser.setFont(new java.awt.Font("Comic Sans MS", 1, 11)); // NOI18N
         btnFIleUser.setForeground(new java.awt.Color(255, 255, 255));
         btnFIleUser.setText("Arquivo");
         btnFIleUser.addActionListener(new java.awt.event.ActionListener() {
@@ -131,7 +131,7 @@ public class GerarRelatorio extends javax.swing.JInternalFrame {
         });
 
         btnRelatorioUser.setBackground(new java.awt.Color(0, 0, 0));
-        btnRelatorioUser.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        btnRelatorioUser.setFont(new java.awt.Font("Comic Sans MS", 1, 11)); // NOI18N
         btnRelatorioUser.setForeground(new java.awt.Color(255, 255, 255));
         btnRelatorioUser.setText("Gerar Relatório");
         btnRelatorioUser.addActionListener(new java.awt.event.ActionListener() {
@@ -145,7 +145,7 @@ public class GerarRelatorio extends javax.swing.JInternalFrame {
         txtFileEvt.setForeground(new java.awt.Color(255, 255, 255));
 
         btnFileEvt.setBackground(new java.awt.Color(0, 0, 0));
-        btnFileEvt.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        btnFileEvt.setFont(new java.awt.Font("Comic Sans MS", 1, 11)); // NOI18N
         btnFileEvt.setForeground(new java.awt.Color(255, 255, 255));
         btnFileEvt.setText("Arquivo");
         btnFileEvt.addActionListener(new java.awt.event.ActionListener() {
@@ -155,7 +155,7 @@ public class GerarRelatorio extends javax.swing.JInternalFrame {
         });
 
         btnRelatorioEvt.setBackground(new java.awt.Color(0, 0, 0));
-        btnRelatorioEvt.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        btnRelatorioEvt.setFont(new java.awt.Font("Comic Sans MS", 1, 11)); // NOI18N
         btnRelatorioEvt.setForeground(new java.awt.Color(255, 255, 255));
         btnRelatorioEvt.setText("Gerar Relatório");
         btnRelatorioEvt.addActionListener(new java.awt.event.ActionListener() {
@@ -240,7 +240,7 @@ public class GerarRelatorio extends javax.swing.JInternalFrame {
                 .addComponent(txtNameEvt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnRelatorioEvt)
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

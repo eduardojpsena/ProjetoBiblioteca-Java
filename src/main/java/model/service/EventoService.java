@@ -57,7 +57,7 @@ public class EventoService {
         br.readLine();
         while (br.ready()) {
                 String linha = br.readLine();
-                System.out.println(linha);
+                //System.out.println(linha);
                 String[] colunas = linha.split(",");
                 Espaco espaco = new Espaco(Long.parseLong(colunas[2]),colunas[3] , Integer.parseInt(colunas[4]));
                 cadastrarEvento(Long.parseLong(colunas[0]), colunas[1], espaco, colunas[5], colunas[6]);
@@ -69,7 +69,7 @@ public class EventoService {
         return eventos;
     }
     
-    //Gerar relatório
+    //Gerar relatorio
     public void gerarRelatorio(List<Evento> eventos, String caminho, String nomeArquivo) throws IOException{
         File diretorio = new File(caminho);
         diretorio.mkdir();

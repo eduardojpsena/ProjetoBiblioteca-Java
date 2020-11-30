@@ -3,6 +3,7 @@ package model.entity;
  *
  * @author eduardoSena
  */
+
 public class Espaco {
     //Atributos
     private long id;

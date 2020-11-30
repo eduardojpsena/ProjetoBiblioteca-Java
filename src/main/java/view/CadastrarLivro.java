@@ -112,6 +112,9 @@ public class CadastrarLivro extends javax.swing.JInternalFrame {
         txtTema.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         txtTema.setForeground(new java.awt.Color(255, 255, 255));
 
+        btnCadastrar.setBackground(new java.awt.Color(0, 0, 0));
+        btnCadastrar.setFont(new java.awt.Font("Comic Sans MS", 1, 11)); // NOI18N
+        btnCadastrar.setForeground(new java.awt.Color(255, 255, 255));
         btnCadastrar.setText("Cadastrar");
         btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -191,7 +194,7 @@ public class CadastrarLivro extends javax.swing.JInternalFrame {
                     .addComponent(txtTema, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(72, 72, 72)
                 .addComponent(btnCadastrar)
-                .addContainerGap(131, Short.MAX_VALUE))
+                .addContainerGap(129, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

@@ -3,6 +3,7 @@ package model.entity;
  *
  * @author eduardoSena
  */
+
 public class Evento {
     //Atributos
     private long id;

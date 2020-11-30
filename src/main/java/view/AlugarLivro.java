@@ -90,7 +90,7 @@ public class AlugarLivro extends javax.swing.JInternalFrame {
         txtUsuario.setForeground(new java.awt.Color(255, 255, 255));
 
         btnPesquisar.setBackground(new java.awt.Color(0, 0, 0));
-        btnPesquisar.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        btnPesquisar.setFont(new java.awt.Font("Comic Sans MS", 1, 11)); // NOI18N
         btnPesquisar.setForeground(new java.awt.Color(255, 255, 255));
         btnPesquisar.setText("Pesquisar");
         btnPesquisar.addActionListener(new java.awt.event.ActionListener() {
@@ -105,7 +105,7 @@ public class AlugarLivro extends javax.swing.JInternalFrame {
         jScrollPane1.setViewportView(txtList);
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
-        jButton1.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Comic Sans MS", 1, 11)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Alugar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {

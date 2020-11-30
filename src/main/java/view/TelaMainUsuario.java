@@ -239,7 +239,10 @@ public class TelaMainUsuario extends javax.swing.JFrame {
     private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
         // TODO add your handling code here:
         JOptionPane.showMessageDialog(null, "Volte Sempre!");
-        System.exit(0);
+        TelaLogin telaLogin = new TelaLogin();
+        this.setVisible(false);
+        telaLogin.setVisible(true);
+        
     }//GEN-LAST:event_btnSairActionPerformed
     
     /**

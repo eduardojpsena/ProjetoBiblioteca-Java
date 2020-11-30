@@ -61,7 +61,7 @@ public class VisualizarFichaCat extends javax.swing.JInternalFrame {
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Visualizar Ficha Catalográfica");
 
-        jLabel3.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Titulo");
 
@@ -74,7 +74,9 @@ public class VisualizarFichaCat extends javax.swing.JInternalFrame {
             }
         });
 
-        btnVisualizar.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        btnVisualizar.setBackground(new java.awt.Color(0, 0, 0));
+        btnVisualizar.setFont(new java.awt.Font("Comic Sans MS", 1, 11)); // NOI18N
+        btnVisualizar.setForeground(new java.awt.Color(255, 255, 255));
         btnVisualizar.setText("Visualizar");
         btnVisualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

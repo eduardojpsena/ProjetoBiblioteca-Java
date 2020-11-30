@@ -1,5 +1,8 @@
-
 package model.service;
+/**
+ *
+ * @author eduardoSena
+ */
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -10,10 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 import model.entity.Espaco;
 
-/**
- *
- * @author eduardoSena
- */
 public class EspacoService {
     public List<Espaco> espacos = new ArrayList<Espaco>();
     
@@ -52,7 +51,7 @@ public class EspacoService {
         br.readLine();
         while (br.ready()) {
                 String linha = br.readLine();
-                System.out.println(linha);
+                //System.out.println(linha);
                 String[] colunas = linha.split(",");
                 cadastrarEspaco(Long.parseLong(colunas[0]),colunas[1] , Integer.parseInt(colunas[2]));
         }

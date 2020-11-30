@@ -71,6 +71,9 @@ public class RemoverUsuario extends javax.swing.JInternalFrame {
         txtUsuario.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         txtUsuario.setForeground(new java.awt.Color(255, 255, 255));
 
+        btnRemover.setBackground(new java.awt.Color(0, 0, 0));
+        btnRemover.setFont(new java.awt.Font("Comic Sans MS", 1, 11)); // NOI18N
+        btnRemover.setForeground(new java.awt.Color(255, 255, 255));
         btnRemover.setText("Remover");
         btnRemover.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,6 +81,9 @@ public class RemoverUsuario extends javax.swing.JInternalFrame {
             }
         });
 
+        btnUsuario.setBackground(new java.awt.Color(0, 0, 0));
+        btnUsuario.setFont(new java.awt.Font("Comic Sans MS", 1, 11)); // NOI18N
+        btnUsuario.setForeground(new java.awt.Color(255, 255, 255));
         btnUsuario.setText("Visualizar");
         btnUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,7 +129,7 @@ public class RemoverUsuario extends javax.swing.JInternalFrame {
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
                 .addComponent(btnRemover)
-                .addContainerGap(108, Short.MAX_VALUE))
+                .addContainerGap(104, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
