@@ -1,9 +1,5 @@
 ID,TITULO,AUTOR,ANO,QUANTIDADE,TEMA
-<<<<<<< HEAD
-1,Do Mil Ao Milhao,Thiago Nigro,2018,5,Financas
-=======
 1,Do Mil Ao Milhao,Thiago Nigro,2018,3,Financas
->>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
 2,A Nova Psicologia Do Sucesso,Carol Dweck,2017,2,Psicologia
 3,O Poder Do Habito,Charles Duhigg,2012,3,Psicologia
 4,Mulheres Que Correm Com Os Lobos,Clarissa Pinkola,2018,1,Psicologia
@@ -22,10 +18,3 @@ ID,TITULO,AUTOR,ANO,QUANTIDADE,TEMA
 17,O Senhor Dos Aneis,John Tolkien,1937,7,Ficcao
 18,Game Of Thrones,George Martin,2012,5,Ficcao
 19,Os Segredos Da Mente Milionaria,Harv Eker,2020,4,Desenvolvimento Pessoal
-<<<<<<< HEAD
-20,Percy Jackson E Os Olimpianos,Rick Riordan,2015,10,Ficcao
-21,A Lista De Chindler,Hitler,1996,10,Terror
-22,A Bola Que Nao Rolava,Eduardo Jose,2020,1,Ficcao
-23,A Historia Da Historia,Jaoa,2020,20,Historia
-=======
->>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755

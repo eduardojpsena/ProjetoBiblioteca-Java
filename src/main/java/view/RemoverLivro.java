@@ -1,34 +1,10 @@
-<<<<<<< HEAD
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-=======
 
->>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
 package view;
 
 import java.io.IOException;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-<<<<<<< HEAD
-import model.entity.Livro;
-import model.service.LivroService;
-
-/**
- *
- * @author Development
- */
-public class RemoverLivro extends javax.swing.JInternalFrame {
-
-  LivroService livroService = new LivroService();
-            
-    public RemoverLivro() {
-        initComponents();
-        try {
-=======
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import model.entity.Livro;
@@ -45,19 +21,13 @@ public class RemoverLivro extends javax.swing.JInternalFrame {
         initComponents();
         
         try { //Importar livros do arquivo txt
->>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
             List<Livro> livros = livroService.importarArquivo("src/main/java/files/livros.txt");
            
         } catch (Exception e) {
                 e.printStackTrace();
         }
-<<<<<<< HEAD
-        
-    }
-=======
     }
 
->>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -67,48 +37,6 @@ public class RemoverLivro extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-<<<<<<< HEAD
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        txtTitulo = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtArea = new javax.swing.JTextArea();
-        btnRemoverLivro = new javax.swing.JButton();
-        btnVoltar = new javax.swing.JButton();
-
-        setTitle("Remover Livro");
-
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-
-        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("            Remover Livro");
-
-        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Titulo ");
-
-        txtTitulo.setBackground(new java.awt.Color(0, 0, 0));
-        txtTitulo.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
-        txtTitulo.setForeground(new java.awt.Color(255, 255, 255));
-
-        txtArea.setBackground(new java.awt.Color(0, 0, 0));
-        txtArea.setColumns(20);
-        txtArea.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
-        txtArea.setForeground(new java.awt.Color(255, 255, 255));
-        txtArea.setRows(5);
-        jScrollPane1.setViewportView(txtArea);
-
-        btnRemoverLivro.setText("Remover");
-        btnRemoverLivro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRemoverLivroActionPerformed(evt);
-            }
-        });
-
-        btnVoltar.setText("Voltar");
-=======
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
@@ -217,28 +145,11 @@ public class RemoverLivro extends javax.swing.JInternalFrame {
                 btnRemovelivroActionPerformed(evt);
             }
         });
->>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-<<<<<<< HEAD
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(114, 114, 114)
-                .addComponent(btnVoltar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnRemoverLivro)
-                .addGap(123, 123, 123))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(197, 197, 197)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel2)
-                    .addComponent(txtTitulo)
-                    .addComponent(jScrollPane1)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 319, Short.MAX_VALUE))
-                .addContainerGap(208, Short.MAX_VALUE))
-=======
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(145, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -272,26 +183,10 @@ public class RemoverLivro extends javax.swing.JInternalFrame {
                 .addGap(293, 293, 293)
                 .addComponent(jLabel2)
                 .addGap(0, 0, Short.MAX_VALUE))
->>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-<<<<<<< HEAD
-                .addGap(65, 65, 65)
-                .addComponent(jLabel1)
-                .addGap(64, 64, 64)
-                .addComponent(jLabel2)
-                .addGap(18, 18, 18)
-                .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnVoltar)
-                    .addComponent(btnRemoverLivro))
-                .addGap(76, 76, 76))
-=======
                 .addGap(33, 33, 33)
                 .addComponent(jLabel2)
                 .addGap(32, 32, 32)
@@ -317,7 +212,6 @@ public class RemoverLivro extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnRemovelivro)
                 .addContainerGap(80, Short.MAX_VALUE))
->>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -334,37 +228,6 @@ public class RemoverLivro extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-<<<<<<< HEAD
-    private void btnRemoverLivroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoverLivroActionPerformed
-        
-        List<Livro> livros = livroService.listarLivro();
-        String titulo = livroService.nomeTitle(txtTitulo.getText());
-        for (Livro livro : livros) {
-            if( titulo.equals(livro.getTitulo())){
-                livroService.removerLivro(titulo);
-                txtArea.setText("Livro " + titulo + " removido");
-                break;
-            }else if(titulo.equals(livro.getTitulo())== false){
-                txtArea.setText("Livro não encontrado");
-            }
-        }
-      try {
-          livroService.exportarLivro(livros);
-      } catch (IOException ex) {
-          Logger.getLogger(RemoverLivro.class.getName()).log(Level.SEVERE, null, ex);
-      }
-    }//GEN-LAST:event_btnRemoverLivroActionPerformed
-
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnRemoverLivro;
-    private javax.swing.JButton btnVoltar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea txtArea;
-=======
     private void btnTituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTituloActionPerformed
         boolean status = false; //verificação de não encontrar livro
         boolean status2 = false; //verificação de encontrar livro
@@ -483,7 +346,6 @@ public class RemoverLivro extends javax.swing.JInternalFrame {
     private javax.swing.JTextField txtAutor;
     private javax.swing.JTextField txtCategoria;
     private javax.swing.JList<String> txtList;
->>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
     private javax.swing.JTextField txtTitulo;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,53 +1,28 @@
-<<<<<<< HEAD
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-=======
 
->>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
 package view;
 
 import java.io.IOException;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-<<<<<<< HEAD
-import model.entity.Livro;
-import model.entity.Usuario;
-import model.service.LivroService;
-=======
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import model.entity.Usuario;
->>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
 import model.service.UsuarioService;
 
 /**
  *
-<<<<<<< HEAD
- * @author Development
- */
-public class RemoverUsuario extends javax.swing.JInternalFrame {
-    
-=======
  * @author andreLuis
  */
 
 public class RemoverUsuario extends javax.swing.JInternalFrame {
 
->>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
     UsuarioService usuarioService = new UsuarioService();
     
     public RemoverUsuario() {
         initComponents();
-<<<<<<< HEAD
-        try {
-=======
         
         try { //Importando usuarios do arquivo externo usuarios
->>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
             List<Usuario> usuarios = usuarioService.importarArquivo("src/main/java/files/usuarios.txt");
            
         } catch (Exception e) {
@@ -55,10 +30,7 @@ public class RemoverUsuario extends javax.swing.JInternalFrame {
         }
         
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -68,18 +40,6 @@ public class RemoverUsuario extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-<<<<<<< HEAD
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        txtUsuario = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtArea = new javax.swing.JTextArea();
-        btnR = new javax.swing.JButton();
-        btnVoltar = new javax.swing.JButton();
-
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-=======
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -89,17 +49,11 @@ public class RemoverUsuario extends javax.swing.JInternalFrame {
         btnUsuario = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         txtList = new javax.swing.JList<>();
->>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
 
         jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Remover Usúario");
 
-<<<<<<< HEAD
-        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Usúario");
-=======
         setClosable(true);
         setPreferredSize(new java.awt.Dimension(736, 515));
 
@@ -112,29 +66,11 @@ public class RemoverUsuario extends javax.swing.JInternalFrame {
         jLabel3.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Usuário");
->>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
 
         txtUsuario.setBackground(new java.awt.Color(0, 0, 0));
         txtUsuario.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         txtUsuario.setForeground(new java.awt.Color(255, 255, 255));
 
-<<<<<<< HEAD
-        txtArea.setBackground(new java.awt.Color(0, 0, 0));
-        txtArea.setColumns(20);
-        txtArea.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
-        txtArea.setForeground(new java.awt.Color(255, 255, 255));
-        txtArea.setRows(5);
-        jScrollPane1.setViewportView(txtArea);
-
-        btnR.setText("Remover");
-        btnR.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRActionPerformed(evt);
-            }
-        });
-
-        btnVoltar.setText("Voltar");
-=======
         btnRemover.setText("Remover");
         btnRemover.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -153,30 +89,12 @@ public class RemoverUsuario extends javax.swing.JInternalFrame {
         txtList.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         txtList.setForeground(new java.awt.Color(255, 255, 255));
         jScrollPane2.setViewportView(txtList);
->>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-<<<<<<< HEAD
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(274, 274, 274)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(140, 140, 140)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(btnVoltar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnR))
-                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtUsuario, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 415, Short.MAX_VALUE))))
-                .addContainerGap(169, Short.MAX_VALUE))
-=======
                 .addGap(280, 280, 280)
                 .addComponent(jLabel2)
                 .addContainerGap(298, Short.MAX_VALUE))
@@ -189,26 +107,10 @@ public class RemoverUsuario extends javax.swing.JInternalFrame {
                     .addComponent(txtUsuario, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(188, 188, 188))
->>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-<<<<<<< HEAD
-                .addGap(92, 92, 92)
-                .addComponent(jLabel1)
-                .addGap(47, 47, 47)
-                .addComponent(jLabel2)
-                .addGap(18, 18, 18)
-                .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnR)
-                    .addComponent(btnVoltar))
-                .addContainerGap(63, Short.MAX_VALUE))
-=======
                 .addGap(45, 45, 45)
                 .addComponent(jLabel2)
                 .addGap(77, 77, 77)
@@ -222,18 +124,13 @@ public class RemoverUsuario extends javax.swing.JInternalFrame {
                 .addGap(26, 26, 26)
                 .addComponent(btnRemover)
                 .addContainerGap(108, Short.MAX_VALUE))
->>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-<<<<<<< HEAD
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-=======
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
->>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -243,21 +140,6 @@ public class RemoverUsuario extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-<<<<<<< HEAD
-    private void btnRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRActionPerformed
-    
-        List<Usuario> usuarios = usuarioService.listarUsuario();
-        String user = txtUsuario.getText();
-        for (Usuario usuario : usuarios) {
-            if (user.equals(usuario.getLogin())){
-                usuarioService.removerUsuario(user);
-                txtArea.setText("Usuario " + user + " removido ");
-                break;
-            }else if(user.equals(usuario.getLogin()) == false) {
-                txtArea.setText("Usuario não encontrado");
-            }
-        }
-=======
     private void btnRemoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoverActionPerformed
         List<Usuario> usuarios = usuarioService.listarUsuario();
         String[] removeUser = txtList.getSelectedValue().split(" /");
@@ -265,24 +147,11 @@ public class RemoverUsuario extends javax.swing.JInternalFrame {
         DefaultListModel dlm = new DefaultListModel();
         
         usuarioService.removerUsuario(removeUser[0]);
->>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
         try {
             usuarioService.exportarUsuario(usuarios);
         } catch (IOException ex) {
             Logger.getLogger(RemoverUsuario.class.getName()).log(Level.SEVERE, null, ex);
         }
-<<<<<<< HEAD
-    }//GEN-LAST:event_btnRActionPerformed
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnR;
-    private javax.swing.JButton btnVoltar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea txtArea;
-=======
         
         JOptionPane.showMessageDialog(null, "Usuário " + removeUser[0] + " removido!");
         
@@ -325,7 +194,6 @@ public class RemoverUsuario extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JList<String> txtList;
->>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
     private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 }

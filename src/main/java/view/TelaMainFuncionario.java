@@ -111,13 +111,6 @@ public class TelaMainFuncionario extends javax.swing.JFrame {
                 btnRemoverUsuarioActionPerformed(evt);
             }
         });
-<<<<<<< HEAD
-
-        btnRelatorioUsuario.setText("Relatório Usuário");
-
-        btnAdicionarEspaco.setText("Adicionar Espaço");
-=======
->>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
 
         btnCadastrarEvento.setText("Cadastrar Evento");
         btnCadastrarEvento.addActionListener(new java.awt.event.ActionListener() {
@@ -191,27 +184,13 @@ public class TelaMainFuncionario extends javax.swing.JFrame {
         jDesktopPane1.setBackground(new java.awt.Color(255, 255, 255));
         jDesktopPane1.setForeground(new java.awt.Color(255, 255, 255));
 
-<<<<<<< HEAD
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\projeto morais library\\ProjetoBiblioteca-Java-andreLuis\\src\\main\\java\\images\\logoMoraisLibraryBlk.png")); // NOI18N
-        jLabel1.setText("jLabel1");
-
-        jDesktopPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-=======
         jDesktopPane1.setLayer(lbIcon, javax.swing.JLayeredPane.DEFAULT_LAYER);
->>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-<<<<<<< HEAD
-            .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addContainerGap(227, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(224, Short.MAX_VALUE))
-=======
             .addComponent(lbIcon, javax.swing.GroupLayout.DEFAULT_SIZE, 731, Short.MAX_VALUE)
->>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -225,7 +204,7 @@ public class TelaMainFuncionario extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jDesktopPane1))
+                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -237,9 +216,7 @@ public class TelaMainFuncionario extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -251,18 +228,10 @@ public class TelaMainFuncionario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCadastrarLivroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarLivroActionPerformed
-<<<<<<< HEAD
-        // TODO add your handling code here:
-        CadastroLivro telaCadastroLivro = new CadastroLivro();
-        jDesktopPane1.add(telaCadastroLivro);
-        telaCadastroLivro.setVisible(true);
-        
-=======
         
         CadastrarLivro telaCadastroLivro = new CadastrarLivro();
         jDesktopPane1.add(telaCadastroLivro);
         telaCadastroLivro.setVisible(true);
->>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
     }//GEN-LAST:event_btnCadastrarLivroActionPerformed
 
     private void btnGerarFichaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerarFichaActionPerformed
@@ -293,15 +262,6 @@ public class TelaMainFuncionario extends javax.swing.JFrame {
         telaAlugarLivro.setVisible(true);
     }//GEN-LAST:event_btnAlugarLivroActionPerformed
 
-<<<<<<< HEAD
-    private void btnRemoverLivroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoverLivroActionPerformed
-        RemoverLivro telaRemoverLivro = new RemoverLivro();
-        jDesktopPane1.add(telaRemoverLivro);
-        telaRemoverLivro.setVisible(true);
-    }//GEN-LAST:event_btnRemoverLivroActionPerformed
-
-    private void btnRemoverUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoverUsuarioActionPerformed
-=======
     private void btnCadastrarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarUsuarioActionPerformed
         
         CadastrarUsuario telaCadastroUsuario = new CadastrarUsuario();
@@ -311,14 +271,11 @@ public class TelaMainFuncionario extends javax.swing.JFrame {
 
     private void btnRemoverUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoverUsuarioActionPerformed
         
->>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
         RemoverUsuario telaRemoverUsuario = new RemoverUsuario();
         jDesktopPane1.add(telaRemoverUsuario);
         telaRemoverUsuario.setVisible(true);
     }//GEN-LAST:event_btnRemoverUsuarioActionPerformed
 
-<<<<<<< HEAD
-=======
     private void btnRemoverLivroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoverLivroActionPerformed
         
         RemoverLivro telaRemoverLivro = new RemoverLivro();
@@ -346,7 +303,6 @@ public class TelaMainFuncionario extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_btnSairActionPerformed
 
->>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
     /**
      * @param args the command line arguments
      */
