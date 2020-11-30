@@ -5,7 +5,12 @@
  */
 package view;
 
+import java.io.IOException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
 import model.entity.Livro;
 import model.entity.Usuario;
 import model.service.LivroService;
@@ -49,14 +54,14 @@ public class ReservarLivro extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         jpReservarLivro = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        txtTitulo = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        txtUsuario = new javax.swing.JTextField();
-        btnVoltar = new javax.swing.JButton();
         btnReservar = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        txtTitulo = new javax.swing.JTextField();
+        btnPesquisar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        txtArea = new javax.swing.JTextArea();
+        txtList = new javax.swing.JList<>();
+        jLabel6 = new javax.swing.JLabel();
+        txtUsuario = new javax.swing.JTextField();
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
@@ -74,30 +79,6 @@ public class ReservarLivro extends javax.swing.JInternalFrame {
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Reservar Livro");
 
-        jLabel3.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Titulo");
-
-        txtTitulo.setBackground(new java.awt.Color(0, 0, 0));
-        txtTitulo.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
-        txtTitulo.setForeground(new java.awt.Color(255, 255, 255));
-        txtTitulo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtTituloActionPerformed(evt);
-            }
-        });
-
-        jLabel5.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setText("Usuario");
-
-        txtUsuario.setBackground(new java.awt.Color(0, 0, 0));
-        txtUsuario.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
-        txtUsuario.setForeground(new java.awt.Color(255, 255, 255));
-
-        btnVoltar.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
-        btnVoltar.setText("Voltar");
-
         btnReservar.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         btnReservar.setText("Reservar");
         btnReservar.addActionListener(new java.awt.event.ActionListener() {
@@ -106,53 +87,84 @@ public class ReservarLivro extends javax.swing.JInternalFrame {
             }
         });
 
-        txtArea.setBackground(new java.awt.Color(0, 0, 0));
-        txtArea.setColumns(20);
-        txtArea.setFont(new java.awt.Font("Comic Sans MS", 3, 12)); // NOI18N
-        txtArea.setForeground(new java.awt.Color(255, 255, 255));
-        txtArea.setRows(5);
-        jScrollPane1.setViewportView(txtArea);
+        jLabel4.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("Titulo");
+
+        txtTitulo.setBackground(new java.awt.Color(0, 0, 0));
+        txtTitulo.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        txtTitulo.setForeground(new java.awt.Color(255, 255, 255));
+
+        btnPesquisar.setBackground(new java.awt.Color(0, 0, 0));
+        btnPesquisar.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        btnPesquisar.setForeground(new java.awt.Color(255, 255, 255));
+        btnPesquisar.setText("Pesquisar");
+        btnPesquisar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPesquisarActionPerformed(evt);
+            }
+        });
+
+        txtList.setBackground(new java.awt.Color(0, 0, 0));
+        txtList.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        txtList.setForeground(new java.awt.Color(255, 255, 255));
+        jScrollPane1.setViewportView(txtList);
+
+        jLabel6.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setText("Usuario");
+
+        txtUsuario.setBackground(new java.awt.Color(0, 0, 0));
+        txtUsuario.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        txtUsuario.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout jpReservarLivroLayout = new javax.swing.GroupLayout(jpReservarLivro);
         jpReservarLivro.setLayout(jpReservarLivroLayout);
         jpReservarLivroLayout.setHorizontalGroup(
             jpReservarLivroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpReservarLivroLayout.createSequentialGroup()
-                .addContainerGap(194, Short.MAX_VALUE)
-                .addGroup(jpReservarLivroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel5)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpReservarLivroLayout.createSequentialGroup()
-                        .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 170, Short.MAX_VALUE)
-                        .addComponent(btnReservar))
-                    .addComponent(jLabel3)
-                    .addComponent(txtUsuario)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jpReservarLivroLayout.createSequentialGroup()
-                        .addGap(96, 96, 96)
-                        .addComponent(jLabel2))
-                    .addComponent(txtTitulo))
+                .addContainerGap(454, Short.MAX_VALUE)
+                .addComponent(btnReservar)
                 .addContainerGap(194, Short.MAX_VALUE))
+            .addGroup(jpReservarLivroLayout.createSequentialGroup()
+                .addGap(151, 151, 151)
+                .addGroup(jpReservarLivroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 421, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jpReservarLivroLayout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addGroup(jpReservarLivroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel6)
+                            .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jpReservarLivroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(txtTitulo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(btnPesquisar)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jpReservarLivroLayout.createSequentialGroup()
+                .addGap(288, 288, 288)
+                .addComponent(jLabel2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jpReservarLivroLayout.setVerticalGroup(
             jpReservarLivroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpReservarLivroLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(30, 30, 30)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
-                .addComponent(jLabel3)
+                .addGap(39, 39, 39)
+                .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnPesquisar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jpReservarLivroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnReservar)
-                    .addComponent(btnVoltar))
+                .addGap(18, 18, 18)
+                .addComponent(btnReservar)
                 .addContainerGap(112, Short.MAX_VALUE))
         );
 
@@ -171,69 +183,128 @@ public class ReservarLivro extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnReservarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReservarActionPerformed
-        // TODO add your handling code here:
+        boolean statusLiv = false; //verificação de não encontrar livro
+        boolean statusLiv2 = false; //verificação de encontrar livro
+        boolean statusUser = false; //verificação de não encontrar usuario
+        boolean statusUser2 = false; //verificação de encontrar usuario
         List<Livro> livros = livroService.listarLivro();
         List<Usuario> usuarios = usuarioService.listarUsuario();
-        String nomeLivro = livroService.nomeTitle(txtTitulo.getText());
+        DefaultListModel dlm = new DefaultListModel();
+        
+        //Nome do titulo selecionado separado para uso
+        String[] sepTitulo = txtList.getSelectedValue().split(" /");
+        String titulo = sepTitulo[0];
+        
         for (Livro livro : livros) {
-            if (nomeLivro.equals(livro.getTitulo())){
+            if(titulo.equals(livro.getTitulo())){
                 if (livro.getQuantidade() <= 1){
-                    txtArea.setText("Livro " + livro.getTitulo() + " não pode ser reservado");
+                    JOptionPane.showMessageDialog(null, "Livro " + livro.getTitulo() + " não pode ser reservado!");
+                    statusLiv2 = true;
                     break;
                 }
                 for (Usuario usuario : usuarios) {
                     if (usuario.getLogin().equals(txtUsuario.getText()) && usuario.getTipo().equals("Interno")){
                         livroService.alugarLivro(livro.getTitulo());
-                        txtArea.setText("•      Reservado com sucesso      •"
+                        try {
+                            livroService.exportarLivro(livros);
+                        } catch (IOException ex) {
+                            Logger.getLogger(AlugarLivro.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                        JOptionPane.showMessageDialog(null, "•  Reservado com sucesso  •"
                                 + "\n- Livro: " + livro.getTitulo()
                                 + "\n- Aluno: " + usuario.getNome());
+                        statusUser2 = true;
+                        statusLiv2 = true;
                         break;
                     }
                     if (usuario.getLogin().equals(txtUsuario.getText()) && usuario.getTipo().equals("Professor")){
                         livroService.alugarLivro(livro.getTitulo());
-                        txtArea.setText("•      Reservado com sucesso      •"
+                        try {
+                            livroService.exportarLivro(livros);
+                        } catch (IOException ex) {
+                            Logger.getLogger(AlugarLivro.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                        JOptionPane.showMessageDialog(null, "•  Reservado com sucesso  •"
                                 + "\n- Livro: " + livro.getTitulo()
                                 + "\n- Professor: " + usuario.getNome());
+                        statusUser2 = true;
+                        statusLiv2 = true;
                         break;
                     } 
                     if (usuario.getLogin().equals(txtUsuario.getText()) && usuario.getTipo().equals("Externo")){
                         livroService.alugarLivro(livro.getTitulo());
-                        txtArea.setText("•      Reservado com sucesso      •"
+                        try {
+                            livroService.exportarLivro(livros);
+                        } catch (IOException ex) {
+                            Logger.getLogger(AlugarLivro.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                        JOptionPane.showMessageDialog(null, "•  Reservado com sucesso  •"
                                 + "\n- Livro: " + livro.getTitulo()
                                 + "\n- Usuário externo: " + usuario.getNome());
+                        statusUser2 = true;
+                        statusLiv2 = true;
                         break;
                     } 
                     if (usuario.getLogin().equals(txtUsuario.getText()) == false){
-                        txtArea.setText("Usuario inválido");
                         
+                        statusUser = true;
+                        statusLiv2 = true;
                     }
                 }
-                break;
-            } else if (nomeLivro.equals(livro.getTitulo()) == false){
-                txtArea.setText("Livro não encontrado");
- 
-            }
+            break;
+            } else if (titulo.equals(livro.getTitulo()) == false){
+                statusLiv = true;
+            }  
         }
+        if (statusUser == true && statusUser2 == false) {
+            JOptionPane.showMessageDialog(null, "Usuario inválido!");
+        }
+        if (statusLiv == true && statusLiv2 == false) {
+            JOptionPane.showMessageDialog(null, "Livro não encontrado!");
+        }
+        dlm.clear();
+        txtList.setModel(dlm);
         txtUsuario.setText("");
-        txtTitulo.setText("");
-       
+        
     }//GEN-LAST:event_btnReservarActionPerformed
 
-    private void txtTituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTituloActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtTituloActionPerformed
+    private void btnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisarActionPerformed
+        boolean status = false; //verificação de não encontrar livro
+        boolean status2 = false; //verificação de encontrar livro
+        List<Livro> livros = livroService.listarLivro();
+        List<Usuario> usuarios = usuarioService.listarUsuario();
+        String nomeLivro = livroService.nomeTitle(txtTitulo.getText());
+        DefaultListModel dlm = new DefaultListModel();
+
+        for (Livro livro : livros) {
+            if (nomeLivro.equals(livro.getTitulo())){
+                dlm.addElement(livro.getTitulo()+" / Autor: " + livro.getAutor()
+                    + " / Ano: " + livro.getAno());
+
+                status2 = true;
+            } else if (nomeLivro.equals(livro.getTitulo())){
+                status = true;
+            }
+            txtList.setModel(dlm);
+        }
+        if (status == true && status2 == false) {
+            JOptionPane.showMessageDialog(null, "Livro não encontrado");
+        }
+        txtTitulo.setText("");
+
+    }//GEN-LAST:event_btnPesquisarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnPesquisar;
     private javax.swing.JButton btnReservar;
-    private javax.swing.JButton btnVoltar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel jpReservarLivro;
-    private javax.swing.JTextArea txtArea;
+    private javax.swing.JList<String> txtList;
     private javax.swing.JTextField txtTitulo;
     private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables

@@ -13,7 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 import model.entity.Espaco;
 import model.entity.Evento;
-import model.entity.Usuario;
 
 
 public class EventoService {
@@ -69,5 +68,30 @@ public class EventoService {
         br.close();
         return eventos;
     }
-	
+    
+    //Gerar relatório
+    public void gerarRelatorio(List<Evento> eventos, String caminho, String nomeArquivo) throws IOException{
+        File diretorio = new File(caminho);
+        diretorio.mkdir();
+        
+        if (diretorio.isDirectory()) {
+            FileWriter arquivo = new FileWriter(caminho +"\\"+ nomeArquivo+".txt", false);
+            arquivo.write("         MORAIS LIBRARY         \n");
+            arquivo.write("----------------------------------\n");
+            arquivo.write("••     RELATORIO DE EVENTOS     ••\n");
+            arquivo.write("----------------------------------\n");
+            arquivo.write("Eventos cadastrados: " + eventos.size() + "\n");
+            for (Evento evento : eventos) {
+                arquivo.write("----------------------------------\n");
+                arquivo.write("ID: " + evento.getId() 
+                            + "\nNOME EVENTO: " + evento.getNomeEvento() 
+                            + "\nLOCAL: " + evento.getEspaco().getNomeLocal() 
+                            + "\nCAPACIDADE: " + evento.getEspaco().getCapacidade()
+                            + "\nDATA: " + evento.getData()
+                            + "\nHORA: " + evento.getHora() + "\n");
+            }
+            
+            arquivo.close();
+        }
+    }
 }

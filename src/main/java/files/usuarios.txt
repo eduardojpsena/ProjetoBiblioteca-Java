@@ -1,5 +1,5 @@
 ID,NOME,LOGIN,SENHA,TIPO
 1,Andre Luis,usuario,123,Interno
-2,Eduardo Sena,usuario2,123,Externo
+2,Marcelo Mendes,mmarcelo,071758,Externo
 3,Marcos Felipe,funcionario,123,Funcionario
 4,Aline Morais,professor,123,Professor

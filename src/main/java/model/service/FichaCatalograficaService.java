@@ -32,7 +32,7 @@ public class FichaCatalograficaService {
     }
     
     //Exportar dados da lista de fichas catalograficas para um arquivo externo .txt
-    public void exportarUsuario(List<FichaCatalografica> fichas) throws IOException {
+    public void exportarFichas(List<FichaCatalografica> fichas) throws IOException {
         File diretorio = new File("src/main/java/files");
         diretorio.mkdir();
 
@@ -69,14 +69,15 @@ public class FichaCatalograficaService {
     //Gerar ficha catalografica
     public String VisualizarFichaCatalografica(String titulo) {
         for (FichaCatalografica ficha : fichas) {
-            String [] autor = ficha.getAutor().split(" ");
+            if (titulo.equals(ficha.getTitulo())){
+                String [] autor = ficha.getAutor().split(" ");
             return "•••••••••••••••••••• FICHA CATALOGRÁFICA ••••••••••••••••••••\n\n"
                     + autor[1] + ", " + autor[0] + "\n\n    " + 
                     ficha.getTitulo() + " / " + ficha.getAutor() + " - " + 
                     ficha.getAno() + ".\n    " + ficha.getQtdPaginas() + " p.\n\n" + 
                     "    ISBN " + ficha.getIsbn() + "\n\n    " + ficha.getPalavraChave();
-        }
-        
+            }
+        }    
         return null;
     }
     

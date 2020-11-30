@@ -77,6 +77,14 @@ public class LivroService {
         File diretorio = new File("src/main/java/files");
         diretorio.mkdir();
 
+<<<<<<< HEAD
+=======
+    //Exportar dados da lista de livros para um arquivo externo .txt
+    public void exportarLivro(List<Livro> livros) throws IOException {
+        File diretorio = new File("src/main/java/files");
+        diretorio.mkdir();
+
+>>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
         if (diretorio.isDirectory()) {
                 FileWriter arquivo = new FileWriter("src/main/java/files/livros.txt", false);
                 arquivo.write("ID,"+"TITULO,"+"AUTOR,"+"ANO,"+"QUANTIDADE,"+"TEMA\n");
@@ -88,6 +96,10 @@ public class LivroService {
                 arquivo.close();
         }
     }
+<<<<<<< HEAD
+=======
+    
+>>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
     //Importar livros de um arquivo externo para a lista de livros
     public List<Livro> importarArquivo(String nomeArquivo) throws IOException {
         File arquivo = new File(nomeArquivo);
@@ -117,4 +129,5 @@ public class LivroService {
     	palavra = sb.toString();
     	return palavra.substring(0, palavra.length()-1);
     }
+
 }

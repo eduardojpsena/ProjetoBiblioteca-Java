@@ -5,6 +5,8 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author andreLuis
@@ -16,10 +18,8 @@ public class TelaMainFuncionario extends javax.swing.JFrame {
      */
     public TelaMainFuncionario() {
         initComponents();
-        btnGerarFicha.setText("<html> Gerar Ficha<br>Catalografica</html>");
-        btnVisualizarFicha.setText("<html>Visualizar Ficha<br>  Catalografica</html>");
-        btnRelatorioUsuario.setText("<html>Gerar Relatório<br>      Usuário</html>");
-        btnRelatorioEvento.setText("<html>Gerar Relatório<br>       Evento</html>");
+        lbIcon.setIcon(new javax.swing.ImageIcon("src/main/java/images/ImageBack.jpg"));
+        
     }
 
     /**
@@ -41,22 +41,20 @@ public class TelaMainFuncionario extends javax.swing.JFrame {
         btnVisualizarFicha = new javax.swing.JButton();
         btnCadastrarUsuario = new javax.swing.JButton();
         btnRemoverUsuario = new javax.swing.JButton();
-        btnRelatorioUsuario = new javax.swing.JButton();
-        btnAdicionarEspaco = new javax.swing.JButton();
         btnCadastrarEvento = new javax.swing.JButton();
         btnRelatorioEvento = new javax.swing.JButton();
         btnSair = new javax.swing.JButton();
         jDesktopPane1 = new javax.swing.JDesktopPane();
-        jLabel1 = new javax.swing.JLabel();
+        lbIcon = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Morais Library");
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
 
-        jPanel2.setBackground(new java.awt.Color(44, 44, 85));
-        jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel2.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel2.setBorder(new javax.swing.border.MatteBorder(null));
 
         btnBuscarLivro.setText("Buscar Livro");
         btnBuscarLivro.addActionListener(new java.awt.event.ActionListener() {
@@ -101,6 +99,11 @@ public class TelaMainFuncionario extends javax.swing.JFrame {
         });
 
         btnCadastrarUsuario.setText("Cadastrar Usuário");
+        btnCadastrarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadastrarUsuarioActionPerformed(evt);
+            }
+        });
 
         btnRemoverUsuario.setText("Remover Usuário");
         btnRemoverUsuario.addActionListener(new java.awt.event.ActionListener() {
@@ -108,16 +111,34 @@ public class TelaMainFuncionario extends javax.swing.JFrame {
                 btnRemoverUsuarioActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
 
         btnRelatorioUsuario.setText("Relatório Usuário");
 
         btnAdicionarEspaco.setText("Adicionar Espaço");
+=======
+>>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
 
         btnCadastrarEvento.setText("Cadastrar Evento");
+        btnCadastrarEvento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadastrarEventoActionPerformed(evt);
+            }
+        });
 
-        btnRelatorioEvento.setText("Relatório Evento");
+        btnRelatorioEvento.setText("Gerar Relatorio");
+        btnRelatorioEvento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRelatorioEventoActionPerformed(evt);
+            }
+        });
 
         btnSair.setText("Sair");
+        btnSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSairActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -134,68 +155,67 @@ public class TelaMainFuncionario extends javax.swing.JFrame {
                     .addComponent(btnVisualizarFicha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnCadastrarUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnRemoverUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnAdicionarEspaco, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnCadastrarEvento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnRelatorioEvento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnSair, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnRelatorioUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnSair, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(19, 19, 19)
                 .addComponent(btnBuscarLivro, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnCadastrarLivro, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnRemoverLivro, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnAlugarLivro, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnGerarFicha, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnVisualizarFicha, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnCadastrarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnRemoverUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnRelatorioUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnAdicionarEspaco, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnCadastrarEvento, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnRelatorioEvento, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         jDesktopPane1.setBackground(new java.awt.Color(255, 255, 255));
         jDesktopPane1.setForeground(new java.awt.Color(255, 255, 255));
 
+<<<<<<< HEAD
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\projeto morais library\\ProjetoBiblioteca-Java-andreLuis\\src\\main\\java\\images\\logoMoraisLibraryBlk.png")); // NOI18N
         jLabel1.setText("jLabel1");
 
         jDesktopPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+=======
+        jDesktopPane1.setLayer(lbIcon, javax.swing.JLayeredPane.DEFAULT_LAYER);
+>>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
                 .addContainerGap(227, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(224, Short.MAX_VALUE))
+=======
+            .addComponent(lbIcon, javax.swing.GroupLayout.DEFAULT_SIZE, 731, Short.MAX_VALUE)
+>>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(lbIcon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -231,15 +251,25 @@ public class TelaMainFuncionario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCadastrarLivroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarLivroActionPerformed
+<<<<<<< HEAD
         // TODO add your handling code here:
         CadastroLivro telaCadastroLivro = new CadastroLivro();
         jDesktopPane1.add(telaCadastroLivro);
         telaCadastroLivro.setVisible(true);
         
+=======
+        
+        CadastrarLivro telaCadastroLivro = new CadastrarLivro();
+        jDesktopPane1.add(telaCadastroLivro);
+        telaCadastroLivro.setVisible(true);
+>>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
     }//GEN-LAST:event_btnCadastrarLivroActionPerformed
 
     private void btnGerarFichaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerarFichaActionPerformed
-        // TODO add your handling code here:
+        
+        GerarFichaCat telaGerarFicha = new GerarFichaCat();
+        jDesktopPane1.add(telaGerarFicha);
+        telaGerarFicha.setVisible(true);
     }//GEN-LAST:event_btnGerarFichaActionPerformed
 
     private void btnBuscarLivroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarLivroActionPerformed
@@ -257,12 +287,13 @@ public class TelaMainFuncionario extends javax.swing.JFrame {
     }//GEN-LAST:event_btnVisualizarFichaActionPerformed
 
     private void btnAlugarLivroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlugarLivroActionPerformed
-
-        ReservarLivro telaReservarLivro = new ReservarLivro();
-        jDesktopPane1.add(telaReservarLivro);
-        telaReservarLivro.setVisible(true);
+        
+        AlugarLivro telaAlugarLivro = new AlugarLivro();
+        jDesktopPane1.add(telaAlugarLivro);
+        telaAlugarLivro.setVisible(true);
     }//GEN-LAST:event_btnAlugarLivroActionPerformed
 
+<<<<<<< HEAD
     private void btnRemoverLivroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoverLivroActionPerformed
         RemoverLivro telaRemoverLivro = new RemoverLivro();
         jDesktopPane1.add(telaRemoverLivro);
@@ -270,11 +301,52 @@ public class TelaMainFuncionario extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRemoverLivroActionPerformed
 
     private void btnRemoverUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoverUsuarioActionPerformed
+=======
+    private void btnCadastrarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarUsuarioActionPerformed
+        
+        CadastrarUsuario telaCadastroUsuario = new CadastrarUsuario();
+        jDesktopPane1.add(telaCadastroUsuario);
+        telaCadastroUsuario.setVisible(true);
+    }//GEN-LAST:event_btnCadastrarUsuarioActionPerformed
+
+    private void btnRemoverUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoverUsuarioActionPerformed
+        
+>>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
         RemoverUsuario telaRemoverUsuario = new RemoverUsuario();
         jDesktopPane1.add(telaRemoverUsuario);
         telaRemoverUsuario.setVisible(true);
     }//GEN-LAST:event_btnRemoverUsuarioActionPerformed
 
+<<<<<<< HEAD
+=======
+    private void btnRemoverLivroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoverLivroActionPerformed
+        
+        RemoverLivro telaRemoverLivro = new RemoverLivro();
+        jDesktopPane1.add(telaRemoverLivro);
+        telaRemoverLivro.setVisible(true);
+    }//GEN-LAST:event_btnRemoverLivroActionPerformed
+
+    private void btnCadastrarEventoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarEventoActionPerformed
+        
+        CadastrarEvento telaCadastroEvento = new CadastrarEvento();
+        jDesktopPane1.add(telaCadastroEvento);
+        telaCadastroEvento.setVisible(true);
+    }//GEN-LAST:event_btnCadastrarEventoActionPerformed
+
+    private void btnRelatorioEventoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRelatorioEventoActionPerformed
+        
+        GerarRelatorio telaGerandoRel = new GerarRelatorio();
+        jDesktopPane1.add(telaGerandoRel);
+        telaGerandoRel.setVisible(true);
+    }//GEN-LAST:event_btnRelatorioEventoActionPerformed
+
+    private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Volte Sempre!");
+        System.exit(0);
+    }//GEN-LAST:event_btnSairActionPerformed
+
+>>>>>>> db9488ae5a6b35e19570321453b255ca8b1e2755
     /**
      * @param args the command line arguments
      */
@@ -311,7 +383,6 @@ public class TelaMainFuncionario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAdicionarEspaco;
     private javax.swing.JButton btnAlugarLivro;
     private javax.swing.JButton btnBuscarLivro;
     private javax.swing.JButton btnCadastrarEvento;
@@ -319,14 +390,13 @@ public class TelaMainFuncionario extends javax.swing.JFrame {
     private javax.swing.JButton btnCadastrarUsuario;
     private javax.swing.JButton btnGerarFicha;
     private javax.swing.JButton btnRelatorioEvento;
-    private javax.swing.JButton btnRelatorioUsuario;
     private javax.swing.JButton btnRemoverLivro;
     private javax.swing.JButton btnRemoverUsuario;
     private javax.swing.JButton btnSair;
     private javax.swing.JButton btnVisualizarFicha;
     private javax.swing.JDesktopPane jDesktopPane1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel lbIcon;
     // End of variables declaration//GEN-END:variables
 }

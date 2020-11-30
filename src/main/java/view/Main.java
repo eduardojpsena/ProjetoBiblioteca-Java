@@ -78,7 +78,7 @@ public class Main {
 
         usuarioService.exportarUsuario(usuarios);*/
 
-        /*//Importar dados usuarios
+        //Importar dados usuarios
         UsuarioService userService = new UsuarioService();
         try {
             List<Usuario> usuarios = userService.importarArquivo("src/main/java/files/usuarios.txt");
@@ -87,10 +87,14 @@ public class Main {
             }
         } catch (Exception e) {
             e.printStackTrace();
-        }*/
-
-        //Remover usuario
-        //userService.removerUsuario("Piu");
+        }
+        List<Usuario> usuarios = userService.listarUsuario();
+        userService.gerarRelatorio(usuarios, "C:\\Users\\eduar\\OneDrive\\Área de Trabalho", "relatorioUsuario");
+        
+        /*//Remover usuario
+        userService.removerUsuario("dudusn");*/
+        
+        
         //Listar usuario
         //System.out.println(userService.listarUsuario());
 
@@ -104,30 +108,28 @@ public class Main {
             System.out.println(livro); 
         }*/
 
-
-        /*//Importar dados eventos
+        //Importar dados eventos
         EventoService eventoService = new EventoService();
         try {
-                List<Evento> eventos = eventoService.importarArquivo("C:/Users/eduar/OneDrive/�rea de Trabalho/eventos.txt");
-                for (Evento evento : eventos) {
-                        System.out.println("Eventos importados do txt: " + evento);
-                }
+            List<Evento> eventos = eventoService.importarArquivo("C:/Users/eduar/OneDrive/�rea de Trabalho/eventos.txt");
+                
         } catch (IOException e) {
                 e.printStackTrace();
-        }*/
-
-
-        //Importar dados livros
+        }
+        List<Evento> eventos = eventoService.listarEvento();
+        eventoService.gerarRelatorio(eventos, "C:/Users/eduar/OneDrive/Área de Trabalho", "relatorioEventos");
+        
+        /*//Importar dados livros
         LivroService livroService = new LivroService();
         try {
             List<Livro> livros = livroService.importarArquivo("src/main/java/files/livros.txt");
             for (Livro livro : livros) {
-                System.out.println("Livros importados do txt: " + livro);
+                //System.out.println("Livros importados do txt: " + livro);
             }
 
         } catch (Exception e) {
                 e.printStackTrace();
-        }
+        }*/
         
         //System.out.println(livroService.fichaCatalografica("Mulheres que correm com os lobos"));
         
@@ -143,10 +145,13 @@ public class Main {
         
         System.out.println(livrosEnc);*/
         
-        //Aluguel de livros
-        livroService.alugarLivro("Mulheres que correm com os lobos");
+        /*//Aluguel de livros
+        livroService.alugarLivro("Do Mil Ao Milhao");
+        System.out.println("Livro alugado");
+        List<Livro> livros = livroService.listarLivro();
         
-        System.out.println(livroService.listarLivro());
+        livroService.exportarLivro(livros);*/
+        
         
         /*//Cadastrar ficha catalografica e exportar dados para arquivo txt
         FichaCatalograficaService fichasService = new FichaCatalograficaService();
@@ -159,8 +164,35 @@ public class Main {
             System.out.println(fichaCatalografica);
         }
         
-        fichasService.exportarUsuario(fichasCat);
+        System.out.println(fichasCat.get(fichasCat.size()-1).getId() + 1);
+        
+        //fichasService.exportarFichas(fichasCat);
         
         System.out.println(fichasService.VisualizarFichaCatalografica("Producao Artesanal De Cerveja Pilsen"));*/
+        
+        /*//Importar fichas catalograficas
+        FichaCatalograficaService fichasService = new FichaCatalograficaService();
+        try { //Importando dados do arquivo contendo as fichas cadastradas
+            List<FichaCatalografica> fichas = fichasService.importarArquivo("src/main/java/files/fichasCat.txt");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        List<FichaCatalografica> fichas = fichasService.listarFichas();
+        for (FichaCatalografica ficha : fichas) {
+            System.out.println(ficha);
+        }
+        System.out.println(fichasService.VisualizarFichaCatalografica("Producao Artesanal De Cerveja Pilsen"));
+        */
+        /*String teste = "ID: 1 / Nome: Hall De Entrada / Capacidade: 50";
+        String [] sep1 = teste.split(" / ");
+        String [] sep2 = sep1[0].split(": ");
+        String [] sep3 = sep1[1].split(": ");
+        String [] sep4 = sep1[2].split(": ");
+        
+        System.out.println(sep2[1]);
+        System.out.println(sep3[1]);
+        System.out.println(sep4[1]);*/
+        
     }
 }

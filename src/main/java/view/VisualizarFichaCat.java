@@ -41,7 +41,6 @@ public class VisualizarFichaCat extends javax.swing.JInternalFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         txtTitulo = new javax.swing.JTextField();
-        btnVoltar = new javax.swing.JButton();
         btnVisualizar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtFicha = new javax.swing.JTextArea();
@@ -75,9 +74,6 @@ public class VisualizarFichaCat extends javax.swing.JInternalFrame {
             }
         });
 
-        btnVoltar.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
-        btnVoltar.setText("Voltar");
-
         btnVisualizar.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         btnVisualizar.setText("Visualizar");
         btnVisualizar.addActionListener(new java.awt.event.ActionListener() {
@@ -100,13 +96,10 @@ public class VisualizarFichaCat extends javax.swing.JInternalFrame {
             .addGroup(jpVisualizarFichaCatLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jpVisualizarFichaCatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jpVisualizarFichaCatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(jpVisualizarFichaCatLayout.createSequentialGroup()
-                            .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 168, Short.MAX_VALUE)
-                            .addComponent(btnVisualizar))
+                    .addGroup(jpVisualizarFichaCatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(btnVisualizar)
                         .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(txtTitulo, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addComponent(txtTitulo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel2))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jpVisualizarFichaCatLayout.createSequentialGroup()
@@ -117,7 +110,7 @@ public class VisualizarFichaCat extends javax.swing.JInternalFrame {
         jpVisualizarFichaCatLayout.setVerticalGroup(
             jpVisualizarFichaCatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpVisualizarFichaCatLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(13, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addGap(58, 58, 58)
                 .addComponent(jLabel3)
@@ -126,9 +119,7 @@ public class VisualizarFichaCat extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jpVisualizarFichaCatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnVoltar)
-                    .addComponent(btnVisualizar))
+                .addComponent(btnVisualizar)
                 .addContainerGap(68, Short.MAX_VALUE))
         );
 
@@ -147,9 +138,10 @@ public class VisualizarFichaCat extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVisualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVisualizarActionPerformed
-        // TODO add your handling code here:
+
         List<FichaCatalografica> fichas = fichasService.listarFichas(); 
-        String nomeFicha = fichasService.fichaTitle(txtTitulo.getText()); //Primeira letra de cada palavra maiuscula
+        //Primeira letra de cada palavra maiuscula
+        String nomeFicha = fichasService.fichaTitle(txtTitulo.getText()); 
         for (FichaCatalografica ficha : fichas) {
             if (nomeFicha.equals(ficha.getTitulo())){
                 txtFicha.setText(fichasService.VisualizarFichaCatalografica(ficha.getTitulo()));
@@ -158,7 +150,7 @@ public class VisualizarFichaCat extends javax.swing.JInternalFrame {
                 txtFicha.setText("Livro Não Encontrado!!");
             }
         }
-        
+        System.out.println(fichas);
         txtTitulo.setText("");
     }//GEN-LAST:event_btnVisualizarActionPerformed
 
@@ -169,7 +161,6 @@ public class VisualizarFichaCat extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnVisualizar;
-    private javax.swing.JButton btnVoltar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

@@ -7,6 +7,7 @@ package view;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
 import model.entity.Livro;
 import model.service.LivroService;
 
@@ -43,7 +44,6 @@ public class BuscaLivro extends javax.swing.JInternalFrame {
         txtTitulo = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         txtAutor = new javax.swing.JTextField();
-        btnVoltar = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         txtCategoria = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -81,9 +81,6 @@ public class BuscaLivro extends javax.swing.JInternalFrame {
 
         txtAutor.setBackground(new java.awt.Color(0, 0, 0));
         txtAutor.setForeground(new java.awt.Color(255, 255, 255));
-
-        btnVoltar.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
-        btnVoltar.setText("Voltar");
 
         jLabel4.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
@@ -129,37 +126,36 @@ public class BuscaLivro extends javax.swing.JInternalFrame {
             jpBuscarLivroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpBuscarLivroLayout.createSequentialGroup()
                 .addContainerGap(194, Short.MAX_VALUE)
-                .addGroup(jpBuscarLivroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jpBuscarLivroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(jpBuscarLivroLayout.createSequentialGroup()
-                            .addComponent(jLabel3)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel4)
-                            .addGap(34, 34, 34)
-                            .addComponent(jButton1))
-                        .addComponent(jLabel2)
-                        .addComponent(txtTitulo)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jpBuscarLivroLayout.createSequentialGroup()
-                            .addGroup(jpBuscarLivroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jButton2)
-                                .addComponent(txtAutor, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(jpBuscarLivroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(txtCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton3))))
+                .addGroup(jpBuscarLivroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jpBuscarLivroLayout.createSequentialGroup()
-                        .addGap(113, 113, 113)
-                        .addComponent(jLabel1)))
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel4)
+                        .addGap(34, 34, 34)
+                        .addComponent(jButton1))
+                    .addComponent(jLabel2)
+                    .addComponent(txtTitulo)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jpBuscarLivroLayout.createSequentialGroup()
+                        .addGroup(jpBuscarLivroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton2)
+                            .addComponent(txtAutor, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jpBuscarLivroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton3))))
                 .addContainerGap(194, Short.MAX_VALUE))
+            .addGroup(jpBuscarLivroLayout.createSequentialGroup()
+                .addGap(296, 296, 296)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jpBuscarLivroLayout.setVerticalGroup(
             jpBuscarLivroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpBuscarLivroLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(41, 41, 41)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
+                .addGap(30, 30, 30)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -182,9 +178,7 @@ public class BuscaLivro extends javax.swing.JInternalFrame {
                     .addComponent(jButton3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnVoltar)
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addContainerGap(99, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -206,7 +200,7 @@ public class BuscaLivro extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_txtTituloActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+
         List<Livro> livros = livroService.listarLivro();
         //Primeira letra de cada palavra maiuscula
         String nomeLivro = livroService.nomeTitle(txtTitulo.getText());
@@ -222,7 +216,7 @@ public class BuscaLivro extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+
         List<Livro> livros = livroService.listarLivro();
         //Primeira letra de cada palavra maiuscula
         String nomeAutor = livroService.nomeTitle(txtAutor.getText());
@@ -238,7 +232,7 @@ public class BuscaLivro extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+
         List<Livro> livros = livroService.listarLivro();
         String txtLiv = "";
         //Primeira letra de cada palavra maiuscula
@@ -259,7 +253,6 @@ public class BuscaLivro extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnVoltar;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
