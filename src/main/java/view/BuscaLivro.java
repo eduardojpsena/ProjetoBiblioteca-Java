@@ -68,6 +68,7 @@ public class BuscaLivro extends javax.swing.JInternalFrame {
         jLabel2.setText("Titulo");
 
         txtTitulo.setBackground(new java.awt.Color(0, 0, 0));
+        txtTitulo.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         txtTitulo.setForeground(new java.awt.Color(255, 255, 255));
         txtTitulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,6 +81,7 @@ public class BuscaLivro extends javax.swing.JInternalFrame {
         jLabel3.setText("Autor");
 
         txtAutor.setBackground(new java.awt.Color(0, 0, 0));
+        txtAutor.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         txtAutor.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel4.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
@@ -87,16 +89,19 @@ public class BuscaLivro extends javax.swing.JInternalFrame {
         jLabel4.setText("Categoria");
 
         txtCategoria.setBackground(new java.awt.Color(0, 0, 0));
+        txtCategoria.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         txtCategoria.setForeground(new java.awt.Color(255, 255, 255));
 
         txtArea.setBackground(new java.awt.Color(0, 0, 0));
         txtArea.setColumns(20);
-        txtArea.setFont(new java.awt.Font("Comic Sans MS", 3, 12)); // NOI18N
+        txtArea.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         txtArea.setForeground(new java.awt.Color(255, 255, 255));
         txtArea.setRows(5);
         jScrollPane1.setViewportView(txtArea);
 
-        jButton1.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        jButton1.setBackground(new java.awt.Color(0, 0, 0));
+        jButton1.setFont(new java.awt.Font("Comic Sans MS", 1, 11)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Visualizar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,7 +109,9 @@ public class BuscaLivro extends javax.swing.JInternalFrame {
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        jButton2.setBackground(new java.awt.Color(0, 0, 0));
+        jButton2.setFont(new java.awt.Font("Comic Sans MS", 1, 11)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Visualizar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,7 +119,9 @@ public class BuscaLivro extends javax.swing.JInternalFrame {
             }
         });
 
-        jButton3.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        jButton3.setBackground(new java.awt.Color(0, 0, 0));
+        jButton3.setFont(new java.awt.Font("Comic Sans MS", 1, 11)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Visualizar");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -178,7 +187,7 @@ public class BuscaLivro extends javax.swing.JInternalFrame {
                     .addComponent(jButton3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(99, Short.MAX_VALUE))
+                .addContainerGap(95, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

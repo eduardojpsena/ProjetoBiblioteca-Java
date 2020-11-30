@@ -3,6 +3,7 @@ package model.entity;
  *
  * @author andreLuis
  */
+
 import java.util.List;
 
 public class Aluguel {

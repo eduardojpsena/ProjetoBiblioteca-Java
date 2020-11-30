@@ -86,7 +86,7 @@ public class RemoverLivro extends javax.swing.JInternalFrame {
         txtTitulo.setForeground(new java.awt.Color(255, 255, 255));
 
         btnTitulo.setBackground(new java.awt.Color(0, 0, 0));
-        btnTitulo.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        btnTitulo.setFont(new java.awt.Font("Comic Sans MS", 1, 11)); // NOI18N
         btnTitulo.setForeground(new java.awt.Color(255, 255, 255));
         btnTitulo.setText("Pesquisar");
         btnTitulo.addActionListener(new java.awt.event.ActionListener() {
@@ -112,7 +112,7 @@ public class RemoverLivro extends javax.swing.JInternalFrame {
         jLabel5.setText("Categoria");
 
         btnCategoria.setBackground(new java.awt.Color(0, 0, 0));
-        btnCategoria.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        btnCategoria.setFont(new java.awt.Font("Comic Sans MS", 1, 11)); // NOI18N
         btnCategoria.setForeground(new java.awt.Color(255, 255, 255));
         btnCategoria.setText("Pesquisar");
         btnCategoria.addActionListener(new java.awt.event.ActionListener() {
@@ -122,7 +122,7 @@ public class RemoverLivro extends javax.swing.JInternalFrame {
         });
 
         btnAutor.setBackground(new java.awt.Color(0, 0, 0));
-        btnAutor.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        btnAutor.setFont(new java.awt.Font("Comic Sans MS", 1, 11)); // NOI18N
         btnAutor.setForeground(new java.awt.Color(255, 255, 255));
         btnAutor.setText("Pesquisar");
         btnAutor.addActionListener(new java.awt.event.ActionListener() {
@@ -137,7 +137,7 @@ public class RemoverLivro extends javax.swing.JInternalFrame {
         jScrollPane1.setViewportView(txtList);
 
         btnRemovelivro.setBackground(new java.awt.Color(0, 0, 0));
-        btnRemovelivro.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        btnRemovelivro.setFont(new java.awt.Font("Comic Sans MS", 1, 11)); // NOI18N
         btnRemovelivro.setForeground(new java.awt.Color(255, 255, 255));
         btnRemovelivro.setText("Remover");
         btnRemovelivro.addActionListener(new java.awt.event.ActionListener() {

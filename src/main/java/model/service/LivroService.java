@@ -98,7 +98,7 @@ public class LivroService {
         br.readLine();
         while (br.ready()) {
             String linha = br.readLine();
-            System.out.println(linha);
+            //System.out.println(linha);
             String[] colunas = linha.split(",");
             cadastrarLivro(Long.parseLong(colunas[0]), colunas[1], colunas[2], colunas[3], 
                             Integer.parseInt(colunas[4]), colunas[5]);
